@@ -17,16 +17,16 @@ import {
 } from 'c2app-models-utils';
 // @ts-ignore
 import ch from '../ch.json';
-import mapboxgl, { LinePaint, MapboxGeoJSONFeature } from 'mapbox-gl';
+import maplibregl, { LinePaint, MapboxGeoJSONFeature } from 'maplibre-gl';
 import { routingSvc } from './routing-service';
 import { Pages } from '../models';
 
 export interface ILayer {
   layerName: string;
   showLayer: boolean;
-  type: mapboxgl.AnyLayer;
-  layout?: mapboxgl.AnyLayout;
-  paint?: mapboxgl.AnyPaint;
+  type: maplibregl.AnyLayer;
+  layout?: maplibregl.AnyLayout;
+  paint?: maplibregl.AnyPaint;
   filter?: any[];
 }
 
@@ -197,7 +197,7 @@ export const appStateMgmt = {
       // Layers/styles
 
       sources: [] as Array<ISource>,
-      mapStyle: 'mapbox/streets-v11',
+      mapStyle: 'maplibre/streets-v11',
       gridOptions: {
         gridCellSize: 0.5,
         updateLocation: false,
@@ -503,7 +503,7 @@ export const appStateMgmt = {
                     {
                       layerName: 'Grid',
                       showLayer: false,
-                      type: { type: 'line' } as mapboxgl.AnyLayer,
+                      type: { type: 'line' },
                       paint: {
                         'line-opacity': 0.5,
                       },
@@ -528,7 +528,7 @@ export const appStateMgmt = {
                     {
                       layerName: 'Grid Labels',
                       showLayer: false,
-                      type: { type: 'symbol' } as mapboxgl.AnyLayer,
+                      type: { type: 'symbol' },
                       layout: {
                         'text-field': '{cellLabel}',
                         'text-allow-overlap': true,
@@ -564,7 +564,7 @@ export const appStateMgmt = {
                   {
                     layerName: layerName,
                     showLayer: true,
-                    type: { type: 'symbol' } as mapboxgl.AnyLayer,
+                    type: { type: 'symbol' },
                     layout: {
                       'icon-image': icon,
                       'icon-size': icon === 'ground' ? 0.1 : icon === 'air' ? 0.25 : 0.5,
@@ -689,7 +689,7 @@ export const appStateMgmt = {
                     {
                       layerName: 'Incident',
                       showLayer: true,
-                      type: { type: 'symbol' } as mapboxgl.AnyLayer,
+                      type: { type: 'symbol' },
                       layout: {
                         'icon-image': 'chemical',
                         'icon-size': 0.5,
@@ -753,7 +753,7 @@ export const appStateMgmt = {
                     {
                       layerName: 'Incident',
                       showLayer: true,
-                      type: { type: 'symbol' } as mapboxgl.AnyLayer,
+                      type: { type: 'symbol' },
                       layout: {
                         'icon-image': 'chemical',
                         'icon-size': 0.5,
@@ -793,7 +793,7 @@ export const appStateMgmt = {
                     {
                       layerName: 'Population Data',
                       showLayer: true,
-                      type: { type: 'line' } as mapboxgl.AnyLayer,
+                      type: { type: 'line' },
                       paint: {
                         'line-opacity': 0.5,
                       },

@@ -1,5 +1,6 @@
-import m from 'mithril';
-import mapboxgl, { GeoJSONSource, LinePaint, MapboxGeoJSONFeature } from 'mapbox-gl';
+// import m from 'mithril';
+// import mapboxgl, { GeoJSONSource, LinePaint, MapboxGeoJSONFeature } from 'mapbox-gl';
+import maplibregl, { GeoJSONSource, LinePaint, MapboxGeoJSONFeature } from 'maplibre-gl';
 import bbox from '@turf/bbox';
 import booleanPointInPolygon from '@turf/boolean-point-in-polygon';
 import { Point, Feature, Polygon, FeatureCollection, Geometry } from 'geojson';
@@ -34,7 +35,7 @@ export const drawConfig = {
   },
 };
 
-export const handleDrawEvent = (map: mapboxgl.Map, features: MapboxGeoJSONFeature[], actions: IActions) => {
+export const handleDrawEvent = (map: maplibregl.Map, features: MapboxGeoJSONFeature[], actions: IActions) => {
   actions.updateDrawings(features[0] as MapboxGeoJSONFeature);
   if (features[0].geometry.type === 'Polygon') {
     getFeaturesInPolygon(map, features, actions);
@@ -46,7 +47,7 @@ export const handleDrawEvent = (map: mapboxgl.Map, features: MapboxGeoJSONFeatur
   instance.open();
 };
 
-const getFeaturesInPolygon = (map: mapboxgl.Map, features: Feature[], actions: IActions) => {
+const getFeaturesInPolygon = (map: maplibregl.Map, features: Feature[], actions: IActions) => {
   let layers: Array<string> = [];
 
   if (map.getLayer('ResourcesresourcesIDfiremanResources')) layers.push('ResourcesresourcesIDfiremanResources');
@@ -83,7 +84,7 @@ export const displayInfoSidebar = (features: MapboxGeoJSONFeature[], actions: IA
 };
 
 export const getGridSource = (
-  map: mapboxgl.Map,
+  map: maplibregl.Map,
   actions: IActions,
   appState: IAppModel
 ): FeatureCollection<Polygon> => {
@@ -135,7 +136,7 @@ export const getLabelsSource = (gridSource: FeatureCollection<Polygon>): Feature
   } as FeatureCollection;
 };
 
-export const loadImages = (map: mapboxgl.Map) => {
+export const loadImages = (map: maplibregl.Map) => {
   map.loadImage(fireman, function (error: any, image: ImageBitmap) {
     if (error) throw error;
     if (!map.hasImage('FIREFIGHTER')) map.addImage('FIREFIGHTER', image as ImageBitmap);
@@ -206,45 +207,38 @@ export const loadImages = (map: mapboxgl.Map) => {
   });
 };
 
-export const switchBasemap = async (map: mapboxgl.Map, styleID: string) => {
-  const currentStyle = map.getStyle();
-  const newStyle = (await m.request(
-    `https://api.mapbox.com/styles/v1/${styleID}?access_token=` + process.env.ACCESSTOKEN
-  )) as mapboxgl.Style;
+// export const switchBasemap = async (map: maplibregl.Map, styleID: string) => {
+//   const currentStyle = map.getStyle();
+//   const newStyle = (await m.request(
+//     'https://geodata.nationaalgeoregister.nl/beta/topotiles-viewer/styles/achtergrond.json'
+//   )) as maplibregl.Style;
 
-  // ensure any sources from the current style are copied across to the new style
-  newStyle.sources = Object.assign({}, currentStyle.sources, newStyle.sources);
+//   // ensure any sources from the current style are copied across to the new style
+//   newStyle.sources = Object.assign({}, currentStyle.sources, newStyle.sources);
 
-  // find the index of where to insert our layers to retain in the new style
-  let labelIndex = newStyle.layers?.findIndex((el) => {
-    return el.id == 'state-label';
-  });
+//   // find the index of where to insert our layers to retain in the new style
+//   let labelIndex = newStyle.layers?.findIndex((el) => {
+//     return el.id == 'state-label';
+//   });
 
-  // default to on top
-  if (labelIndex === -1) {
-    labelIndex = newStyle.layers?.length;
-  }
-  const appLayers = currentStyle.layers?.filter((el) => {
-    // app layers are the layers to retain, and these are any layers which have a different source set
-    const source = (el as any).source;
-    return source &&
-      source != 'mapbox://mapbox.satellite' &&
-      source != 'mapbox' &&
-      source != 'composite';
-  });
+//   // default to on top
+//   if (labelIndex === -1) {
+//     labelIndex = newStyle.layers?.length;
+//   }
+//   const appLayers = currentStyle.layers?.filter((el) => {
+//     // app layers are the layers to retain, and these are any layers which have a different source set
+//     const source = (el as any).source;
+//     return source && source != 'mapbox://mapbox.satellite' && source != 'mapbox' && source != 'composite';
+//   });
 
-  if(!newStyle || !newStyle.layers || !appLayers) return;
-  newStyle.layers = [  
-    ...newStyle.layers.slice(0, labelIndex),
-    ...appLayers,
-    ...newStyle.layers.slice(labelIndex, -1),
-  ];
+//   if (!newStyle || !newStyle.layers || !appLayers) return;
+//   newStyle.layers = [...newStyle.layers.slice(0, labelIndex), ...appLayers, ...newStyle.layers.slice(labelIndex, -1)];
 
-  map.setStyle(newStyle);
-  loadImages(map);
-};
+//   map.setStyle(newStyle);
+//   loadImages(map);
+// };
 
-export const updateSourcesAndLayers = (appState: IAppModel, actions: IActions, map: mapboxgl.Map) => {
+export const updateSourcesAndLayers = (appState: IAppModel, actions: IActions, map: maplibregl.Map) => {
   appState.app.sources.forEach((source: ISource) => {
     // Set source
     const sourceName = source.sourceName.concat(source.id);
@@ -267,7 +261,7 @@ export const updateSourcesAndLayers = (appState: IAppModel, actions: IActions, m
           type: layer.type.type,
           source: sourceName,
           layout: layer.layout ? layer.layout : {},
-          // @ts-ignore        
+          // @ts-ignore
           paint: layer.paint ? layer.paint : {},
           filter: layer.filter ? layer.filter : ['all'],
         });
@@ -282,14 +276,14 @@ export const updateSourcesAndLayers = (appState: IAppModel, actions: IActions, m
   });
 };
 
-export const updateGrid = (appState: IAppModel, actions: IActions, map: mapboxgl.Map) => {
+export const updateGrid = (appState: IAppModel, actions: IActions, map: maplibregl.Map) => {
   const gridSource = getGridSource(map, actions, appState);
   const gridLabelsSource = getLabelsSource(gridSource);
 
   actions.updateGrid(gridSource, gridLabelsSource);
 };
 
-export const updateSatellite = (appState: IAppModel, map: mapboxgl.Map) => {
+export const updateSatellite = (appState: IAppModel, map: maplibregl.Map) => {
   // Set source
   const sourceName = 'wms-satellite-source';
   if (!map.getSource(sourceName)) {
@@ -312,12 +306,16 @@ export const updateSatellite = (appState: IAppModel, map: mapboxgl.Map) => {
         layout: {
           visibility: appState.app.showSatellite ? 'visible' : 'none',
         },
-      
+
         paint: {},
       },
       'aeroway-line'
     );
   }
   map.setLayoutProperty(layerName, 'visibility', appState.app.showSatellite ? 'visible' : 'none');
-  map.setPaintProperty('building', 'fill-opacity', appState.app.showSatellite ? 0 : ["interpolate", ["linear"], ["zoom"], 15, 0, 16, 1]);
+  map.setPaintProperty(
+    'building',
+    'fill-opacity',
+    appState.app.showSatellite ? 0 : ['interpolate', ['linear'], ['zoom'], 15, 0, 16, 1]
+  );
 };

@@ -21,7 +21,7 @@ import {
   ResourceSubtype,
 } from 'c2app-models-utils';
 import M from 'materialize-css';
-import mapboxgl from 'mapbox-gl';
+import maplibregl from 'maplibre-gl';
 import m from 'mithril';
 
 export class Socket {
@@ -69,7 +69,7 @@ export class Socket {
                   {
                     layerName: 'Contexts',
                     showLayer: true,
-                    type: { type: 'line' } as mapboxgl.AnyLayer,
+                    type: { type: 'line' } as maplibregl.AnyLayer,
                     paint: {
                       'line-width': 4,
                     },
@@ -126,7 +126,7 @@ export class Socket {
                 return {
                   layerName: type + 'Resources',
                   showLayer: true,
-                  type: { type: 'symbol' } as mapboxgl.AnyLayer,
+                  type: { type: 'symbol' } as maplibregl.AnyLayer,
                   layout: {
                     'icon-image': type,
                     'icon-size': type === 'GROUND' ? 0.1 : type === 'AIR' ? 0.25 : 0.5,
@@ -146,7 +146,7 @@ export class Socket {
                   return {
                     layerName: type + 'Resources',
                     showLayer: true,
-                    type: { type: 'symbol' } as mapboxgl.AnyLayer,
+                    type: { type: 'symbol' } as maplibregl.AnyLayer,
                     layout: {
                       'icon-image': type,
                       'icon-size': type === 'GROUND' ? 0.1 : type === 'AIR' ? 0.25 : 0.5,
@@ -229,7 +229,7 @@ export class Socket {
                   {
                     layerName: 'Sensors',
                     showLayer: true,
-                    type: { type: 'symbol' } as mapboxgl.AnyLayer,
+                    type: { type: 'symbol' } as maplibregl.AnyLayer,
                     layout: {
                       'icon-image': 'media',
                       'icon-size': 0.5,
@@ -286,7 +286,7 @@ export class Socket {
                   {
                     layerName: 'Incident',
                     showLayer: true,
-                    type: { type: 'symbol' } as mapboxgl.AnyLayer,
+                    type: { type: 'symbol' } as maplibregl.AnyLayer,
                     layout: {
                       'icon-image': 'chemical',
                       'icon-size': 0.5,
@@ -336,7 +336,7 @@ export class Socket {
                 return {
                   layerName: dt.toString(),
                   showLayer: true,
-                  type: { type: 'line' } as mapboxgl.AnyLayer,
+                  type: { type: 'line' } as maplibregl.AnyLayer,
                   paint: {
                     'line-color': {
                       type: 'identity',
@@ -360,7 +360,7 @@ export class Socket {
                   return {
                     layerName: dt.toString(),
                     showLayer: true,
-                    type: { type: 'line' } as mapboxgl.AnyLayer,
+                    type: { type: 'line' } as maplibregl.AnyLayer,
                     paint: {
                       'line-color': {
                         type: 'identity',
@@ -507,7 +507,7 @@ export class Socket {
                   return {
                     layerName: dt.toString(),
                     showLayer: true,
-                    type: { type: 'line' } as mapboxgl.AnyLayer,
+                    type: { type: 'line' } as maplibregl.AnyLayer,
                     paint: {
                       'line-color': {
                         type: 'identity',

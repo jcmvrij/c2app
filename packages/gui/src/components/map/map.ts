@@ -1,16 +1,14 @@
 import m from 'mithril';
-import mapboxgl from 'mapbox-gl';
+import maplibregl from 'maplibre-gl';
 import MapboxDraw from '@mapbox/mapbox-gl-draw';
 // @ts-ignore
-import { RulerControl } from 'mapbox-gl-controls';
+import { RulerControl } from '@prashis/maplibre-gl-controls';
 import { MeiosisComponent } from '../../services/meiosis';
 import * as MapUtils from './map-utils';
 
 export const Map: MeiosisComponent = () => {
-  mapboxgl.accessToken = process.env.ACCESSTOKEN || '';
-  let map: mapboxgl.Map;
+  let map: maplibregl.Map;
   let draw: MapboxDraw;
-  let token: boolean = process.env.ACCESSTOKEN ? true : false;
 
   return {
     view: () => {
@@ -19,11 +17,9 @@ export const Map: MeiosisComponent = () => {
     // Executes once on creation
     oncreate: ({ attrs: { state: appState, actions } }) => {
       // Create map and add controls
-      map = new mapboxgl.Map({
+      map = new maplibregl.Map({
         container: 'mapboxMap',
-        style: token
-          ? `mapbox://styles/${appState.app.mapStyle}`
-          : 'https://geodata.nationaalgeoregister.nl/beta/topotiles-viewer/styles/achtergrond.json',
+        style: 'https://geodata.nationaalgeoregister.nl/beta/topotiles-viewer/styles/achtergrond.json',
         center: [4.35, 51.911] as [number, number],
         zoom: 12,
       });
@@ -32,7 +28,7 @@ export const Map: MeiosisComponent = () => {
 
       // Add draw controls
       draw = new MapboxDraw(MapUtils.drawConfig);
-      map.addControl(new mapboxgl.NavigationControl(), 'top-left');
+      map.addControl(new maplibregl.NavigationControl(), 'top-left');
       map.addControl(draw, 'top-left');
       map.addControl(new RulerControl(), 'top-left');
 
@@ -61,10 +57,10 @@ export const Map: MeiosisComponent = () => {
         MapUtils.updateGrid(appState, actions, map);
       }
 
-      // Check if basemap should be switched
-      if (token && !map.getStyle().sprite?.includes(appState.app.mapStyle)) {
-        MapUtils.switchBasemap(map, appState.app.mapStyle).catch();
-      }
+      // // Check if basemap should be switched
+      // if (!map.getStyle().sprite?.includes(appState.app.mapStyle)) {
+      //   MapUtils.switchBasemap(map, appState.app.mapStyle).catch();
+      // }
 
       MapUtils.updateSourcesAndLayers(appState, actions, map);
       MapUtils.updateSatellite(appState, map);
