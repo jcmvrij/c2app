@@ -22,7 +22,6 @@
     "@turf/square-grid": "^6.5.0",
     "c2app-models-utils": "file:../shared",
     "geojson": "^0.5.0",
-    "mapbox-gl": "1.13.0",
     "maplibre-gl": "1.15.2",
     "material-icons": "^1.10.5",
     "materialize-css": "^1.0.0",

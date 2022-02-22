@@ -210,7 +210,7 @@ export const loadImages = (map: maplibregl.Map) => {
 // export const switchBasemap = async (map: maplibregl.Map, styleID: string) => {
 //   const currentStyle = map.getStyle();
 //   const newStyle = (await m.request(
-//     'https://geodata.nationaalgeoregister.nl/beta/topotiles-viewer/styles/achtergrond.json'
+//     `https://api.mapbox.com/styles/v1/${styleID}?access_token=` + process.env.ACCESSTOKEN
 //   )) as maplibregl.Style;
 
 //   // ensure any sources from the current style are copied across to the new style

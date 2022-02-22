@@ -26,8 +26,6 @@ Refer to the [README](./docker/README.md) file in the `docker` folder for more i
 
 ## Development
 
-Before you can use the map, please create your `Mapbox` access token from [here](https://account.mapbox.com), and insert it into the `./packages/gui/.env` file (you can copy the `.env.example` to `.env`).
-
 To run the node parts of this repository separately (i.e. without the Kafka infrastructure) you can run:
 
 ```bash
