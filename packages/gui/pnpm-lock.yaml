@@ -19,7 +19,7 @@ specifiers:
   geojson: ^0.5.0
   html-webpack-plugin: ^5.5.0
   html-webpack-tags-plugin: ^3.0.2
-  maplibre-gl: 1.15.2
+  maplibre-gl: ^1.15.2
   material-icons: ^1.10.5
   materialize-css: ^1.0.0
   mini-css-extract-plugin: ^2.4.6

@@ -12,15 +12,15 @@ export const Map: MeiosisComponent = () => {
 
   return {
     view: () => {
-      return m('#mapboxMap.col.s12.l9.right');
+      return m('#maplibreMap.col.s12.l9.right');
     },
     // Executes once on creation
     oncreate: ({ attrs: { state: appState, actions } }) => {
       // Create map and add controls
       map = new maplibregl.Map({
-        container: 'mapboxMap',
+        container: 'maplibreMap',
         style: 'https://geodata.nationaalgeoregister.nl/beta/topotiles-viewer/styles/achtergrond.json',
-        center: [4.35, 51.911] as [number, number],
+        center: [4.3, 52.07] as [number, number],
         zoom: 12,
       });
       MapUtils.loadImages(map);
@@ -57,10 +57,10 @@ export const Map: MeiosisComponent = () => {
         MapUtils.updateGrid(appState, actions, map);
       }
 
-      // // Check if basemap should be switched
-      // if (!map.getStyle().sprite?.includes(appState.app.mapStyle)) {
-      //   MapUtils.switchBasemap(map, appState.app.mapStyle).catch();
-      // }
+      // Check if basemap should be switched
+      if (!map.getStyle().sprite?.includes(appState.app.mapStyle)) {
+        MapUtils.switchBasemap(map).catch();
+      }
 
       MapUtils.updateSourcesAndLayers(appState, actions, map);
       MapUtils.updateSatellite(appState, map);

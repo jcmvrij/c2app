@@ -197,7 +197,7 @@ export const appStateMgmt = {
       // Layers/styles
 
       sources: [] as Array<ISource>,
-      mapStyle: 'mapbox/streets-v11',
+      mapStyle: 'https://geodata.nationaalgeoregister.nl/beta/topotiles-viewer/styles/achtergrond.json',
       gridOptions: {
         gridCellSize: 0.5,
         updateLocation: false,

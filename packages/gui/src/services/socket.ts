@@ -425,7 +425,7 @@ export class Socket {
     });
     // These positions are received directly from the agent-smith simulator
     // These are therefore NOT assistance resources, but 'just' simEntities
-    /*this.socket.on('positions', (data: FeatureCollection) => {
+    this.socket.on('positions', (data: FeatureCollection) => {
       if (!this.shouldUpdate()) {
       } else {
         us({
@@ -447,7 +447,7 @@ export class Socket {
                     {
                       layerName: 'Firemen',
                       showLayer: true,
-                      type: { type: 'symbol' } as mapboxgl.AnyLayer,
+                      type: { type: 'symbol' } as maplibregl.AnyLayer,
                       layout: {
                         'icon-image': 'fireman',
                         'icon-size': 0.5,
@@ -463,7 +463,7 @@ export class Socket {
           },
         });
       }
-    });*/
+    });
     // CAP Alert
     this.socket.on('alert', (data: IAlert) => {
       const alertArea = (data.info as IInfo).area as IArea[];
