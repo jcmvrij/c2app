@@ -6,47 +6,46 @@ specifiers:
   '@turf/bbox': ^6.5.0
   '@turf/boolean-point-in-polygon': ^6.5.0
   '@turf/square-grid': ^6.5.0
-  '@types/mapbox-gl': 1.13.0
   '@types/mapbox__mapbox-gl-draw': ^1.2.3
   '@types/materialize-css': ^1.0.11
-  '@types/mithril': ^2.0.8
+  '@types/mithril': ^2.0.9
   '@types/polylabel': ^1.0.5
-  c2app-models-utils: file:../shared
-  copy-webpack-plugin: ^10.2.0
-  css-loader: ^6.5.1
-  css-minimizer-webpack-plugin: ^3.3.1
-  dotenv-webpack: ^7.0.3
+  c2app-models-utils: link:..\shared
+  copy-webpack-plugin: ^10.2.4
+  css-loader: ^6.6.0
+  css-minimizer-webpack-plugin: ^3.4.1
+  dotenv-webpack: ^7.1.0
   geojson: ^0.5.0
   html-webpack-plugin: ^5.5.0
   html-webpack-tags-plugin: ^3.0.2
-  maplibre-gl: ^1.15.2
-  material-icons: ^1.10.5
+  maplibre-gl: ^2.1.6
+  material-icons: ^1.10.7
   materialize-css: ^1.0.0
-  mini-css-extract-plugin: ^2.4.6
+  mini-css-extract-plugin: ^2.5.3
   mithril: ^2.0.4
   mithril-materialized: ^0.19.4
-  mithril-ui-form: ^1.4.4
+  mithril-ui-form: ^1.4.5
   polylabel: ^1.1.0
   rimraf: ^3.0.2
   socket.io-client: 4.4.1
   style-loader: ^3.3.1
   ts-loader: ^9.2.6
   tslib: ^2.3.1
-  typescript: ^4.5.4
-  webpack: ^5.66.0
-  webpack-cli: ^4.9.1
-  webpack-dev-server: ^4.7.3
+  typescript: ^4.5.5
+  webpack: ^5.69.1
+  webpack-cli: ^4.9.2
+  webpack-dev-server: ^4.7.4
   workbox-webpack-plugin: ^6.4.2
 
 dependencies:
   '@mapbox/mapbox-gl-draw': 1.3.0
-  '@prashis/maplibre-gl-controls': 1.0.1_maplibre-gl@1.15.2
+  '@prashis/maplibre-gl-controls': 1.0.1_maplibre-gl@2.1.6
   '@turf/bbox': 6.5.0
   '@turf/boolean-point-in-polygon': 6.5.0
   '@turf/square-grid': 6.5.0
   c2app-models-utils: link:../shared
   geojson: 0.5.0
-  maplibre-gl: 1.15.2
+  maplibre-gl: 2.1.6
   material-icons: 1.10.7
   materialize-css: 1.0.0
   mithril: 2.0.4
@@ -56,7 +55,6 @@ dependencies:
   socket.io-client: 4.4.1
 
 devDependencies:
-  '@types/mapbox-gl': 1.13.0
   '@types/mapbox__mapbox-gl-draw': 1.2.3
   '@types/materialize-css': 1.0.11
   '@types/mithril': 2.0.9
@@ -1285,10 +1283,6 @@ packages:
       minimist: 1.2.5
     dev: false
 
-  /@mapbox/geojson-types/1.0.2:
-    resolution: {integrity: sha512-e9EBqHHv3EORHrSfbR9DqecPNn+AmuAoQxV6aL8Xu30bJMJR1o8PZLZzpk1Wq7/NfCbuhmakHTPYRhoqLsXRnw==}
-    dev: false
-
   /@mapbox/jsonlint-lines-primitives/2.0.2:
     resolution: {integrity: sha1-zlblOfg1UrWNENZy6k1vya3HsjQ=}
     engines: {node: '>= 0.6'}
@@ -1306,22 +1300,20 @@ packages:
       xtend: 4.0.2
     dev: false
 
-  /@mapbox/mapbox-gl-supported/1.5.0:
-    resolution: {integrity: sha512-/PT1P6DNf7vjEEiPkVIRJkvibbqWtqnyGaBz3nfRdcxclNSnSdaLU5tfAgcD7I8Yt5i+L19s406YLl1koLnLbg==}
-    peerDependencies:
-      mapbox-gl: '>=0.32.1 <2.0.0'
+  /@mapbox/mapbox-gl-supported/2.0.1:
+    resolution: {integrity: sha512-HP6XvfNIzfoMVfyGjBckjiAOQK9WfX0ywdLubuPMPv+Vqf5fj0uCbgBQYpiqcWZT6cbyyRnTSXDheT1ugvF6UQ==}
     dev: false
 
   /@mapbox/point-geometry/0.1.0:
     resolution: {integrity: sha1-ioP5M1x4YO/6Lu7KJUMyqgru2PI=}
     dev: false
 
-  /@mapbox/tiny-sdf/1.2.5:
-    resolution: {integrity: sha512-cD8A/zJlm6fdJOk6DqPUV8mcpyJkRz2x2R+/fYcWDYG3oWbG7/L7Yl/WqQ1VZCjnL9OTIMAn6c+BC5Eru4sQEw==}
+  /@mapbox/tiny-sdf/2.0.5:
+    resolution: {integrity: sha512-OhXt2lS//WpLdkqrzo/KwB7SRD8AiNTFFzuo9n14IBupzIMa67yGItcK7I2W9D8Ghpa4T04Sw9FWsKCJG50Bxw==}
     dev: false
 
-  /@mapbox/unitbezier/0.0.0:
-    resolution: {integrity: sha1-FWUb1VOme4WB+zmIEMmK2Go0Uk4=}
+  /@mapbox/unitbezier/0.0.1:
+    resolution: {integrity: sha512-nMkuDXFv60aBr9soUG5q+GvZYL+2KZHVvsqFCzqnkGEf46U2fvmytHaEVc1/YZbiLn8X+eR3QzX1+dwDO1lxlw==}
     dev: false
 
   /@mapbox/vector-tile/1.3.1:
@@ -1356,13 +1348,13 @@ packages:
       fastq: 1.13.0
     dev: true
 
-  /@prashis/maplibre-gl-controls/1.0.1_maplibre-gl@1.15.2:
+  /@prashis/maplibre-gl-controls/1.0.1_maplibre-gl@2.1.6:
     resolution: {integrity: sha512-4QIxNGZrQIiyTxMvYSR8hkeetM8nMheye6Yez7sR4S9lee7RPzz2SkvUxWjs+4wm5QAHuMWnFjoOa4bzGF40cQ==}
     peerDependencies:
       maplibre-gl: ^1.15.2
     dependencies:
       '@turf/distance': 6.3.0
-      maplibre-gl: 1.15.2
+      maplibre-gl: 2.1.6
     dev: false
 
   /@rollup/plugin-babel/5.3.0_@babel+core@7.17.5+rollup@2.67.3:
@@ -3173,10 +3165,6 @@ packages:
     resolution: {integrity: sha512-NtNxqUcXgpW2iMrfqSfR73Glt39K+BLwWsPs94yR63v45T0Wbej7eRmL5cWfwEgqXnmjQp3zaJTshdRW/qC2ZQ==}
     dev: true
 
-  /grid-index/1.1.0:
-    resolution: {integrity: sha512-HZRwumpOGUrHyxO5bqKZL0B0GlUpwtCAzZ42sgxUPniu33R1LSFH5yrIcBCHjkctCAh3mtWKcKd9J4vDDdeVHA==}
-    dev: false
-
   /handle-thing/2.0.1:
     resolution: {integrity: sha512-9Qn4yBxelxoh2Ow62nP+Ka/kMnOXRi8BXnRaUwezLNhqelnN49xKz4F/dPP8OYLxLxq6JDtZb2i9XznUQbNPTg==}
     dev: true
@@ -3774,35 +3762,29 @@ packages:
       sourcemap-codec: 1.4.8
     dev: true
 
-  /maplibre-gl/1.15.2:
-    resolution: {integrity: sha512-uPeV530apb4JfX3cRFfE+awFnbcJTOnCv2QvY4mw4huiInbybElWYkNzTs324YLSADq0f4bidRoYcR81ho3aLA==}
-    engines: {node: '>=6.4.0'}
+  /maplibre-gl/2.1.6:
+    resolution: {integrity: sha512-UHdw4YeCkIyfG7vMdNK6e/sDNPB7jjUN5MUytKE1DFQB7sKM9V19ar1GUyn0uYRvQwJ5iC01fWhH3r/5bbHlKQ==}
+    requiresBuild: true
     dependencies:
       '@mapbox/geojson-rewind': 0.5.1
-      '@mapbox/geojson-types': 1.0.2
       '@mapbox/jsonlint-lines-primitives': 2.0.2
-      '@mapbox/mapbox-gl-supported': 1.5.0
+      '@mapbox/mapbox-gl-supported': 2.0.1
       '@mapbox/point-geometry': 0.1.0
-      '@mapbox/tiny-sdf': 1.2.5
-      '@mapbox/unitbezier': 0.0.0
+      '@mapbox/tiny-sdf': 2.0.5
+      '@mapbox/unitbezier': 0.0.1
       '@mapbox/vector-tile': 1.3.1
       '@mapbox/whoots-js': 3.1.0
       csscolorparser: 1.0.3
       earcut: 2.2.3
       geojson-vt: 3.2.1
       gl-matrix: 3.4.3
-      grid-index: 1.1.0
-      minimist: 1.2.5
       murmurhash-js: 1.0.0
       pbf: 3.2.1
       potpack: 1.0.2
       quickselect: 2.0.0
-      rw: 1.3.3
       supercluster: 7.1.4
       tinyqueue: 2.0.3
       vt-pbf: 3.1.3
-    transitivePeerDependencies:
-      - mapbox-gl
     dev: false
 
   /material-icons/1.10.7:
@@ -4811,10 +4793,6 @@ packages:
 
   /rw/0.1.4:
     resolution: {integrity: sha1-SQPL2AJIrg7eaFv1j9I2p6mymj4=}
-    dev: false
-
-  /rw/1.3.3:
-    resolution: {integrity: sha1-P4Yt+pGrdmsUiF700BEkv9oHT7Q=}
     dev: false
 
   /safe-buffer/5.1.2:

@@ -1,5 +1,4 @@
 import m, { FactoryComponent } from 'mithril';
-import { MapboxGeoJSONFeature } from 'mapbox-gl';
 import { IActions, ISource, IAppModel } from '../../services/meiosis';
 import M from 'materialize-css';
 import { LayoutForm } from 'mithril-ui-form';
@@ -10,8 +9,16 @@ import {
   IChemicalIncidentScenario,
   ICbrnProperties,
 } from 'c2app-models-utils';
+import { LayerSpecification } from 'maplibre-gl';
 
-export const formatMan = (ft: MapboxGeoJSONFeature) => {
+export declare type GeoJSONFeatureTwo = GeoJSON.Feature<GeoJSON.Geometry> & {
+  layer: LayerSpecification;
+  source: string;
+  sourceLayer: string;
+  state: { [key: string]: any };
+};
+
+export const formatMan = (ft: GeoJSONFeatureTwo) => {
   const props = ft?.properties;
   return m('div', [
     m('p', 'Layer Name: ' + ft.layer.id),
@@ -19,12 +26,12 @@ export const formatMan = (ft: MapboxGeoJSONFeature) => {
     m('p', 'Callsign: ' + props?.name),
   ]);
 };
-export const formatCar = (ft: MapboxGeoJSONFeature) => {
+export const formatCar = (ft: GeoJSONFeatureTwo) => {
   const props = ft?.properties;
   return m('div', [m('p', 'Layer Name: ' + ft.layer.id), m('p', 'Type: ' + props?.type)]);
 };
 
-export const formatUnknown = (ft: MapboxGeoJSONFeature) => {
+export const formatUnknown = (ft: GeoJSONFeatureTwo) => {
   const props = ft?.properties;
   return m('div', [
     m('p', 'Layer Name: ' + ft.layer.id),
@@ -39,7 +46,7 @@ export const alertFormatComponent: FactoryComponent<{
 }> = () => {
   return {
     view: (vnode) => {
-      const ft = vnode.attrs.state.app.clickedFeature as MapboxGeoJSONFeature;
+      const ft = vnode.attrs.state.app.clickedFeature as unknown as GeoJSONFeatureTwo;
       const alert = vnode.attrs.state.app.sources.find((v: ISource) => {
         return v.sourceName + v.id === ft.source;
       }) as ISource;
@@ -81,7 +88,7 @@ export const contextFormatComponent: FactoryComponent<{
 }> = () => {
   return {
     view: (vnode) => {
-      const ft = vnode.attrs.state.app.clickedFeature as MapboxGeoJSONFeature;
+      const ft = vnode.attrs.state.app.clickedFeature as unknown as GeoJSONFeatureTwo;
       return m('div', [
         m('p', 'ID: ' + ft.properties?.id),
         m('p', 'Description: ' + ft.properties?.description),
@@ -97,7 +104,7 @@ export const resourceFormatComponent: FactoryComponent<{
 }> = () => {
   return {
     view: (vnode) => {
-      const ft = vnode.attrs.state.app.clickedFeature as MapboxGeoJSONFeature;
+      const ft = vnode.attrs.state.app.clickedFeature as unknown as GeoJSONFeatureTwo;
       return m('div', [
         m('p', 'ID: ' + ft.properties?.id),
         m('p', 'Type: ' + ft.properties?.resourceType),
@@ -114,7 +121,7 @@ export const sensorFormatComponent: FactoryComponent<{
 }> = () => {
   return {
     view: (vnode) => {
-      const ft = vnode.attrs.state.app.clickedFeature as MapboxGeoJSONFeature;
+      const ft = vnode.attrs.state.app.clickedFeature as unknown as GeoJSONFeatureTwo;
       const sensors = JSON.parse(ft.properties?.sensors);
       return m(
         'li',
@@ -142,7 +149,7 @@ export const incidentLocationFormatComponent: FactoryComponent<{
   };
   return {
     view: (vnode) => {
-      const ft = vnode.attrs.state.app.clickedFeature as MapboxGeoJSONFeature;
+      const ft = vnode.attrs.state.app.clickedFeature as unknown as GeoJSONFeatureTwo;
       const scenario = JSON.parse(ft.properties?.scenario) as IChemicalIncidentScenario;
       const form = formGenerator({});
 

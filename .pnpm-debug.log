@@ -50,7 +50,7 @@
       "name": "Error",
       "message": "c2app-server@0.0.1 dev: `ts-node-dev src/index.ts`\nExit status 1",
       "code": "ELIFECYCLE",
-      "stack": "Error: c2app-server@0.0.1 dev: `ts-node-dev src/index.ts`\nExit status 1\n    at EventEmitter.<anonymous> (C:\\Users\\Admin\\AppData\\Roaming\\npm\\pnpm-global\\5\\node_modules\\.pnpm\\pnpm@6.31.0\\node_modules\\pnpm\\dist\\pnpm.cjs:105664:20)\n    at EventEmitter.emit (node:events:520:28)\n    at ChildProcess.<anonymous> (C:\\Users\\Admin\\AppData\\Roaming\\npm\\pnpm-global\\5\\node_modules\\.pnpm\\pnpm@6.31.0\\node_modules\\pnpm\\dist\\pnpm.cjs:92211:18)\n    at ChildProcess.emit (node:events:520:28)\n    at maybeClose (node:internal/child_process:1092:16)\n    at Socket.<anonymous> (node:internal/child_process:451:11)\n    at Socket.emit (node:events:520:28)\n    at Pipe.<anonymous> (node:net:687:12)"
+      "stack": "Error: c2app-server@0.0.1 dev: `ts-node-dev src/index.ts`\nExit status 1\n    at EventEmitter.<anonymous> (C:\\Users\\Admin\\AppData\\Roaming\\npm\\pnpm-global\\5\\node_modules\\.pnpm\\pnpm@6.32.1\\node_modules\\pnpm\\dist\\pnpm.cjs:105685:20)\n    at EventEmitter.emit (node:events:520:28)\n    at ChildProcess.<anonymous> (C:\\Users\\Admin\\AppData\\Roaming\\npm\\pnpm-global\\5\\node_modules\\.pnpm\\pnpm@6.32.1\\node_modules\\pnpm\\dist\\pnpm.cjs:92232:18)\n    at ChildProcess.emit (node:events:520:28)\n    at maybeClose (node:internal/child_process:1092:16)\n    at Process.ChildProcess._handle.onexit (node:internal/child_process:302:5)"
     }
   },
   "8 error pnpm": {
@@ -65,8 +65,7 @@
       "name": "pnpm",
       "message": "c2app-server@0.0.1 dev: `ts-node-dev src/index.ts`\nExit status 1",
       "code": "ERR_PNPM_RECURSIVE_RUN_FIRST_FAIL",
-      "stack": "Error: c2app-server@0.0.1 dev: `ts-node-dev src/index.ts`\nExit status 1\n    at EventEmitter.<anonymous> (C:\\Users\\Admin\\AppData\\Roaming\\npm\\pnpm-global\\5\\node_modules\\.pnpm\\pnpm@6.31.0\\node_modules\\pnpm\\dist\\pnpm.cjs:105664:20)\n    at EventEmitter.emit (node:events:520:28)\n    at ChildProcess.<anonymous> (C:\\Users\\Admin\\AppData\\Roaming\\npm\\pnpm-global\\5\\node_modules\\.pnpm\\pnpm@6.31.0\\node_modules\\pnpm\\dist\\pnpm.cjs:92211:18)\n    at ChildProcess.emit (node:events:520:28)\n    at maybeClose (node:internal/child_process:1092:16)\n    at Socket.<anonymous> (node:internal/child_process:451:11)\n    at Socket.emit (node:events:520:28)\n    at Pipe.<anonymous> (node:net:687:12)"
+      "stack": "Error: c2app-server@0.0.1 dev: `ts-node-dev src/index.ts`\nExit status 1\n    at EventEmitter.<anonymous> (C:\\Users\\Admin\\AppData\\Roaming\\npm\\pnpm-global\\5\\node_modules\\.pnpm\\pnpm@6.32.1\\node_modules\\pnpm\\dist\\pnpm.cjs:105685:20)\n    at EventEmitter.emit (node:events:520:28)\n    at ChildProcess.<anonymous> (C:\\Users\\Admin\\AppData\\Roaming\\npm\\pnpm-global\\5\\node_modules\\.pnpm\\pnpm@6.32.1\\node_modules\\pnpm\\dist\\pnpm.cjs:92232:18)\n    at ChildProcess.emit (node:events:520:28)\n    at maybeClose (node:internal/child_process:1092:16)\n    at Process.ChildProcess._handle.onexit (node:internal/child_process:302:5)"
     }
-  },
-  "9 warn pnpm:global": " Local package.json exists, but node_modules missing, did you mean to install?"
+  }
 }

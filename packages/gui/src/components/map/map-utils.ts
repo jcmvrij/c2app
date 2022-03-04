@@ -1,6 +1,6 @@
 import m from 'mithril';
 // import maplibregl, { GeoJSONSource, LinePaint, MapboxGeoJSONFeature } from 'maplibre-gl';
-import maplibregl, { GeoJSONSource, MapboxGeoJSONFeature } from 'maplibre-gl';
+import { GeoJSONSource, GeoJSONFeature } from 'maplibre-gl';
 import bbox from '@turf/bbox';
 import booleanPointInPolygon from '@turf/boolean-point-in-polygon';
 import { Point, Feature, Polygon, FeatureCollection, Geometry } from 'geojson';
@@ -36,8 +36,8 @@ export const drawConfig = {
   },
 };
 
-export const handleDrawEvent = (map: maplibregl.Map, features: MapboxGeoJSONFeature[], actions: IActions) => {
-  actions.updateDrawings(features[0] as MapboxGeoJSONFeature);
+export const handleDrawEvent = (map: maplibregl.Map, features: GeoJSONFeature[], actions: IActions) => {
+  actions.updateDrawings(features[0]);
   if (features[0].geometry.type === 'Polygon') {
     getFeaturesInPolygon(map, features, actions);
   }
@@ -48,7 +48,7 @@ export const handleDrawEvent = (map: maplibregl.Map, features: MapboxGeoJSONFeat
   instance.open();
 };
 
-const getFeaturesInPolygon = (map: maplibregl.Map, features: Feature[], actions: IActions) => {
+const getFeaturesInPolygon = (map: maplibregl.Map, features: GeoJSONFeature[], actions: IActions) => {
   let layers: Array<string> = [];
 
   if (map.getLayer('ResourcesresourcesIDfiremanResources')) layers.push('ResourcesresourcesIDfiremanResources');
@@ -78,8 +78,8 @@ const getFeaturesInPolygon = (map: maplibregl.Map, features: Feature[], actions:
   actions.updateSelectedFeatures(polyFeatures);
 };
 
-export const displayInfoSidebar = (features: MapboxGeoJSONFeature[], actions: IActions) => {
-  actions.updateClickedFeature(features[0] as MapboxGeoJSONFeature);
+export const displayInfoSidebar = (features: GeoJSONFeature[], actions: IActions) => {
+  actions.updateClickedFeature(features[0] as GeoJSONFeature);
   const instance = M.Sidenav.getInstance(document.getElementById('slide-out-2') as HTMLElement);
   instance.open();
 };
@@ -138,71 +138,71 @@ export const getLabelsSource = (gridSource: FeatureCollection<Polygon>): Feature
 };
 
 export const loadImages = (map: maplibregl.Map) => {
-  map.loadImage(fireman, function (error: any, image: ImageBitmap) {
+  map.loadImage(fireman, (error: any, image: HTMLImageElement | ImageBitmap | null | undefined) => {
     if (error) throw error;
     if (!map.hasImage('FIREFIGHTER')) map.addImage('FIREFIGHTER', image as ImageBitmap);
   });
-  map.loadImage(policeman, function (error: any, image: ImageBitmap) {
+  map.loadImage(policeman, (error: any, image: HTMLImageElement | ImageBitmap | null | undefined) => {
     if (error) throw error;
     if (!map.hasImage('POLICE')) map.addImage('POLICE', image as ImageBitmap);
   });
-  map.loadImage(sanitary, function (error: any, image: ImageBitmap) {
+  map.loadImage(sanitary, (error: any, image: HTMLImageElement | ImageBitmap | null | undefined) => {
     if (error) throw error;
     if (!map.hasImage('MEDICAL')) map.addImage('MEDICAL', image as ImageBitmap);
   });
-  map.loadImage(first_responder, function (error: any, image: ImageBitmap) {
+  map.loadImage(first_responder, (error: any, image: HTMLImageElement | ImageBitmap | null | undefined) => {
     if (error) throw error;
     if (!map.hasImage('OTHER')) map.addImage('OTHER', image as ImageBitmap);
   });
-  map.loadImage(car, function (error: any, image: ImageBitmap) {
+  map.loadImage(car, (error: any, image: HTMLImageElement | ImageBitmap | null | undefined) => {
     if (error) throw error;
     if (!map.hasImage('CAR')) map.addImage('CAR', image as ImageBitmap);
   });
-  map.loadImage(van, function (error: any, image: ImageBitmap) {
+  map.loadImage(van, (error: any, image: HTMLImageElement | ImageBitmap | null | undefined) => {
     if (error) throw error;
     if (!map.hasImage('VAN')) map.addImage('VAN', image as ImageBitmap);
   });
-  map.loadImage(truck, function (error: any, image: ImageBitmap) {
+  map.loadImage(truck, (error: any, image: HTMLImageElement | ImageBitmap | null | undefined) => {
     if (error) throw error;
     if (!map.hasImage('TRUCK')) map.addImage('TRUCK', image as ImageBitmap);
   });
-  map.loadImage(air, function (error: any, image: ImageBitmap) {
+  map.loadImage(air, (error: any, image: HTMLImageElement | ImageBitmap | null | undefined) => {
     if (error) throw error;
     if (!map.hasImage('AIR')) map.addImage('AIR', image as ImageBitmap);
   });
-  map.loadImage(ground, function (error: any, image: ImageBitmap) {
+  map.loadImage(ground, (error: any, image: HTMLImageElement | ImageBitmap | null | undefined) => {
     if (error) throw error;
     if (!map.hasImage('GROUND')) map.addImage('GROUND', image as ImageBitmap);
   });
-  map.loadImage(chemical, function (error: any, image: ImageBitmap) {
+  map.loadImage(chemical, (error: any, image: HTMLImageElement | ImageBitmap | null | undefined) => {
     if (error) throw error;
     if (!map.hasImage('chemical')) map.addImage('chemical', image as ImageBitmap);
   });
-  map.loadImage(roadBlock, function (error: any, image: ImageBitmap) {
+  map.loadImage(roadBlock, (error: any, image: HTMLImageElement | ImageBitmap | null | undefined) => {
     if (error) throw error;
     if (!map.hasImage('roadBlock')) map.addImage('roadBlock', image as ImageBitmap);
   });
-  map.loadImage(media, function (error: any, image: ImageBitmap) {
+  map.loadImage(media, (error: any, image: HTMLImageElement | ImageBitmap | null | undefined) => {
     if (error) throw error;
     if (!map.hasImage('media')) map.addImage('media', image as ImageBitmap);
   });
-  map.loadImage(controlPoint, function (error: any, image: ImageBitmap) {
+  map.loadImage(controlPoint, (error: any, image: HTMLImageElement | ImageBitmap | null | undefined) => {
     if (error) throw error;
     if (!map.hasImage('controlPoint')) map.addImage('controlPoint', image as ImageBitmap);
   });
-  map.loadImage(divisionCommand, function (error: any, image: ImageBitmap) {
+  map.loadImage(divisionCommand, (error: any, image: HTMLImageElement | ImageBitmap | null | undefined) => {
     if (error) throw error;
     if (!map.hasImage('divisionCommand')) map.addImage('divisionCommand', image as ImageBitmap);
   });
-  map.loadImage(evacuation, function (error: any, image: ImageBitmap) {
+  map.loadImage(evacuation, (error: any, image: HTMLImageElement | ImageBitmap | null | undefined) => {
     if (error) throw error;
     if (!map.hasImage('evacuation')) map.addImage('evacuation', image as ImageBitmap);
   });
-  map.loadImage(helicopter, function (error: any, image: ImageBitmap) {
+  map.loadImage(helicopter, (error: any, image: HTMLImageElement | ImageBitmap | null | undefined) => {
     if (error) throw error;
     if (!map.hasImage('helicopter')) map.addImage('helicopter', image as ImageBitmap);
   });
-  map.loadImage(military, function (error: any, image: ImageBitmap) {
+  map.loadImage(military, (error: any, image: HTMLImageElement | ImageBitmap | null | undefined) => {
     if (error) throw error;
     if (!map.hasImage('military')) map.addImage('military', image as ImageBitmap);
   });
@@ -213,7 +213,7 @@ export const switchBasemap = async (map: maplibregl.Map) => {
   const currentStyle = map.getStyle();
   const newStyle = (await m.request(
     'https://geodata.nationaalgeoregister.nl/beta/topotiles-viewer/styles/achtergrond.json'
-  )) as maplibregl.Style;
+  )) as maplibregl.StyleSpecification;
 
   // ensure any sources from the current style are copied across to the new style
   newStyle.sources = Object.assign({}, currentStyle.sources, newStyle.sources);
@@ -267,7 +267,7 @@ export const updateSourcesAndLayers = (appState: IAppModel, actions: IActions, m
           paint: layer.paint ? layer.paint : {},
           filter: layer.filter ? layer.filter : ['all'],
         });
-        map.on('click', layerName, ({ features }) => displayInfoSidebar(features as MapboxGeoJSONFeature[], actions));
+        map.on('click', layerName, ({ features }) => displayInfoSidebar(features as GeoJSONFeature[], actions));
         map.on('mouseenter', layerName, () => (map.getCanvas().style.cursor = 'pointer'));
         map.on('mouseleave', layerName, () => (map.getCanvas().style.cursor = ''));
       }

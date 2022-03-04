@@ -1,13 +1,47 @@
 import m from 'mithril';
-import maplibregl from 'maplibre-gl';
+import maplibregl, { GeoJSONFeature, IControl, Listener, MapEvent, MapEventType } from 'maplibre-gl';
 import MapboxDraw from '@mapbox/mapbox-gl-draw';
 // @ts-ignore
 import { RulerControl } from '@prashis/maplibre-gl-controls';
 import { MeiosisComponent } from '../../services/meiosis';
 import * as MapUtils from './map-utils';
 
+declare type MapLayerEventTypeTwo = {
+  'draw.create': (e: { type: string; features: GeoJSONFeature[] }) => void;
+  'draw.update': (e: { type: string; features: GeoJSONFeature[] }) => void;
+};
+
+// interface MapLayerEventTypeTwo {
+//   'draw.create': (e: {type: string, features: unknown}) => void;
+//   // 'draw.create': (el: string, wasNew: boolean) => void;
+//   'delete': (changedCount: number) => void;
+// }
+
+declare interface DrawableMap {
+  // on<T extends keyof MapLayerEventType>(
+  //   type: T,
+  //   layer: string,
+  //   listener: (ev: MapLayerEventType[T] & Object) => void
+  // ): this;
+  on<T extends keyof MapEventType>(type: T, listener: (ev: MapEventType[T] & Object) => void): this;
+  on(type: MapEvent, listener: Listener): this;
+  on<U extends keyof MapLayerEventTypeTwo>(event: U, listener: MapLayerEventTypeTwo[U]): this;
+
+  // emit<U extends keyof MapLayerEventTypeTwo>(event: U, ...args: Parameters<MapLayerEventTypeTwo[U]>): boolean;
+}
+
+declare interface DrawableMap {
+  on<T extends keyof MapLayerEventTypeTwo>(
+    type: T,
+    layer: string,
+    listener: (ev: MapLayerEventTypeTwo[T]) => void
+  ): this;
+}
+
+class DrawableMap extends maplibregl.Map {}
+
 export const Map: MeiosisComponent = () => {
-  let map: maplibregl.Map;
+  let map: DrawableMap;
   let draw: MapboxDraw;
 
   return {
@@ -22,14 +56,17 @@ export const Map: MeiosisComponent = () => {
         style: 'https://geodata.nationaalgeoregister.nl/beta/topotiles-viewer/styles/achtergrond.json',
         center: [4.3, 52.07] as [number, number],
         zoom: 12,
-      });
+      }) as DrawableMap;
       MapUtils.loadImages(map);
       MapUtils.updateGrid(appState, actions, map);
 
       // Add draw controls
       draw = new MapboxDraw(MapUtils.drawConfig);
-      map.addControl(new maplibregl.NavigationControl(), 'top-left');
-      map.addControl(draw, 'top-left');
+      map.addControl(
+        new maplibregl.NavigationControl({ showCompass: true, showZoom: true, visualizePitch: true }),
+        'top-left'
+      );
+      map.addControl(draw as unknown as IControl, 'top-left');
       map.addControl(new RulerControl(), 'top-left');
 
       // Add map listeners
