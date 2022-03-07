@@ -20,7 +20,7 @@ import ch from '../ch.json';
 import { GeoJSONFeature, LayerSpecification, LineLayerSpecification } from 'maplibre-gl';
 import { routingSvc } from './routing-service';
 import { Pages } from '../models';
-import { GeoJSONFeatureTwo } from '../components/sidebars/poi-formatting';
+import { IGeoJSONFeatureTwo } from '../components/sidebars/poi-formatting';
 
 export interface ILayer {
   layerName: string;
@@ -61,7 +61,7 @@ export interface IAppModel {
     alert?: IAlert;
 
     // Clicking/Selecting
-    clickedFeature?: GeoJSONFeatureTwo;
+    clickedFeature?: IGeoJSONFeatureTwo;
     selectedFeatures?: FeatureCollection;
     latestDrawing: Feature;
     clearDrawing: {

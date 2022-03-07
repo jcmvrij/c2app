@@ -18,7 +18,7 @@ export const profileModal: FactoryComponent<{
           m(
             'form.row',
             {
-              onsubmit: function (e: Event) {
+              onsubmit: (e: Event) => {
                 e.preventDefault();
               },
             },

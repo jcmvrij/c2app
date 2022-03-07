@@ -26,8 +26,6 @@ declare interface DrawableMap {
   on<T extends keyof MapEventType>(type: T, listener: (ev: MapEventType[T] & Object) => void): this;
   on(type: MapEvent, listener: Listener): this;
   on<U extends keyof MapLayerEventTypeTwo>(event: U, listener: MapLayerEventTypeTwo[U]): this;
-
-  // emit<U extends keyof MapLayerEventTypeTwo>(event: U, ...args: Parameters<MapLayerEventTypeTwo[U]>): boolean;
 }
 
 declare interface DrawableMap {

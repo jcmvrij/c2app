@@ -65,7 +65,7 @@ export const poiSidebar: MeiosisComponent = () => {
       const elem = document.getElementById('slide-out-2') as HTMLElement;
       M.Sidenav.init(elem, {
         edge: 'right',
-        onOpenStart: function (elem: Element) {
+        onOpenStart: (elem: Element) => {
           // @ts-ignore
           elem.M_Sidenav._overlay.remove();
         },

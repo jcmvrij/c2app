@@ -44,7 +44,7 @@ export const profileSidebar: MeiosisComponent = () => {
       const elem = document.getElementById('slide-out-profile') as HTMLElement;
       M.Sidenav.init(elem, {
         edge: 'right',
-        onOpenStart: function (elem: Element) {
+        onOpenStart: (elem: Element) => {
           // @ts-ignore
           elem.M_Sidenav._overlay.remove();
         },
