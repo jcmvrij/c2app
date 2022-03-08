@@ -694,7 +694,7 @@ export const appStateMgmt = {
                       showLayer: true,
                       type: { type: 'symbol' } as maplibregl.LayerSpecification,
                       layout: {
-                        'icon-image': 'chemical',
+                        'icon-image': 'CHEMICAL',
                         'icon-size': 0.5,
                         'icon-allow-overlap': true,
                       },
@@ -758,7 +758,7 @@ export const appStateMgmt = {
                       showLayer: true,
                       type: { type: 'symbol' } as maplibregl.LayerSpecification,
                       layout: {
-                        'icon-image': 'chemical',
+                        'icon-image': 'CHEMICAL',
                         'icon-size': 0.5,
                         'icon-allow-overlap': true,
                       },

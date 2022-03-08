@@ -230,7 +230,7 @@ export class Socket {
                     showLayer: true,
                     type: { type: 'symbol' } as maplibregl.LayerSpecification,
                     layout: {
-                      'icon-image': 'media',
+                      'icon-image': 'MEDIA',
                       'icon-size': 0.5,
                       'icon-allow-overlap': true,
                     },
@@ -287,7 +287,7 @@ export class Socket {
                     showLayer: true,
                     type: { type: 'symbol' } as maplibregl.LayerSpecification,
                     layout: {
-                      'icon-image': 'chemical',
+                      'icon-image': 'CHEMICAL',
                       'icon-size': 0.5,
                       'icon-allow-overlap': true,
                     },

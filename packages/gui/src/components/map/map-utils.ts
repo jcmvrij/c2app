@@ -1,10 +1,7 @@
-import m from 'mithril';
-// import maplibregl, { GeoJSONSource, LinePaint, MapboxGeoJSONFeature } from 'maplibre-gl';
 import { GeoJSONSource, GeoJSONFeature } from 'maplibre-gl';
 import bbox from '@turf/bbox';
 import booleanPointInPolygon from '@turf/boolean-point-in-polygon';
 import { Point, Feature, Polygon, FeatureCollection, Geometry } from 'geojson';
-// import { IActions, IAppModel, ILayer, ISource, SourceType } from '../../services/meiosis';
 import { IActions, IAppModel, ILayer, ISource } from '../../services/meiosis';
 import SquareGrid from '@turf/square-grid';
 import polylabel from 'polylabel';
@@ -129,39 +126,6 @@ export const loadImages = (map: maplibregl.Map) => {
   });
 };
 
-
-export const switchBasemap = async (map: maplibregl.Map) => {
-  // TODO this function used to switch between mapbox styles in the newStyle const, can it be removed?
-  const currentStyle = map.getStyle();
-  const newStyle = (await m.request(
-    'https://geodata.nationaalgeoregister.nl/beta/topotiles-viewer/styles/achtergrond.json'
-  )) as maplibregl.StyleSpecification;
-
-  // ensure any sources from the current style are copied across to the new style
-  newStyle.sources = Object.assign({}, currentStyle.sources, newStyle.sources);
-
-  // find the index of where to insert our layers to retain in the new style
-  let labelIndex = newStyle.layers?.findIndex((el) => {
-    return el.id == 'state-label';
-  });
-
-  // default to on top
-  if (labelIndex === -1) {
-    labelIndex = newStyle.layers?.length;
-  }
-  const appLayers = currentStyle.layers?.filter((el) => {
-    // app layers are the layers to retain, and these are any layers which have a different source set
-    const source = (el as any).source;
-    return source && source != 'mapbox://mapbox.satellite' && source != 'mapbox' && source != 'composite';
-  });
-
-  if (!newStyle || !newStyle.layers || !appLayers) return;
-  newStyle.layers = [...newStyle.layers.slice(0, labelIndex), ...appLayers, ...newStyle.layers.slice(labelIndex, -1)];
-
-  map.setStyle(newStyle);
-  loadImages(map);
-};
-
 export const updateSourcesAndLayers = (appState: IAppModel, actions: IActions, map: maplibregl.Map) => {
   appState.app.sources.forEach((source: ISource) => {
     // Set source
@@ -194,8 +158,9 @@ export const updateSourcesAndLayers = (appState: IAppModel, actions: IActions, m
         map.on('mouseleave', layerName, () => (map.getCanvas().style.cursor = ''));
       }
       map.setLayoutProperty(layerName, 'visibility', layer.showLayer ? 'visible' : 'none');
+      
       // if (source.sourceCategory === SourceType.alert || source.sourceCategory === SourceType.plume)
-      // map.setPaintProperty(layerName, 'line-opacity', (layer.paint as LinePaint)['line-opacity']);
+      // map.setPaintProperty(layerName, 'line-opacity', (layer.paint as LineLayerSpecification['paint'])!['line-opacity']);
     });
   });
 };
@@ -230,7 +195,6 @@ export const updateSatellite = (appState: IAppModel, map: maplibregl.Map) => {
         layout: {
           visibility: appState.app.showSatellite ? 'visible' : 'none',
         },
-
         paint: {},
       },
       'roads_case'
@@ -238,7 +202,6 @@ export const updateSatellite = (appState: IAppModel, map: maplibregl.Map) => {
   }
   map.setLayoutProperty(layerName, 'visibility', appState.app.showSatellite ? 'visible' : 'none');
   // map.setPaintProperty(
-  //   // layer might be wrong
   // 'background',
   // 'fill-opacity',
   // appState.app.showSatellite ? 0 : ['interpolate', ['linear'], ['zoom'], 15, 0, 16, 1]

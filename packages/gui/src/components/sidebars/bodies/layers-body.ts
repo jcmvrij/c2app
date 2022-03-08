@@ -17,24 +17,6 @@ export const layersBody: FactoryComponent<{
             m(
               '.collapsible-body',
               m('.row', [
-                m(
-                  'button.btn.waves-effect.waves-light.col.s5.offset-s1',
-                  {
-                    onclick: () => {
-                      vnode.attrs.actions.switchStyle('mapbox/dark-v10');
-                    },
-                  },
-                  'Dark'
-                ),
-                m(
-                  'button.btn.waves-effect.waves-light.col.s5',
-                  {
-                    onclick: () => {
-                      vnode.attrs.actions.switchStyle('mapbox/streets-v11');
-                    },
-                  },
-                  'Light'
-                ),
                 m('.valign-wrapper.col.s12', [
                   m(
                     '.switch.col.s2',

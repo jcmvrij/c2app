@@ -1,7 +1,6 @@
 import m from 'mithril';
 import maplibregl, { GeoJSONFeature, IControl, Listener, MapEvent, MapEventType } from 'maplibre-gl';
 import MapboxDraw from '@mapbox/mapbox-gl-draw';
-// @ts-ignore
 import { RulerControl } from '@prashis/maplibre-gl-controls';
 import { MeiosisComponent } from '../../services/meiosis';
 import * as MapUtils from './map-utils';
@@ -11,18 +10,7 @@ declare type MapLayerEventTypeTwo = {
   'draw.update': (e: { type: string; features: GeoJSONFeature[] }) => void;
 };
 
-// interface MapLayerEventTypeTwo {
-//   'draw.create': (e: {type: string, features: unknown}) => void;
-//   // 'draw.create': (el: string, wasNew: boolean) => void;
-//   'delete': (changedCount: number) => void;
-// }
-
 declare interface DrawableMap {
-  // on<T extends keyof MapLayerEventType>(
-  //   type: T,
-  //   layer: string,
-  //   listener: (ev: MapLayerEventType[T] & Object) => void
-  // ): this;
   on<T extends keyof MapEventType>(type: T, listener: (ev: MapEventType[T] & Object) => void): this;
   on(type: MapEvent, listener: Listener): this;
   on<U extends keyof MapLayerEventTypeTwo>(event: U, listener: MapLayerEventTypeTwo[U]): this;
@@ -90,11 +78,6 @@ export const Map: MeiosisComponent = () => {
       // Update the grid if necessary
       if (appState.app.gridOptions.updateGrid) {
         MapUtils.updateGrid(appState, actions, map);
-      }
-
-      // Check if basemap should be switched
-      if (!map.getStyle().sprite?.includes(appState.app.mapStyle)) {
-        MapUtils.switchBasemap(map).catch();
       }
 
       MapUtils.updateSourcesAndLayers(appState, actions, map);
