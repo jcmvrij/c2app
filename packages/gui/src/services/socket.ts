@@ -448,7 +448,7 @@ export class Socket {
                       showLayer: true,
                       type: { type: 'symbol' } as maplibregl.LayerSpecification,
                       layout: {
-                        'icon-image': 'fireman',
+                        'icon-image': 'FIREFIGHTER',
                         'icon-size': 0.5,
                         'icon-allow-overlap': true,
                       },

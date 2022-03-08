@@ -8,24 +8,7 @@ import { Point, Feature, Polygon, FeatureCollection, Geometry } from 'geojson';
 import { IActions, IAppModel, ILayer, ISource } from '../../services/meiosis';
 import SquareGrid from '@turf/square-grid';
 import polylabel from 'polylabel';
-// ICONS
-import car from '../../assets/Operations/Car.png';
-import van from '../../assets/Operations/Car.png';
-import controlPoint from '../../assets/Operations/Control point.png';
-import divisionCommand from '../../assets/Operations/Division command.png';
-import evacuation from '../../assets/Operations/Evacuation.png';
-import fireman from '../../assets/Operations/Firemen unit.png';
-import helicopter from '../../assets/Operations/Helicopter.png';
-import media from '../../assets/Operations/Media.png';
-import sanitary from '../../assets/Operations/Medical services.png';
-import military from '../../assets/Operations/Military.png';
-import policeman from '../../assets/Operations/Police unit.png';
-import roadBlock from '../../assets/Operations/Road block.png';
-import truck from '../../assets/Operations/Truck.png';
-import chemical from '../../assets/Incidents/Chemical.png';
-import air from '../../assets/Operations/air.png';
-import ground from '../../assets/Operations/ground.png';
-import first_responder from '../../assets/Operations/Medical services.png';
+import { appIcons } from './map-icons';
 
 export const drawConfig = {
   displayControlsDefault: false,
@@ -138,75 +121,14 @@ export const getLabelsSource = (gridSource: FeatureCollection<Polygon>): Feature
 };
 
 export const loadImages = (map: maplibregl.Map) => {
-  map.loadImage(fireman, (error: any, image: HTMLImageElement | ImageBitmap | null | undefined) => {
-    if (error) throw error;
-    if (!map.hasImage('FIREFIGHTER')) map.addImage('FIREFIGHTER', image as ImageBitmap);
-  });
-  map.loadImage(policeman, (error: any, image: HTMLImageElement | ImageBitmap | null | undefined) => {
-    if (error) throw error;
-    if (!map.hasImage('POLICE')) map.addImage('POLICE', image as ImageBitmap);
-  });
-  map.loadImage(sanitary, (error: any, image: HTMLImageElement | ImageBitmap | null | undefined) => {
-    if (error) throw error;
-    if (!map.hasImage('MEDICAL')) map.addImage('MEDICAL', image as ImageBitmap);
-  });
-  map.loadImage(first_responder, (error: any, image: HTMLImageElement | ImageBitmap | null | undefined) => {
-    if (error) throw error;
-    if (!map.hasImage('OTHER')) map.addImage('OTHER', image as ImageBitmap);
-  });
-  map.loadImage(car, (error: any, image: HTMLImageElement | ImageBitmap | null | undefined) => {
-    if (error) throw error;
-    if (!map.hasImage('CAR')) map.addImage('CAR', image as ImageBitmap);
-  });
-  map.loadImage(van, (error: any, image: HTMLImageElement | ImageBitmap | null | undefined) => {
-    if (error) throw error;
-    if (!map.hasImage('VAN')) map.addImage('VAN', image as ImageBitmap);
-  });
-  map.loadImage(truck, (error: any, image: HTMLImageElement | ImageBitmap | null | undefined) => {
-    if (error) throw error;
-    if (!map.hasImage('TRUCK')) map.addImage('TRUCK', image as ImageBitmap);
-  });
-  map.loadImage(air, (error: any, image: HTMLImageElement | ImageBitmap | null | undefined) => {
-    if (error) throw error;
-    if (!map.hasImage('AIR')) map.addImage('AIR', image as ImageBitmap);
-  });
-  map.loadImage(ground, (error: any, image: HTMLImageElement | ImageBitmap | null | undefined) => {
-    if (error) throw error;
-    if (!map.hasImage('GROUND')) map.addImage('GROUND', image as ImageBitmap);
-  });
-  map.loadImage(chemical, (error: any, image: HTMLImageElement | ImageBitmap | null | undefined) => {
-    if (error) throw error;
-    if (!map.hasImage('chemical')) map.addImage('chemical', image as ImageBitmap);
-  });
-  map.loadImage(roadBlock, (error: any, image: HTMLImageElement | ImageBitmap | null | undefined) => {
-    if (error) throw error;
-    if (!map.hasImage('roadBlock')) map.addImage('roadBlock', image as ImageBitmap);
-  });
-  map.loadImage(media, (error: any, image: HTMLImageElement | ImageBitmap | null | undefined) => {
-    if (error) throw error;
-    if (!map.hasImage('media')) map.addImage('media', image as ImageBitmap);
-  });
-  map.loadImage(controlPoint, (error: any, image: HTMLImageElement | ImageBitmap | null | undefined) => {
-    if (error) throw error;
-    if (!map.hasImage('controlPoint')) map.addImage('controlPoint', image as ImageBitmap);
-  });
-  map.loadImage(divisionCommand, (error: any, image: HTMLImageElement | ImageBitmap | null | undefined) => {
-    if (error) throw error;
-    if (!map.hasImage('divisionCommand')) map.addImage('divisionCommand', image as ImageBitmap);
-  });
-  map.loadImage(evacuation, (error: any, image: HTMLImageElement | ImageBitmap | null | undefined) => {
-    if (error) throw error;
-    if (!map.hasImage('evacuation')) map.addImage('evacuation', image as ImageBitmap);
-  });
-  map.loadImage(helicopter, (error: any, image: HTMLImageElement | ImageBitmap | null | undefined) => {
-    if (error) throw error;
-    if (!map.hasImage('helicopter')) map.addImage('helicopter', image as ImageBitmap);
-  });
-  map.loadImage(military, (error: any, image: HTMLImageElement | ImageBitmap | null | undefined) => {
-    if (error) throw error;
-    if (!map.hasImage('military')) map.addImage('military', image as ImageBitmap);
+  appIcons.forEach(([image, name]) => {
+    map.loadImage(image, (error, img) => {
+      if (error) throw error;
+      if (!map.hasImage(name)) map.addImage(name, img as ImageBitmap);
+    });
   });
 };
+
 
 export const switchBasemap = async (map: maplibregl.Map) => {
   // TODO this function used to switch between mapbox styles in the newStyle const, can it be removed?
