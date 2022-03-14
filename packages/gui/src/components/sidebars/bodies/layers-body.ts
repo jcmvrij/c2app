@@ -31,7 +31,7 @@ export const layersBody: FactoryComponent<{
                       m('span.lever'),
                     ])
                   ),
-                  m('p.col.s9', 'NL Satellite'),
+                  m('p.col.s8', 'NL Satellite'),
                 ]),
               ])
             ),
@@ -65,7 +65,7 @@ export const layersBody: FactoryComponent<{
                             m('span.lever'),
                           ])
                         ),
-                        m('p.col.s9', layer.layerName),
+                        m('p.col.s8', layer.layerName),
                       ]);
                     });
                   })
@@ -104,7 +104,7 @@ export const layersBody: FactoryComponent<{
                             m('span.lever'),
                           ])
                         ),
-                        m('p.col.s9', layer.layerName),
+                        m('p.col.s8', layer.layerName),
                       ]);
                     });
                   })
@@ -202,7 +202,7 @@ export const layersBody: FactoryComponent<{
                           m('span.lever'),
                         ])
                       ),
-                      m('p.col.s9', source.sourceName),
+                      m('p.col.s8', source.sourceName),
                     ]);
                   })
                 )
@@ -242,7 +242,7 @@ export const layersBody: FactoryComponent<{
                           m('span.lever'),
                         ])
                       ),
-                      m('p.col.s9', source.sourceName),
+                      m('p.col.s8', source.sourceName),
                     ]);
                   })
                 )

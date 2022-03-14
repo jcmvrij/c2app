@@ -425,8 +425,7 @@ export class Socket {
     // These positions are received directly from the agent-smith simulator
     // These are therefore NOT assistance resources, but 'just' simEntities
     this.socket.on('positions', (data: FeatureCollection) => {
-      if (!this.shouldUpdate()) {
-      } else {
+      if (this.shouldUpdate()) {
         us({
           app: {
             sources: (sources: Array<ISource>) => {

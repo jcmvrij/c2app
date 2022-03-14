@@ -64,6 +64,10 @@ export const Map: MeiosisComponent = () => {
           MapUtils.updateSourcesAndLayers(appState, actions, map);
           MapUtils.updateSatellite(appState, map);
         });
+
+        map.on('styleimagemissing', (e) => {
+          console.log(`Image ${e.id} is missing!`)
+          });
       });
     },
     // Executes on every redraw
