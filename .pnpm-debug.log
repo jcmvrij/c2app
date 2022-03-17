@@ -25,47 +25,2918 @@
     "wd": "C:\\dev\\c2app\\packages\\shared"
   },
   "4 debug pnpm:lifecycle": {
-    "depPath": "C:\\dev\\c2app\\packages\\server",
-    "line": "'ts-node-dev' is not recognized as an internal or external command,",
+    "depPath": "C:\\dev\\c2app\\packages\\shared",
+    "line": "\u001bc15:09:54 - Starting compilation in watch mode...",
     "stage": "dev",
-    "stdio": "stderr",
-    "wd": "C:\\dev\\c2app\\packages\\server"
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\shared"
   },
   "5 debug pnpm:lifecycle": {
     "depPath": "C:\\dev\\c2app\\packages\\server",
-    "line": "operable program or batch file.",
+    "line": "[INFO] 15:09:54 ts-node-dev ver. 1.1.8 (using ts-node ver. 9.1.1, typescript ver. 4.5.5)",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\server"
+  },
+  "6 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "> safr-gui@0.1.0 start",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "7 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "> webpack serve --env development --open",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "8 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\shared",
+    "line": "15:09:59 - Found 0 errors. Watching for file changes.",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\shared"
+  },
+  "9 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "Running in development mode, output directed to C:\\dev\\c2app\\packages\\gui\\dist.",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "10 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "<i> [webpack-dev-server] Project is running at:",
+    "stage": "dev",
+    "stdio": "stderr",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "11 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "<i> [webpack-dev-server] Loopback: \u001b[36mhttp://localhost:1234/\u001b[39m",
+    "stage": "dev",
+    "stdio": "stderr",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "12 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "<i> [webpack-dev-server] On Your Network (IPv4): \u001b[36mhttp://139.63.176.222:1234/\u001b[39m",
+    "stage": "dev",
+    "stdio": "stderr",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "13 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "<i> [webpack-dev-server] Content not from webpack is served from '\u001b[36mC:\\dev\\c2app\\packages\\gui\\public\u001b[39m' directory",
+    "stage": "dev",
+    "stdio": "stderr",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "14 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\server",
+    "line": "\u001b[32m[Nest] 13676  - \u001b[39m14/03/2022, 15:10:03 \u001b[32m    LOG\u001b[39m \u001b[38;5;3m[NestFactory] \u001b[39m\u001b[32mStarting Nest application...\u001b[39m",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\server"
+  },
+  "15 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\server",
+    "line": "\u001b[32m[Nest] 13676  - \u001b[39m14/03/2022, 15:10:03 \u001b[32m    LOG\u001b[39m \u001b[38;5;3m[InstanceLoader] \u001b[39m\u001b[32mHttpModule dependencies initialized\u001b[39m\u001b[38;5;3m +55ms\u001b[39m",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\server"
+  },
+  "16 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\server",
+    "line": "\u001b[32m[Nest] 13676  - \u001b[39m14/03/2022, 15:10:03 \u001b[32m    LOG\u001b[39m \u001b[38;5;3m[InstanceLoader] \u001b[39m\u001b[32mConfigHostModule dependencies initialized\u001b[39m\u001b[38;5;3m +1ms\u001b[39m",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\server"
+  },
+  "17 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\server",
+    "line": "\u001b[32m[Nest] 13676  - \u001b[39m14/03/2022, 15:10:03 \u001b[32m    LOG\u001b[39m \u001b[38;5;3m[InstanceLoader] \u001b[39m\u001b[32mMessagesModule dependencies initialized\u001b[39m\u001b[38;5;3m +1ms\u001b[39m",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\server"
+  },
+  "18 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\server",
+    "line": "\u001b[32m[Nest] 13676  - \u001b[39m14/03/2022, 15:10:03 \u001b[32m    LOG\u001b[39m \u001b[38;5;3m[InstanceLoader] \u001b[39m\u001b[32mConfigModule dependencies initialized\u001b[39m\u001b[38;5;3m +2ms\u001b[39m",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\server"
+  },
+  "19 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\server",
+    "line": "\u001b[32m[Nest] 13676  - \u001b[39m14/03/2022, 15:10:03 \u001b[32m    LOG\u001b[39m \u001b[38;5;3m[InstanceLoader] \u001b[39m\u001b[32mAppModule dependencies initialized\u001b[39m\u001b[38;5;3m +13ms\u001b[39m",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\server"
+  },
+  "20 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\server",
+    "line": "\u001b[32m[Nest] 13676  - \u001b[39m14/03/2022, 15:10:03 \u001b[32m    LOG\u001b[39m \u001b[38;5;3m[WebSocketsController] \u001b[39m\u001b[32mDefaultWebSocketGateway subscribed to the \"client-init\" message\u001b[39m\u001b[38;5;3m +35ms\u001b[39m",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\server"
+  },
+  "21 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\server",
+    "line": "\u001b[32m[Nest] 13676  - \u001b[39m14/03/2022, 15:10:03 \u001b[32m    LOG\u001b[39m \u001b[38;5;3m[WebSocketsController] \u001b[39m\u001b[32mDefaultWebSocketGateway subscribed to the \"client-create\" message\u001b[39m\u001b[38;5;3m +1ms\u001b[39m",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\server"
+  },
+  "22 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\server",
+    "line": "\u001b[32m[Nest] 13676  - \u001b[39m14/03/2022, 15:10:03 \u001b[32m    LOG\u001b[39m \u001b[38;5;3m[WebSocketsController] \u001b[39m\u001b[32mDefaultWebSocketGateway subscribed to the \"client-update\" message\u001b[39m\u001b[38;5;3m +0ms\u001b[39m",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\server"
+  },
+  "23 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\server",
+    "line": "\u001b[32m[Nest] 13676  - \u001b[39m14/03/2022, 15:10:03 \u001b[32m    LOG\u001b[39m \u001b[38;5;3m[WebSocketsController] \u001b[39m\u001b[32mDefaultWebSocketGateway subscribed to the \"client-delete\" message\u001b[39m\u001b[38;5;3m +1ms\u001b[39m",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\server"
+  },
+  "24 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\server",
+    "line": "\u001b[32m[Nest] 13676  - \u001b[39m14/03/2022, 15:10:03 \u001b[32m    LOG\u001b[39m \u001b[38;5;3m[WebSocketsController] \u001b[39m\u001b[32mDefaultWebSocketGateway subscribed to the \"client-message\" message\u001b[39m\u001b[38;5;3m +1ms\u001b[39m",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\server"
+  },
+  "25 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\server",
+    "line": "\u001b[32m[Nest] 13676  - \u001b[39m14/03/2022, 15:10:03 \u001b[32m    LOG\u001b[39m \u001b[38;5;3m[WebSocketsController] \u001b[39m\u001b[32mDefaultWebSocketGateway subscribed to the \"client-cht\" message\u001b[39m\u001b[38;5;3m +1ms\u001b[39m",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\server"
+  },
+  "26 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\server",
+    "line": "\u001b[32m[Nest] 13676  - \u001b[39m14/03/2022, 15:10:03 \u001b[32m    LOG\u001b[39m \u001b[38;5;3m[WebSocketsController] \u001b[39m\u001b[32mDefaultWebSocketGateway subscribed to the \"client-pop\" message\u001b[39m\u001b[38;5;3m +1ms\u001b[39m",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\server"
+  },
+  "27 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\server",
+    "line": "\u001b[32m[Nest] 13676  - \u001b[39m14/03/2022, 15:10:03 \u001b[32m    LOG\u001b[39m \u001b[38;5;3m[RoutesResolver] \u001b[39m\u001b[32mAppController {/}:\u001b[39m\u001b[38;5;3m +6ms\u001b[39m",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\server"
+  },
+  "28 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\server",
+    "line": "\u001b[32m[Nest] 13676  - \u001b[39m14/03/2022, 15:10:03 \u001b[32m    LOG\u001b[39m \u001b[38;5;3m[RouterExplorer] \u001b[39m\u001b[32mMapped {/version, GET} route\u001b[39m\u001b[38;5;3m +6ms\u001b[39m",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\server"
+  },
+  "29 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\server",
+    "line": "\u001b[32m[Nest] 13676  - \u001b[39m14/03/2022, 15:10:03 \u001b[32m    LOG\u001b[39m \u001b[38;5;3m[RoutesResolver] \u001b[39m\u001b[32mMessagesController {/messages}:\u001b[39m\u001b[38;5;3m +1ms\u001b[39m",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\server"
+  },
+  "30 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\server",
+    "line": "\u001b[32m[Nest] 13676  - \u001b[39m14/03/2022, 15:10:03 \u001b[32m    LOG\u001b[39m \u001b[38;5;3m[RouterExplorer] \u001b[39m\u001b[32mMapped {/messages/:topic, POST} route\u001b[39m\u001b[38;5;3m +3ms\u001b[39m",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\server"
+  },
+  "31 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\server",
+    "line": "\u001b[32m[Nest] 13676  - \u001b[39m14/03/2022, 15:10:03 \u001b[32m    LOG\u001b[39m \u001b[38;5;3m[RouterExplorer] \u001b[39m\u001b[32mMapped {/messages/:topic, GET} route\u001b[39m\u001b[38;5;3m +2ms\u001b[39m",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\server"
+  },
+  "32 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\server",
+    "line": "\u001b[32m[Nest] 13676  - \u001b[39m14/03/2022, 15:10:03 \u001b[32m    LOG\u001b[39m \u001b[38;5;3m[RouterExplorer] \u001b[39m\u001b[32mMapped {/messages/:topic/:id, GET} route\u001b[39m\u001b[38;5;3m +2ms\u001b[39m",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\server"
+  },
+  "33 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\server",
+    "line": "\u001b[32m[Nest] 13676  - \u001b[39m14/03/2022, 15:10:03 \u001b[32m    LOG\u001b[39m \u001b[38;5;3m[RouterExplorer] \u001b[39m\u001b[32mMapped {/messages/:topic/:id, PATCH} route\u001b[39m\u001b[38;5;3m +2ms\u001b[39m",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\server"
+  },
+  "34 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\server",
+    "line": "\u001b[32m[Nest] 13676  - \u001b[39m14/03/2022, 15:10:03 \u001b[32m    LOG\u001b[39m \u001b[38;5;3m[RouterExplorer] \u001b[39m\u001b[32mMapped {/messages/:topic/:id, DELETE} route\u001b[39m\u001b[38;5;3m +1ms\u001b[39m",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\server"
+  },
+  "35 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\server",
+    "line": "\u001b[32m[Nest] 13676  - \u001b[39m14/03/2022, 15:10:03 \u001b[32m    LOG\u001b[39m \u001b[38;5;3m[NestApplication] \u001b[39m\u001b[32mNest application successfully started\u001b[39m\u001b[38;5;3m +7ms\u001b[39m",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\server"
+  },
+  "36 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\server",
+    "line": "Connected: VwBS88ot4H7hu58UAAAB Client count: 1",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\server"
+  },
+  "37 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\server",
+    "line": "Number of entries in collection 'plumes': 2",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\server"
+  },
+  "38 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\server",
+    "line": "Number of entries in collection 'contexts': 3",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\server"
+  },
+  "39 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\server",
+    "line": "Number of entries in collection 'chemical_incidents': 1",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\server"
+  },
+  "40 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\server",
+    "line": "Number of entries in collection 'positions': 124",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\server"
+  },
+  "41 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\server",
+    "line": "Number of entries in collection 'resources': 45",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\server"
+  },
+  "42 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\server",
+    "line": "Storing all messages in db/safr.db.",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\server"
+  },
+  "43 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\server",
+    "line": "Number of entries in collection 'plumes': 2",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\server"
+  },
+  "44 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\server",
+    "line": "Number of entries in collection 'contexts': 3",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\server"
+  },
+  "45 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\server",
+    "line": "Number of entries in collection 'chemical_incidents': 1",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\server"
+  },
+  "46 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\server",
+    "line": "Number of entries in collection 'positions': 124",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\server"
+  },
+  "47 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\server",
+    "line": "Number of entries in collection 'resources': 45",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\server"
+  },
+  "48 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\server",
+    "line": "Storing all messages in db/safr.db.",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\server"
+  },
+  "49 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "<i> [webpack-dev-middleware] wait until bundle finished: /",
+    "stage": "dev",
+    "stdio": "stderr",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "50 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "assets by info 1.76 MiB \u001b[1m\u001b[32m[immutable]\u001b[39m\u001b[22m 26 assets",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "51 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "assets by path \u001b[1m\u001b[32mcomponents/\u001b[39m\u001b[22m 5.73 KiB 23 assets",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "52 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "assets by path \u001b[1m\u001b[32mservices/*.ts\u001b[39m\u001b[22m 9.32 KiB",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "53 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "  asset \u001b[1m\u001b[32mservices/meiosis.d.ts\u001b[39m\u001b[22m 7.77 KiB \u001b[1m\u001b[32m[emitted]\u001b[39m\u001b[22m",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "54 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "  asset \u001b[1m\u001b[32mservices/socket.d.ts\u001b[39m\u001b[22m 824 bytes \u001b[1m\u001b[32m[emitted]\u001b[39m\u001b[22m",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "55 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "  asset \u001b[1m\u001b[32mservices/routing-service.d.ts\u001b[39m\u001b[22m 755 bytes \u001b[1m\u001b[32m[emitted]\u001b[39m\u001b[22m",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "56 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "assets by path \u001b[1m\u001b[32massets/*.png\u001b[39m\u001b[22m 16.1 KiB",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "57 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "  asset \u001b[1m\u001b[32massets/pwa-512x512.png\u001b[39m\u001b[22m 11 KiB \u001b[1m\u001b[32m[emitted]\u001b[39m\u001b[22m [from: src/assets/pwa-512x512.png] \u001b[1m\u001b[32m[copied]\u001b[39m\u001b[22m",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "58 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "  asset \u001b[1m\u001b[32massets/pwa-192x192.png\u001b[39m\u001b[22m 5.18 KiB \u001b[1m\u001b[32m[emitted]\u001b[39m\u001b[22m [from: src/assets/pwa-192x192.png] \u001b[1m\u001b[32m[copied]\u001b[39m\u001b[22m",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "59 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "assets by path \u001b[1m\u001b[32mmodels/*.ts\u001b[39m\u001b[22m 592 bytes",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "60 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "  asset \u001b[1m\u001b[32mmodels/page.d.ts\u001b[39m\u001b[22m 567 bytes \u001b[1m\u001b[32m[emitted]\u001b[39m\u001b[22m",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "61 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "  asset \u001b[1m\u001b[32mmodels/index.d.ts\u001b[39m\u001b[22m 25 bytes \u001b[1m\u001b[32m[emitted]\u001b[39m\u001b[22m",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "62 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "+ 7 assets",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "63 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "runtime modules 26.2 KiB 12 modules",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "64 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "javascript modules 2.39 MiB",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "65 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "  modules by path \u001b[1m./node_modules/.pnpm/\u001b[39m\u001b[22m 2.2 MiB 153 modules",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "66 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "  modules by path \u001b[1m./src/\u001b[39m\u001b[22m 167 KiB 33 modules",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "67 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "  modules by path \u001b[1m../shared/dist/\u001b[39m\u001b[22m 27.6 KiB",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "68 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "    modules by path \u001b[1m../shared/dist/models/*.js\u001b[39m\u001b[22m 24.6 KiB 4 modules",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "69 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "    + 2 modules",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "70 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "asset modules 31.4 KiB (javascript) 1.76 MiB (asset)",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "71 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "  modules by mime type \u001b[1mimage/svg+xml\u001b[39m\u001b[22m 30.3 KiB",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "72 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "    \u001b[1mdata:image/svg+xml;charset=utf-8,%3Csvg width=%27..\u001b[39m\u001b[22m 301 bytes \u001b[1m\u001b[33m[built]\u001b[39m\u001b[22m \u001b[1m\u001b[33m[code generated]\u001b[39m\u001b[22m",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "73 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "    + 32 modules",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "74 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "  modules by path \u001b[1m./\u001b[39m\u001b[22m 1.07 KiB (javascript) 1.76 MiB (asset)",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "75 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "    modules by path \u001b[1m./src/\u001b[39m\u001b[22m 672 bytes (javascript) 49.4 KiB (asset) 16 modules",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "76 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "    modules by path \u001b[1m./node_modules/.pnpm/\u001b[39m\u001b[22m 420 bytes (javascript) 1.72 MiB (asset) 10 modules",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "77 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "\u001b[1m./src/template/chem_options.json\u001b[39m\u001b[22m 17.3 KiB \u001b[1m\u001b[33m[built]\u001b[39m\u001b[22m \u001b[1m\u001b[33m[code generated]\u001b[39m\u001b[22m",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "78 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "webpack 5.69.1 compiled \u001b[1m\u001b[32msuccessfully\u001b[39m\u001b[22m in 14355 ms",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "79 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\server",
+    "line": "Connected: 1VLecPgaUIMMYzX0AAAD Client count: 2",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\server"
+  },
+  "80 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\server",
+    "line": "Disconnected: VwBS88ot4H7hu58UAAAB Client count: 1",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\server"
+  },
+  "81 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\server",
+    "line": "\u001b[1;31m{\"errno\":-4078,\"code\":\"ECONNREFUSED\",\"syscall\":\"connect\",\"address\":\"127.0.0.1\",\"port\":3501}\u001b[0m",
     "stage": "dev",
     "stdio": "stderr",
     "wd": "C:\\dev\\c2app\\packages\\server"
   },
-  "6 debug pnpm:lifecycle": {
+  "82 debug pnpm:lifecycle": {
     "depPath": "C:\\dev\\c2app\\packages\\server",
-    "exitCode": 1,
+    "line": "\u001b[1;31m{\"errno\":-4078,\"code\":\"ECONNREFUSED\",\"syscall\":\"connect\",\"address\":\"127.0.0.1\",\"port\":3501}\u001b[0m",
+    "stage": "dev",
+    "stdio": "stderr",
+    "wd": "C:\\dev\\c2app\\packages\\server"
+  },
+  "83 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\server",
+    "line": "\u001b[1;31m{\"errno\":-4078,\"code\":\"ECONNREFUSED\",\"syscall\":\"connect\",\"address\":\"127.0.0.1\",\"port\":3501}\u001b[0m",
+    "stage": "dev",
+    "stdio": "stderr",
+    "wd": "C:\\dev\\c2app\\packages\\server"
+  },
+  "84 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\server",
+    "line": "\u001b[1;31m{\"errno\":-4078,\"code\":\"ECONNREFUSED\",\"syscall\":\"connect\",\"address\":\"127.0.0.1\",\"port\":3501}\u001b[0m",
+    "stage": "dev",
+    "stdio": "stderr",
+    "wd": "C:\\dev\\c2app\\packages\\server"
+  },
+  "85 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\server",
+    "line": "\u001b[1;31m{\"errno\":-4078,\"code\":\"ECONNREFUSED\",\"syscall\":\"connect\",\"address\":\"127.0.0.1\",\"port\":3501}\u001b[0m",
+    "stage": "dev",
+    "stdio": "stderr",
+    "wd": "C:\\dev\\c2app\\packages\\server"
+  },
+  "86 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\server",
+    "line": "\u001b[1;31m{\"errno\":-4078,\"code\":\"ECONNREFUSED\",\"syscall\":\"connect\",\"address\":\"127.0.0.1\",\"port\":3501}\u001b[0m",
+    "stage": "dev",
+    "stdio": "stderr",
+    "wd": "C:\\dev\\c2app\\packages\\server"
+  },
+  "87 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\server",
+    "line": "\u001b[1;31m{\"errno\":-4078,\"code\":\"ECONNREFUSED\",\"syscall\":\"connect\",\"address\":\"127.0.0.1\",\"port\":3501}\u001b[0m",
+    "stage": "dev",
+    "stdio": "stderr",
+    "wd": "C:\\dev\\c2app\\packages\\server"
+  },
+  "88 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\server",
+    "line": "\u001b[1;31m{\"errno\":-4078,\"code\":\"ECONNREFUSED\",\"syscall\":\"connect\",\"address\":\"127.0.0.1\",\"port\":3501}\u001b[0m",
+    "stage": "dev",
+    "stdio": "stderr",
+    "wd": "C:\\dev\\c2app\\packages\\server"
+  },
+  "89 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\server",
+    "line": "\u001b[1;31m{\"errno\":-4078,\"code\":\"ECONNREFUSED\",\"syscall\":\"connect\",\"address\":\"127.0.0.1\",\"port\":3501}\u001b[0m",
+    "stage": "dev",
+    "stdio": "stderr",
+    "wd": "C:\\dev\\c2app\\packages\\server"
+  },
+  "90 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\server",
+    "line": "\u001b[1;31m{\"errno\":-4078,\"code\":\"ECONNREFUSED\",\"syscall\":\"connect\",\"address\":\"127.0.0.1\",\"port\":3501}\u001b[0m",
+    "stage": "dev",
+    "stdio": "stderr",
+    "wd": "C:\\dev\\c2app\\packages\\server"
+  },
+  "91 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\server",
+    "line": "\u001b[1;31m{\"errno\":-4078,\"code\":\"ECONNREFUSED\",\"syscall\":\"connect\",\"address\":\"127.0.0.1\",\"port\":3501}\u001b[0m",
+    "stage": "dev",
+    "stdio": "stderr",
+    "wd": "C:\\dev\\c2app\\packages\\server"
+  },
+  "92 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\server",
+    "line": "\u001b[1;31m{\"errno\":-4078,\"code\":\"ECONNREFUSED\",\"syscall\":\"connect\",\"address\":\"127.0.0.1\",\"port\":3501}\u001b[0m",
+    "stage": "dev",
+    "stdio": "stderr",
+    "wd": "C:\\dev\\c2app\\packages\\server"
+  },
+  "93 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\server",
+    "line": "\u001b[1;31m{\"errno\":-4078,\"code\":\"ECONNREFUSED\",\"syscall\":\"connect\",\"address\":\"127.0.0.1\",\"port\":3501}\u001b[0m",
+    "stage": "dev",
+    "stdio": "stderr",
+    "wd": "C:\\dev\\c2app\\packages\\server"
+  },
+  "94 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\server",
+    "line": "\u001b[1;31m{\"errno\":-4078,\"code\":\"ECONNREFUSED\",\"syscall\":\"connect\",\"address\":\"127.0.0.1\",\"port\":3501}\u001b[0m",
+    "stage": "dev",
+    "stdio": "stderr",
+    "wd": "C:\\dev\\c2app\\packages\\server"
+  },
+  "95 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\server",
+    "line": "\u001b[1;31m{\"errno\":-4078,\"code\":\"ECONNREFUSED\",\"syscall\":\"connect\",\"address\":\"127.0.0.1\",\"port\":3501}\u001b[0m",
+    "stage": "dev",
+    "stdio": "stderr",
+    "wd": "C:\\dev\\c2app\\packages\\server"
+  },
+  "96 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\server",
+    "line": "\u001b[1;31m{\"errno\":-4078,\"code\":\"ECONNREFUSED\",\"syscall\":\"connect\",\"address\":\"127.0.0.1\",\"port\":3501}\u001b[0m",
+    "stage": "dev",
+    "stdio": "stderr",
+    "wd": "C:\\dev\\c2app\\packages\\server"
+  },
+  "97 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\server",
+    "line": "\u001b[1;31m{\"errno\":-4078,\"code\":\"ECONNREFUSED\",\"syscall\":\"connect\",\"address\":\"127.0.0.1\",\"port\":3501}\u001b[0m",
+    "stage": "dev",
+    "stdio": "stderr",
+    "wd": "C:\\dev\\c2app\\packages\\server"
+  },
+  "98 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\server",
+    "line": "\u001b[1;31m{\"errno\":-4078,\"code\":\"ECONNREFUSED\",\"syscall\":\"connect\",\"address\":\"127.0.0.1\",\"port\":3501}\u001b[0m",
+    "stage": "dev",
+    "stdio": "stderr",
+    "wd": "C:\\dev\\c2app\\packages\\server"
+  },
+  "99 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\server",
+    "line": "\u001b[1;31m{\"errno\":-4078,\"code\":\"ECONNREFUSED\",\"syscall\":\"connect\",\"address\":\"127.0.0.1\",\"port\":3501}\u001b[0m",
+    "stage": "dev",
+    "stdio": "stderr",
+    "wd": "C:\\dev\\c2app\\packages\\server"
+  },
+  "100 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\server",
+    "line": "\u001b[1;31m{\"errno\":-4078,\"code\":\"ECONNREFUSED\",\"syscall\":\"connect\",\"address\":\"127.0.0.1\",\"port\":3501}\u001b[0m",
+    "stage": "dev",
+    "stdio": "stderr",
+    "wd": "C:\\dev\\c2app\\packages\\server"
+  },
+  "101 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\server",
+    "line": "\u001b[1;31m{\"errno\":-4078,\"code\":\"ECONNREFUSED\",\"syscall\":\"connect\",\"address\":\"127.0.0.1\",\"port\":3501}\u001b[0m",
+    "stage": "dev",
+    "stdio": "stderr",
+    "wd": "C:\\dev\\c2app\\packages\\server"
+  },
+  "102 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\server",
+    "line": "\u001b[1;31m{\"errno\":-4078,\"code\":\"ECONNREFUSED\",\"syscall\":\"connect\",\"address\":\"127.0.0.1\",\"port\":3501}\u001b[0m",
+    "stage": "dev",
+    "stdio": "stderr",
+    "wd": "C:\\dev\\c2app\\packages\\server"
+  },
+  "103 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\server",
+    "line": "\u001b[1;31m{\"errno\":-4078,\"code\":\"ECONNREFUSED\",\"syscall\":\"connect\",\"address\":\"127.0.0.1\",\"port\":3501}\u001b[0m",
+    "stage": "dev",
+    "stdio": "stderr",
+    "wd": "C:\\dev\\c2app\\packages\\server"
+  },
+  "104 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\server",
+    "line": "\u001b[1;31m{\"errno\":-4078,\"code\":\"ECONNREFUSED\",\"syscall\":\"connect\",\"address\":\"127.0.0.1\",\"port\":3501}\u001b[0m",
+    "stage": "dev",
+    "stdio": "stderr",
+    "wd": "C:\\dev\\c2app\\packages\\server"
+  },
+  "105 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\server",
+    "line": "\u001b[1;31m{\"errno\":-4078,\"code\":\"ECONNREFUSED\",\"syscall\":\"connect\",\"address\":\"127.0.0.1\",\"port\":3501}\u001b[0m",
+    "stage": "dev",
+    "stdio": "stderr",
+    "wd": "C:\\dev\\c2app\\packages\\server"
+  },
+  "106 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\server",
+    "line": "\u001b[1;31m{\"errno\":-4078,\"code\":\"ECONNREFUSED\",\"syscall\":\"connect\",\"address\":\"127.0.0.1\",\"port\":3501}\u001b[0m",
+    "stage": "dev",
+    "stdio": "stderr",
+    "wd": "C:\\dev\\c2app\\packages\\server"
+  },
+  "107 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\server",
+    "line": "\u001b[1;31m{\"errno\":-4078,\"code\":\"ECONNREFUSED\",\"syscall\":\"connect\",\"address\":\"127.0.0.1\",\"port\":3501}\u001b[0m",
+    "stage": "dev",
+    "stdio": "stderr",
+    "wd": "C:\\dev\\c2app\\packages\\server"
+  },
+  "108 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\server",
+    "line": "\u001b[1;31m{\"errno\":-4078,\"code\":\"ECONNREFUSED\",\"syscall\":\"connect\",\"address\":\"127.0.0.1\",\"port\":3501}\u001b[0m",
+    "stage": "dev",
+    "stdio": "stderr",
+    "wd": "C:\\dev\\c2app\\packages\\server"
+  },
+  "109 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\server",
+    "line": "\u001b[1;31m{\"errno\":-4078,\"code\":\"ECONNREFUSED\",\"syscall\":\"connect\",\"address\":\"127.0.0.1\",\"port\":3501}\u001b[0m",
+    "stage": "dev",
+    "stdio": "stderr",
+    "wd": "C:\\dev\\c2app\\packages\\server"
+  },
+  "110 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\server",
+    "line": "\u001b[1;31m{\"errno\":-4078,\"code\":\"ECONNREFUSED\",\"syscall\":\"connect\",\"address\":\"127.0.0.1\",\"port\":3501}\u001b[0m",
+    "stage": "dev",
+    "stdio": "stderr",
+    "wd": "C:\\dev\\c2app\\packages\\server"
+  },
+  "111 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\server",
+    "line": "\u001b[1;31m{\"errno\":-4078,\"code\":\"ECONNREFUSED\",\"syscall\":\"connect\",\"address\":\"127.0.0.1\",\"port\":3501}\u001b[0m",
+    "stage": "dev",
+    "stdio": "stderr",
+    "wd": "C:\\dev\\c2app\\packages\\server"
+  },
+  "112 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\server",
+    "line": "\u001b[1;31m{\"errno\":-4078,\"code\":\"ECONNREFUSED\",\"syscall\":\"connect\",\"address\":\"127.0.0.1\",\"port\":3501}\u001b[0m",
+    "stage": "dev",
+    "stdio": "stderr",
+    "wd": "C:\\dev\\c2app\\packages\\server"
+  },
+  "113 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\server",
+    "line": "\u001b[1;31m{\"errno\":-4078,\"code\":\"ECONNREFUSED\",\"syscall\":\"connect\",\"address\":\"127.0.0.1\",\"port\":3501}\u001b[0m",
+    "stage": "dev",
+    "stdio": "stderr",
+    "wd": "C:\\dev\\c2app\\packages\\server"
+  },
+  "114 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\server",
+    "line": "\u001b[1;31m{\"errno\":-4078,\"code\":\"ECONNREFUSED\",\"syscall\":\"connect\",\"address\":\"127.0.0.1\",\"port\":3501}\u001b[0m",
+    "stage": "dev",
+    "stdio": "stderr",
+    "wd": "C:\\dev\\c2app\\packages\\server"
+  },
+  "115 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "assets by status 1.78 MiB \u001b[1m\u001b[32m[cached]\u001b[39m\u001b[22m 29 assets",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "116 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "assets by status 6.85 MiB \u001b[1m\u001b[32m[emitted]\u001b[39m\u001b[22m",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "117 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "  assets by path \u001b[1m\u001b[32mcomponents/\u001b[39m\u001b[22m 5.67 KiB 22 assets",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "118 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "  assets by path \u001b[1m\u001b[32mservices/*.ts\u001b[39m\u001b[22m 9.32 KiB",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "119 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "    asset \u001b[1m\u001b[32mservices/meiosis.d.ts\u001b[39m\u001b[22m 7.77 KiB \u001b[1m\u001b[32m[emitted]\u001b[39m\u001b[22m",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "120 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "    asset \u001b[1m\u001b[32mservices/socket.d.ts\u001b[39m\u001b[22m 824 bytes \u001b[1m\u001b[32m[emitted]\u001b[39m\u001b[22m",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "121 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "    asset \u001b[1m\u001b[32mservices/routing-service.d.ts\u001b[39m\u001b[22m 755 bytes \u001b[1m\u001b[32m[emitted]\u001b[39m\u001b[22m",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "122 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "  assets by path \u001b[1m\u001b[32m*.js\u001b[39m\u001b[22m 6.84 MiB",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "123 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "    asset \u001b[1m\u001b[32mbundle.js\u001b[39m\u001b[22m 6.82 MiB \u001b[1m\u001b[32m[emitted]\u001b[39m\u001b[22m (name: main)",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "124 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "    asset \u001b[1m\u001b[32mmain.f0f4d9c3b5a3599ee18a.hot-update.js\u001b[39m\u001b[22m 19.5 KiB \u001b[1m\u001b[32m[emitted]\u001b[39m\u001b[22m \u001b[1m\u001b[32m[immutable]\u001b[39m\u001b[22m \u001b[1m\u001b[32m[hmr]\u001b[39m\u001b[22m (name: main)",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "125 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "  asset \u001b[1m\u001b[32mindex.html\u001b[39m\u001b[22m 890 bytes \u001b[1m\u001b[32m[emitted]\u001b[39m\u001b[22m",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "126 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "  asset \u001b[1m\u001b[32mapp.d.ts\u001b[39m\u001b[22m 236 bytes \u001b[1m\u001b[32m[emitted]\u001b[39m\u001b[22m",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "127 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "  asset \u001b[1m\u001b[32mmain.f0f4d9c3b5a3599ee18a.hot-update.json\u001b[39m\u001b[22m 28 bytes \u001b[1m\u001b[32m[emitted]\u001b[39m\u001b[22m \u001b[1m\u001b[32m[immutable]\u001b[39m\u001b[22m \u001b[1m\u001b[32m[hmr]\u001b[39m\u001b[22m",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "128 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "Entrypoint \u001b[1mmain\u001b[39m\u001b[22m 6.84 MiB (1.76 MiB) = \u001b[1m\u001b[32mbundle.js\u001b[39m\u001b[22m 6.82 MiB \u001b[1m\u001b[32mmain.f0f4d9c3b5a3599ee18a.hot-update.js\u001b[39m\u001b[22m 19.5 KiB 26 auxiliary assets",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "129 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "cached modules 2.43 MiB (javascript) 1.76 MiB (asset) \u001b[1m\u001b[32m[cached]\u001b[39m\u001b[22m 250 modules",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "130 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "runtime modules 26.2 KiB 12 modules",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "131 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "javascript modules 10.6 KiB",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "132 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "  \u001b[1m./src/services/routing-service.ts\u001b[39m\u001b[22m 4.15 KiB \u001b[1m\u001b[33m[built]\u001b[39m\u001b[22m \u001b[1m\u001b[33m[code generated]\u001b[39m\u001b[22m",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "133 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "  \u001b[1m./src/components/map/map.ts\u001b[39m\u001b[22m 6.48 KiB \u001b[1m\u001b[33m[built]\u001b[39m\u001b[22m \u001b[1m\u001b[33m[code generated]\u001b[39m\u001b[22m",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "134 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "webpack 5.69.1 compiled \u001b[1m\u001b[32msuccessfully\u001b[39m\u001b[22m in 4180 ms",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "135 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\server",
+    "line": "Disconnected: 1VLecPgaUIMMYzX0AAAD Client count: 0",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\server"
+  },
+  "136 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\server",
+    "line": "Connected: yNHXMP4bmxnvzIurAAAF Client count: 1",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\server"
+  },
+  "137 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\server",
+    "line": "\u001b[1;31m{\"errno\":-4078,\"code\":\"ECONNREFUSED\",\"syscall\":\"connect\",\"address\":\"127.0.0.1\",\"port\":3501}\u001b[0m",
+    "stage": "dev",
+    "stdio": "stderr",
+    "wd": "C:\\dev\\c2app\\packages\\server"
+  },
+  "138 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\server",
+    "line": "\u001b[1;31m{\"errno\":-4078,\"code\":\"ECONNREFUSED\",\"syscall\":\"connect\",\"address\":\"127.0.0.1\",\"port\":3501}\u001b[0m",
+    "stage": "dev",
+    "stdio": "stderr",
+    "wd": "C:\\dev\\c2app\\packages\\server"
+  },
+  "139 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\server",
+    "line": "\u001b[1;31m{\"errno\":-4078,\"code\":\"ECONNREFUSED\",\"syscall\":\"connect\",\"address\":\"127.0.0.1\",\"port\":3501}\u001b[0m",
+    "stage": "dev",
+    "stdio": "stderr",
+    "wd": "C:\\dev\\c2app\\packages\\server"
+  },
+  "140 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\server",
+    "line": "\u001b[1;31m{\"errno\":-4078,\"code\":\"ECONNREFUSED\",\"syscall\":\"connect\",\"address\":\"127.0.0.1\",\"port\":3501}\u001b[0m",
+    "stage": "dev",
+    "stdio": "stderr",
+    "wd": "C:\\dev\\c2app\\packages\\server"
+  },
+  "141 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\server",
+    "line": "\u001b[1;31m{\"errno\":-4078,\"code\":\"ECONNREFUSED\",\"syscall\":\"connect\",\"address\":\"127.0.0.1\",\"port\":3501}\u001b[0m",
+    "stage": "dev",
+    "stdio": "stderr",
+    "wd": "C:\\dev\\c2app\\packages\\server"
+  },
+  "142 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\server",
+    "line": "\u001b[1;31m{\"errno\":-4078,\"code\":\"ECONNREFUSED\",\"syscall\":\"connect\",\"address\":\"127.0.0.1\",\"port\":3501}\u001b[0m",
+    "stage": "dev",
+    "stdio": "stderr",
+    "wd": "C:\\dev\\c2app\\packages\\server"
+  },
+  "143 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\server",
+    "line": "\u001b[1;31m{\"errno\":-4078,\"code\":\"ECONNREFUSED\",\"syscall\":\"connect\",\"address\":\"127.0.0.1\",\"port\":3501}\u001b[0m",
+    "stage": "dev",
+    "stdio": "stderr",
+    "wd": "C:\\dev\\c2app\\packages\\server"
+  },
+  "144 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\server",
+    "line": "\u001b[1;31m{\"errno\":-4078,\"code\":\"ECONNREFUSED\",\"syscall\":\"connect\",\"address\":\"127.0.0.1\",\"port\":3501}\u001b[0m",
+    "stage": "dev",
+    "stdio": "stderr",
+    "wd": "C:\\dev\\c2app\\packages\\server"
+  },
+  "145 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\server",
+    "line": "\u001b[1;31m{\"errno\":-4078,\"code\":\"ECONNREFUSED\",\"syscall\":\"connect\",\"address\":\"127.0.0.1\",\"port\":3501}\u001b[0m",
+    "stage": "dev",
+    "stdio": "stderr",
+    "wd": "C:\\dev\\c2app\\packages\\server"
+  },
+  "146 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\server",
+    "line": "\u001b[1;31m{\"errno\":-4078,\"code\":\"ECONNREFUSED\",\"syscall\":\"connect\",\"address\":\"127.0.0.1\",\"port\":3501}\u001b[0m",
+    "stage": "dev",
+    "stdio": "stderr",
+    "wd": "C:\\dev\\c2app\\packages\\server"
+  },
+  "147 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\server",
+    "line": "\u001b[1;31m{\"errno\":-4078,\"code\":\"ECONNREFUSED\",\"syscall\":\"connect\",\"address\":\"127.0.0.1\",\"port\":3501}\u001b[0m",
+    "stage": "dev",
+    "stdio": "stderr",
+    "wd": "C:\\dev\\c2app\\packages\\server"
+  },
+  "148 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\server",
+    "line": "\u001b[1;31m{\"errno\":-4078,\"code\":\"ECONNREFUSED\",\"syscall\":\"connect\",\"address\":\"127.0.0.1\",\"port\":3501}\u001b[0m",
+    "stage": "dev",
+    "stdio": "stderr",
+    "wd": "C:\\dev\\c2app\\packages\\server"
+  },
+  "149 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\server",
+    "line": "\u001b[1;31m{\"errno\":-4078,\"code\":\"ECONNREFUSED\",\"syscall\":\"connect\",\"address\":\"127.0.0.1\",\"port\":3501}\u001b[0m",
+    "stage": "dev",
+    "stdio": "stderr",
+    "wd": "C:\\dev\\c2app\\packages\\server"
+  },
+  "150 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\server",
+    "line": "\u001b[1;31m{\"errno\":-4078,\"code\":\"ECONNREFUSED\",\"syscall\":\"connect\",\"address\":\"127.0.0.1\",\"port\":3501}\u001b[0m",
+    "stage": "dev",
+    "stdio": "stderr",
+    "wd": "C:\\dev\\c2app\\packages\\server"
+  },
+  "151 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\server",
+    "line": "\u001b[1;31m{\"errno\":-4078,\"code\":\"ECONNREFUSED\",\"syscall\":\"connect\",\"address\":\"127.0.0.1\",\"port\":3501}\u001b[0m",
+    "stage": "dev",
+    "stdio": "stderr",
+    "wd": "C:\\dev\\c2app\\packages\\server"
+  },
+  "152 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\server",
+    "line": "\u001b[1;31m{\"errno\":-4078,\"code\":\"ECONNREFUSED\",\"syscall\":\"connect\",\"address\":\"127.0.0.1\",\"port\":3501}\u001b[0m",
+    "stage": "dev",
+    "stdio": "stderr",
+    "wd": "C:\\dev\\c2app\\packages\\server"
+  },
+  "153 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\server",
+    "line": "\u001b[1;31m{\"errno\":-4078,\"code\":\"ECONNREFUSED\",\"syscall\":\"connect\",\"address\":\"127.0.0.1\",\"port\":3501}\u001b[0m",
+    "stage": "dev",
+    "stdio": "stderr",
+    "wd": "C:\\dev\\c2app\\packages\\server"
+  },
+  "154 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\server",
+    "line": "\u001b[1;31m{\"errno\":-4078,\"code\":\"ECONNREFUSED\",\"syscall\":\"connect\",\"address\":\"127.0.0.1\",\"port\":3501}\u001b[0m",
+    "stage": "dev",
+    "stdio": "stderr",
+    "wd": "C:\\dev\\c2app\\packages\\server"
+  },
+  "155 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\server",
+    "line": "\u001b[1;31m{\"errno\":-4078,\"code\":\"ECONNREFUSED\",\"syscall\":\"connect\",\"address\":\"127.0.0.1\",\"port\":3501}\u001b[0m",
+    "stage": "dev",
+    "stdio": "stderr",
+    "wd": "C:\\dev\\c2app\\packages\\server"
+  },
+  "156 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\server",
+    "line": "\u001b[1;31m{\"errno\":-4078,\"code\":\"ECONNREFUSED\",\"syscall\":\"connect\",\"address\":\"127.0.0.1\",\"port\":3501}\u001b[0m",
+    "stage": "dev",
+    "stdio": "stderr",
+    "wd": "C:\\dev\\c2app\\packages\\server"
+  },
+  "157 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\server",
+    "line": "\u001b[1;31m{\"errno\":-4078,\"code\":\"ECONNREFUSED\",\"syscall\":\"connect\",\"address\":\"127.0.0.1\",\"port\":3501}\u001b[0m",
+    "stage": "dev",
+    "stdio": "stderr",
+    "wd": "C:\\dev\\c2app\\packages\\server"
+  },
+  "158 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\server",
+    "line": "\u001b[1;31m{\"errno\":-4078,\"code\":\"ECONNREFUSED\",\"syscall\":\"connect\",\"address\":\"127.0.0.1\",\"port\":3501}\u001b[0m",
+    "stage": "dev",
+    "stdio": "stderr",
+    "wd": "C:\\dev\\c2app\\packages\\server"
+  },
+  "159 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\server",
+    "line": "\u001b[1;31m{\"errno\":-4078,\"code\":\"ECONNREFUSED\",\"syscall\":\"connect\",\"address\":\"127.0.0.1\",\"port\":3501}\u001b[0m",
+    "stage": "dev",
+    "stdio": "stderr",
+    "wd": "C:\\dev\\c2app\\packages\\server"
+  },
+  "160 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\server",
+    "line": "\u001b[1;31m{\"errno\":-4078,\"code\":\"ECONNREFUSED\",\"syscall\":\"connect\",\"address\":\"127.0.0.1\",\"port\":3501}\u001b[0m",
+    "stage": "dev",
+    "stdio": "stderr",
+    "wd": "C:\\dev\\c2app\\packages\\server"
+  },
+  "161 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\server",
+    "line": "\u001b[1;31m{\"errno\":-4078,\"code\":\"ECONNREFUSED\",\"syscall\":\"connect\",\"address\":\"127.0.0.1\",\"port\":3501}\u001b[0m",
+    "stage": "dev",
+    "stdio": "stderr",
+    "wd": "C:\\dev\\c2app\\packages\\server"
+  },
+  "162 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\server",
+    "line": "\u001b[1;31m{\"errno\":-4078,\"code\":\"ECONNREFUSED\",\"syscall\":\"connect\",\"address\":\"127.0.0.1\",\"port\":3501}\u001b[0m",
+    "stage": "dev",
+    "stdio": "stderr",
+    "wd": "C:\\dev\\c2app\\packages\\server"
+  },
+  "163 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\server",
+    "line": "\u001b[1;31m{\"errno\":-4078,\"code\":\"ECONNREFUSED\",\"syscall\":\"connect\",\"address\":\"127.0.0.1\",\"port\":3501}\u001b[0m",
+    "stage": "dev",
+    "stdio": "stderr",
+    "wd": "C:\\dev\\c2app\\packages\\server"
+  },
+  "164 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\server",
+    "line": "\u001b[1;31m{\"errno\":-4078,\"code\":\"ECONNREFUSED\",\"syscall\":\"connect\",\"address\":\"127.0.0.1\",\"port\":3501}\u001b[0m",
+    "stage": "dev",
+    "stdio": "stderr",
+    "wd": "C:\\dev\\c2app\\packages\\server"
+  },
+  "165 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "assets by status 1.78 MiB \u001b[1m\u001b[32m[cached]\u001b[39m\u001b[22m 29 assets",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "166 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "assets by status 6.86 MiB \u001b[1m\u001b[32m[emitted]\u001b[39m\u001b[22m",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "167 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "  assets by path \u001b[1m\u001b[32mcomponents/\u001b[39m\u001b[22m 5.67 KiB 22 assets",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "168 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "  assets by chunk 6.84 MiB (name: main)",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "169 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "    asset \u001b[1m\u001b[32mbundle.js\u001b[39m\u001b[22m 6.82 MiB \u001b[1m\u001b[32m[emitted]\u001b[39m\u001b[22m (name: main)",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "170 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "    asset \u001b[1m\u001b[32mmain.7a0d9c4e60b43d2b5112.hot-update.js\u001b[39m\u001b[22m 19.9 KiB \u001b[1m\u001b[32m[emitted]\u001b[39m\u001b[22m \u001b[1m\u001b[32m[immutable]\u001b[39m\u001b[22m \u001b[1m\u001b[32m[hmr]\u001b[39m\u001b[22m (name: main)",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "171 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "    asset \u001b[1m\u001b[32m3a034967806fe84e8983.png\u001b[39m\u001b[22m 3.31 KiB \u001b[1m\u001b[32m[emitted]\u001b[39m\u001b[22m \u001b[1m\u001b[32m[immutable]\u001b[39m\u001b[22m [from: src/assets/circle.png] \u001b[1m\u001b[32m[hmr]\u001b[39m\u001b[22m (name: main) (auxiliary name: main)",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "172 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "  assets by path \u001b[1m\u001b[32mservices/*.ts\u001b[39m\u001b[22m 9.32 KiB",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "173 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "    asset \u001b[1m\u001b[32mservices/meiosis.d.ts\u001b[39m\u001b[22m 7.77 KiB \u001b[1m\u001b[32m[emitted]\u001b[39m\u001b[22m",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "174 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "    asset \u001b[1m\u001b[32mservices/socket.d.ts\u001b[39m\u001b[22m 824 bytes \u001b[1m\u001b[32m[emitted]\u001b[39m\u001b[22m",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "175 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "    asset \u001b[1m\u001b[32mservices/routing-service.d.ts\u001b[39m\u001b[22m 755 bytes \u001b[1m\u001b[32m[emitted]\u001b[39m\u001b[22m",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "176 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "  asset \u001b[1m\u001b[32mindex.html\u001b[39m\u001b[22m 890 bytes \u001b[1m\u001b[32m[emitted]\u001b[39m\u001b[22m",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "177 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "  asset \u001b[1m\u001b[32mapp.d.ts\u001b[39m\u001b[22m 236 bytes \u001b[1m\u001b[32m[emitted]\u001b[39m\u001b[22m",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "178 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "  asset \u001b[1m\u001b[32mmain.7a0d9c4e60b43d2b5112.hot-update.json\u001b[39m\u001b[22m 28 bytes \u001b[1m\u001b[32m[emitted]\u001b[39m\u001b[22m \u001b[1m\u001b[32m[immutable]\u001b[39m\u001b[22m \u001b[1m\u001b[32m[hmr]\u001b[39m\u001b[22m",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "179 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "Entrypoint \u001b[1mmain\u001b[39m\u001b[22m 6.84 MiB (1.77 MiB) = \u001b[1m\u001b[32mbundle.js\u001b[39m\u001b[22m 6.82 MiB \u001b[1m\u001b[32mmain.7a0d9c4e60b43d2b5112.hot-update.js\u001b[39m\u001b[22m 19.9 KiB \u001b[1m\u001b[32m3a034967806fe84e8983.png\u001b[39m\u001b[22m 3.31 KiB 27 auxiliary assets",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "180 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "cached modules 2.43 MiB (javascript) 1.76 MiB (asset) \u001b[1m\u001b[32m[cached]\u001b[39m\u001b[22m 250 modules",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "181 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "runtime modules 26.2 KiB 12 modules",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "182 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "modules by layer 10.7 KiB (javascript) 3.31 KiB (asset)",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "183 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "  \u001b[1m./src/services/routing-service.ts\u001b[39m\u001b[22m 4.15 KiB \u001b[1m\u001b[33m[built]\u001b[39m\u001b[22m \u001b[1m\u001b[33m[code generated]\u001b[39m\u001b[22m",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "184 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "  \u001b[1m./src/components/map/map.ts\u001b[39m\u001b[22m 6.51 KiB \u001b[1m\u001b[33m[built]\u001b[39m\u001b[22m \u001b[1m\u001b[33m[code generated]\u001b[39m\u001b[22m",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "185 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "  \u001b[1m./src/assets/circle.png\u001b[39m\u001b[22m 42 bytes (javascript) 3.31 KiB (asset) \u001b[1m\u001b[33m[built]\u001b[39m\u001b[22m \u001b[1m\u001b[33m[code generated]\u001b[39m\u001b[22m",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "186 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "webpack 5.69.1 compiled \u001b[1m\u001b[32msuccessfully\u001b[39m\u001b[22m in 2993 ms",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "187 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\server",
+    "line": "Disconnected: yNHXMP4bmxnvzIurAAAF Client count: 0",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\server"
+  },
+  "188 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\server",
+    "line": "Connected: TeDlSU3RdKSi9P5qAAAH Client count: 1",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\server"
+  },
+  "189 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\server",
+    "line": "\u001b[1;31m{\"errno\":-4078,\"code\":\"ECONNREFUSED\",\"syscall\":\"connect\",\"address\":\"127.0.0.1\",\"port\":3501}\u001b[0m",
+    "stage": "dev",
+    "stdio": "stderr",
+    "wd": "C:\\dev\\c2app\\packages\\server"
+  },
+  "190 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\server",
+    "line": "\u001b[1;31m{\"errno\":-4078,\"code\":\"ECONNREFUSED\",\"syscall\":\"connect\",\"address\":\"127.0.0.1\",\"port\":3501}\u001b[0m",
+    "stage": "dev",
+    "stdio": "stderr",
+    "wd": "C:\\dev\\c2app\\packages\\server"
+  },
+  "191 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "assets by status 1.78 MiB \u001b[1m\u001b[32m[cached]\u001b[39m\u001b[22m 30 assets",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "192 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "assets by status 6.85 MiB \u001b[1m\u001b[32m[emitted]\u001b[39m\u001b[22m",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "193 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "  assets by path \u001b[1m\u001b[32mcomponents/\u001b[39m\u001b[22m 5.67 KiB 22 assets",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "194 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "  assets by path \u001b[1m\u001b[32mservices/*.ts\u001b[39m\u001b[22m 9.32 KiB",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "195 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "    asset \u001b[1m\u001b[32mservices/meiosis.d.ts\u001b[39m\u001b[22m 7.77 KiB \u001b[1m\u001b[32m[emitted]\u001b[39m\u001b[22m",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "196 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "    asset \u001b[1m\u001b[32mservices/socket.d.ts\u001b[39m\u001b[22m 824 bytes \u001b[1m\u001b[32m[emitted]\u001b[39m\u001b[22m",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "197 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "    asset \u001b[1m\u001b[32mservices/routing-service.d.ts\u001b[39m\u001b[22m 755 bytes \u001b[1m\u001b[32m[emitted]\u001b[39m\u001b[22m",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "198 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "  assets by path \u001b[1m\u001b[32m*.js\u001b[39m\u001b[22m 6.84 MiB",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "199 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "    asset \u001b[1m\u001b[32mbundle.js\u001b[39m\u001b[22m 6.82 MiB \u001b[1m\u001b[32m[emitted]\u001b[39m\u001b[22m (name: main)",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "200 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "    asset \u001b[1m\u001b[32mmain.4ef25581f7df38034f64.hot-update.js\u001b[39m\u001b[22m 19.6 KiB \u001b[1m\u001b[32m[emitted]\u001b[39m\u001b[22m \u001b[1m\u001b[32m[immutable]\u001b[39m\u001b[22m \u001b[1m\u001b[32m[hmr]\u001b[39m\u001b[22m (name: main)",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "201 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "  asset \u001b[1m\u001b[32mindex.html\u001b[39m\u001b[22m 890 bytes \u001b[1m\u001b[32m[emitted]\u001b[39m\u001b[22m",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "202 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "  asset \u001b[1m\u001b[32mapp.d.ts\u001b[39m\u001b[22m 236 bytes \u001b[1m\u001b[32m[emitted]\u001b[39m\u001b[22m",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "203 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "  asset \u001b[1m\u001b[32mmain.4ef25581f7df38034f64.hot-update.json\u001b[39m\u001b[22m 28 bytes \u001b[1m\u001b[32m[emitted]\u001b[39m\u001b[22m \u001b[1m\u001b[32m[immutable]\u001b[39m\u001b[22m \u001b[1m\u001b[32m[hmr]\u001b[39m\u001b[22m",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "204 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "Entrypoint \u001b[1mmain\u001b[39m\u001b[22m 6.84 MiB (1.77 MiB) = \u001b[1m\u001b[32mbundle.js\u001b[39m\u001b[22m 6.82 MiB \u001b[1m\u001b[32mmain.4ef25581f7df38034f64.hot-update.js\u001b[39m\u001b[22m 19.6 KiB 27 auxiliary assets",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "205 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "cached modules 2.43 MiB (javascript) 1.77 MiB (asset) \u001b[1m\u001b[32m[cached]\u001b[39m\u001b[22m 251 modules",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "206 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "runtime modules 26.2 KiB 12 modules",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "207 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "javascript modules 10.7 KiB",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "208 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "  \u001b[1m./src/services/routing-service.ts\u001b[39m\u001b[22m 4.15 KiB \u001b[1m\u001b[33m[built]\u001b[39m\u001b[22m \u001b[1m\u001b[33m[code generated]\u001b[39m\u001b[22m",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "209 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "  \u001b[1m./src/components/map/map.ts\u001b[39m\u001b[22m 6.51 KiB \u001b[1m\u001b[33m[built]\u001b[39m\u001b[22m \u001b[1m\u001b[33m[code generated]\u001b[39m\u001b[22m",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "210 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "webpack 5.69.1 compiled \u001b[1m\u001b[32msuccessfully\u001b[39m\u001b[22m in 2340 ms",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "211 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\server",
+    "line": "Disconnected: TeDlSU3RdKSi9P5qAAAH Client count: 0",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\server"
+  },
+  "212 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\server",
+    "line": "Connected: X8kNpncqQqtopwWPAAAJ Client count: 1",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\server"
+  },
+  "213 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "assets by status 1.78 MiB \u001b[1m\u001b[32m[cached]\u001b[39m\u001b[22m 30 assets",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "214 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "assets by status 6.85 MiB \u001b[1m\u001b[32m[emitted]\u001b[39m\u001b[22m",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "215 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "  assets by path \u001b[1m\u001b[32mcomponents/\u001b[39m\u001b[22m 5.67 KiB 22 assets",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "216 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "  assets by path \u001b[1m\u001b[32mservices/*.ts\u001b[39m\u001b[22m 9.32 KiB",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "217 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "    asset \u001b[1m\u001b[32mservices/meiosis.d.ts\u001b[39m\u001b[22m 7.77 KiB \u001b[1m\u001b[32m[emitted]\u001b[39m\u001b[22m",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "218 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "    asset \u001b[1m\u001b[32mservices/socket.d.ts\u001b[39m\u001b[22m 824 bytes \u001b[1m\u001b[32m[emitted]\u001b[39m\u001b[22m",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "219 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "    asset \u001b[1m\u001b[32mservices/routing-service.d.ts\u001b[39m\u001b[22m 755 bytes \u001b[1m\u001b[32m[emitted]\u001b[39m\u001b[22m",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "220 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "  assets by path \u001b[1m\u001b[32m*.js\u001b[39m\u001b[22m 6.84 MiB",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "221 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "    asset \u001b[1m\u001b[32mbundle.js\u001b[39m\u001b[22m 6.82 MiB \u001b[1m\u001b[32m[emitted]\u001b[39m\u001b[22m (name: main)",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "222 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "    asset \u001b[1m\u001b[32mmain.446478767954bd0bb655.hot-update.js\u001b[39m\u001b[22m 19.6 KiB \u001b[1m\u001b[32m[emitted]\u001b[39m\u001b[22m \u001b[1m\u001b[32m[immutable]\u001b[39m\u001b[22m \u001b[1m\u001b[32m[hmr]\u001b[39m\u001b[22m (name: main)",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "223 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "  asset \u001b[1m\u001b[32mindex.html\u001b[39m\u001b[22m 890 bytes \u001b[1m\u001b[32m[emitted]\u001b[39m\u001b[22m",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "224 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "  asset \u001b[1m\u001b[32mapp.d.ts\u001b[39m\u001b[22m 236 bytes \u001b[1m\u001b[32m[emitted]\u001b[39m\u001b[22m",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "225 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "  asset \u001b[1m\u001b[32mmain.446478767954bd0bb655.hot-update.json\u001b[39m\u001b[22m 28 bytes \u001b[1m\u001b[32m[emitted]\u001b[39m\u001b[22m \u001b[1m\u001b[32m[immutable]\u001b[39m\u001b[22m \u001b[1m\u001b[32m[hmr]\u001b[39m\u001b[22m",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "226 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "Entrypoint \u001b[1mmain\u001b[39m\u001b[22m 6.84 MiB (1.77 MiB) = \u001b[1m\u001b[32mbundle.js\u001b[39m\u001b[22m 6.82 MiB \u001b[1m\u001b[32mmain.446478767954bd0bb655.hot-update.js\u001b[39m\u001b[22m 19.6 KiB 27 auxiliary assets",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "227 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "cached modules 2.43 MiB (javascript) 1.77 MiB (asset) \u001b[1m\u001b[32m[cached]\u001b[39m\u001b[22m 251 modules",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "228 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "runtime modules 26.2 KiB 12 modules",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "229 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "javascript modules 10.7 KiB",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "230 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "  \u001b[1m./src/services/routing-service.ts\u001b[39m\u001b[22m 4.15 KiB \u001b[1m\u001b[33m[built]\u001b[39m\u001b[22m \u001b[1m\u001b[33m[code generated]\u001b[39m\u001b[22m",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "231 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "  \u001b[1m./src/components/map/map.ts\u001b[39m\u001b[22m 6.51 KiB \u001b[1m\u001b[33m[built]\u001b[39m\u001b[22m \u001b[1m\u001b[33m[code generated]\u001b[39m\u001b[22m",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "232 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "webpack 5.69.1 compiled \u001b[1m\u001b[32msuccessfully\u001b[39m\u001b[22m in 1799 ms",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "233 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\server",
+    "line": "Disconnected: X8kNpncqQqtopwWPAAAJ Client count: 0",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\server"
+  },
+  "234 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\server",
+    "line": "Connected: 9JnLtPHKhZ-gwSBoAAAL Client count: 1",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\server"
+  },
+  "235 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\server",
+    "line": "\u001b[1;31m{\"errno\":-4078,\"code\":\"ECONNREFUSED\",\"syscall\":\"connect\",\"address\":\"127.0.0.1\",\"port\":3501}\u001b[0m",
+    "stage": "dev",
+    "stdio": "stderr",
+    "wd": "C:\\dev\\c2app\\packages\\server"
+  },
+  "236 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\server",
+    "line": "\u001b[1;31m{\"errno\":-4078,\"code\":\"ECONNREFUSED\",\"syscall\":\"connect\",\"address\":\"127.0.0.1\",\"port\":3501}\u001b[0m",
+    "stage": "dev",
+    "stdio": "stderr",
+    "wd": "C:\\dev\\c2app\\packages\\server"
+  },
+  "237 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\server",
+    "line": "\u001b[1;31m{\"errno\":-4078,\"code\":\"ECONNREFUSED\",\"syscall\":\"connect\",\"address\":\"127.0.0.1\",\"port\":3501}\u001b[0m",
+    "stage": "dev",
+    "stdio": "stderr",
+    "wd": "C:\\dev\\c2app\\packages\\server"
+  },
+  "238 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\server",
+    "line": "\u001b[1;31m{\"errno\":-4078,\"code\":\"ECONNREFUSED\",\"syscall\":\"connect\",\"address\":\"127.0.0.1\",\"port\":3501}\u001b[0m",
+    "stage": "dev",
+    "stdio": "stderr",
+    "wd": "C:\\dev\\c2app\\packages\\server"
+  },
+  "239 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\server",
+    "line": "\u001b[1;31m{\"errno\":-4078,\"code\":\"ECONNREFUSED\",\"syscall\":\"connect\",\"address\":\"127.0.0.1\",\"port\":3501}\u001b[0m",
+    "stage": "dev",
+    "stdio": "stderr",
+    "wd": "C:\\dev\\c2app\\packages\\server"
+  },
+  "240 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\server",
+    "line": "\u001b[1;31m{\"errno\":-4078,\"code\":\"ECONNREFUSED\",\"syscall\":\"connect\",\"address\":\"127.0.0.1\",\"port\":3501}\u001b[0m",
+    "stage": "dev",
+    "stdio": "stderr",
+    "wd": "C:\\dev\\c2app\\packages\\server"
+  },
+  "241 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\server",
+    "line": "\u001b[1;31m{\"errno\":-4078,\"code\":\"ECONNREFUSED\",\"syscall\":\"connect\",\"address\":\"127.0.0.1\",\"port\":3501}\u001b[0m",
+    "stage": "dev",
+    "stdio": "stderr",
+    "wd": "C:\\dev\\c2app\\packages\\server"
+  },
+  "242 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\server",
+    "line": "\u001b[1;31m{\"errno\":-4078,\"code\":\"ECONNREFUSED\",\"syscall\":\"connect\",\"address\":\"127.0.0.1\",\"port\":3501}\u001b[0m",
+    "stage": "dev",
+    "stdio": "stderr",
+    "wd": "C:\\dev\\c2app\\packages\\server"
+  },
+  "243 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\server",
+    "line": "\u001b[1;31m{\"errno\":-4078,\"code\":\"ECONNREFUSED\",\"syscall\":\"connect\",\"address\":\"127.0.0.1\",\"port\":3501}\u001b[0m",
+    "stage": "dev",
+    "stdio": "stderr",
+    "wd": "C:\\dev\\c2app\\packages\\server"
+  },
+  "244 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\server",
+    "line": "\u001b[1;31m{\"errno\":-4078,\"code\":\"ECONNREFUSED\",\"syscall\":\"connect\",\"address\":\"127.0.0.1\",\"port\":3501}\u001b[0m",
+    "stage": "dev",
+    "stdio": "stderr",
+    "wd": "C:\\dev\\c2app\\packages\\server"
+  },
+  "245 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\server",
+    "line": "\u001b[1;31m{\"errno\":-4078,\"code\":\"ECONNREFUSED\",\"syscall\":\"connect\",\"address\":\"127.0.0.1\",\"port\":3501}\u001b[0m",
+    "stage": "dev",
+    "stdio": "stderr",
+    "wd": "C:\\dev\\c2app\\packages\\server"
+  },
+  "246 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\server",
+    "line": "\u001b[1;31m{\"errno\":-4078,\"code\":\"ECONNREFUSED\",\"syscall\":\"connect\",\"address\":\"127.0.0.1\",\"port\":3501}\u001b[0m",
+    "stage": "dev",
+    "stdio": "stderr",
+    "wd": "C:\\dev\\c2app\\packages\\server"
+  },
+  "247 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\server",
+    "line": "\u001b[1;31m{\"errno\":-4078,\"code\":\"ECONNREFUSED\",\"syscall\":\"connect\",\"address\":\"127.0.0.1\",\"port\":3501}\u001b[0m",
+    "stage": "dev",
+    "stdio": "stderr",
+    "wd": "C:\\dev\\c2app\\packages\\server"
+  },
+  "248 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\server",
+    "line": "\u001b[1;31m{\"errno\":-4078,\"code\":\"ECONNREFUSED\",\"syscall\":\"connect\",\"address\":\"127.0.0.1\",\"port\":3501}\u001b[0m",
+    "stage": "dev",
+    "stdio": "stderr",
+    "wd": "C:\\dev\\c2app\\packages\\server"
+  },
+  "249 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\server",
+    "line": "\u001b[1;31m{\"errno\":-4078,\"code\":\"ECONNREFUSED\",\"syscall\":\"connect\",\"address\":\"127.0.0.1\",\"port\":3501}\u001b[0m",
+    "stage": "dev",
+    "stdio": "stderr",
+    "wd": "C:\\dev\\c2app\\packages\\server"
+  },
+  "250 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\server",
+    "line": "\u001b[1;31m{\"errno\":-4078,\"code\":\"ECONNREFUSED\",\"syscall\":\"connect\",\"address\":\"127.0.0.1\",\"port\":3501}\u001b[0m",
+    "stage": "dev",
+    "stdio": "stderr",
+    "wd": "C:\\dev\\c2app\\packages\\server"
+  },
+  "251 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "assets by status 1.78 MiB \u001b[1m\u001b[32m[cached]\u001b[39m\u001b[22m 30 assets",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "252 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "assets by status 6.86 MiB \u001b[1m\u001b[32m[emitted]\u001b[39m\u001b[22m",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "253 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "  assets by path \u001b[1m\u001b[32mcomponents/\u001b[39m\u001b[22m 5.67 KiB 22 assets",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "254 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "  assets by path \u001b[1m\u001b[32mservices/*.ts\u001b[39m\u001b[22m 9.32 KiB",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "255 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "    asset \u001b[1m\u001b[32mservices/meiosis.d.ts\u001b[39m\u001b[22m 7.77 KiB \u001b[1m\u001b[32m[emitted]\u001b[39m\u001b[22m",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "256 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "    asset \u001b[1m\u001b[32mservices/socket.d.ts\u001b[39m\u001b[22m 824 bytes \u001b[1m\u001b[32m[emitted]\u001b[39m\u001b[22m",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "257 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "    asset \u001b[1m\u001b[32mservices/routing-service.d.ts\u001b[39m\u001b[22m 755 bytes \u001b[1m\u001b[32m[emitted]\u001b[39m\u001b[22m",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "258 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "  assets by path \u001b[1m\u001b[32m*.js\u001b[39m\u001b[22m 6.84 MiB",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "259 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "    asset \u001b[1m\u001b[32mbundle.js\u001b[39m\u001b[22m 6.82 MiB \u001b[1m\u001b[32m[emitted]\u001b[39m\u001b[22m (name: main)",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "260 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "    asset \u001b[1m\u001b[32mmain.c797b4ad00632c5cff01.hot-update.js\u001b[39m\u001b[22m 19.7 KiB \u001b[1m\u001b[32m[emitted]\u001b[39m\u001b[22m \u001b[1m\u001b[32m[immutable]\u001b[39m\u001b[22m \u001b[1m\u001b[32m[hmr]\u001b[39m\u001b[22m (name: main)",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "261 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "  asset \u001b[1m\u001b[32mindex.html\u001b[39m\u001b[22m 890 bytes \u001b[1m\u001b[32m[emitted]\u001b[39m\u001b[22m",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "262 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "  asset \u001b[1m\u001b[32mapp.d.ts\u001b[39m\u001b[22m 236 bytes \u001b[1m\u001b[32m[emitted]\u001b[39m\u001b[22m",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "263 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "  asset \u001b[1m\u001b[32mmain.c797b4ad00632c5cff01.hot-update.json\u001b[39m\u001b[22m 28 bytes \u001b[1m\u001b[32m[emitted]\u001b[39m\u001b[22m \u001b[1m\u001b[32m[immutable]\u001b[39m\u001b[22m \u001b[1m\u001b[32m[hmr]\u001b[39m\u001b[22m",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "264 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "Entrypoint \u001b[1mmain\u001b[39m\u001b[22m 6.84 MiB (1.77 MiB) = \u001b[1m\u001b[32mbundle.js\u001b[39m\u001b[22m 6.82 MiB \u001b[1m\u001b[32mmain.c797b4ad00632c5cff01.hot-update.js\u001b[39m\u001b[22m 19.7 KiB 27 auxiliary assets",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "265 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "cached modules 2.43 MiB (javascript) 1.77 MiB (asset) \u001b[1m\u001b[32m[cached]\u001b[39m\u001b[22m 251 modules",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "266 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "runtime modules 26.2 KiB 12 modules",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "267 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "javascript modules 10.7 KiB",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "268 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "  \u001b[1m./src/services/routing-service.ts\u001b[39m\u001b[22m 4.15 KiB \u001b[1m\u001b[33m[built]\u001b[39m\u001b[22m \u001b[1m\u001b[33m[code generated]\u001b[39m\u001b[22m",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "269 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "  \u001b[1m./src/components/map/map.ts\u001b[39m\u001b[22m 6.54 KiB \u001b[1m\u001b[33m[built]\u001b[39m\u001b[22m \u001b[1m\u001b[33m[code generated]\u001b[39m\u001b[22m",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "270 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "webpack 5.69.1 compiled \u001b[1m\u001b[32msuccessfully\u001b[39m\u001b[22m in 2922 ms",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "271 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\server",
+    "line": "Disconnected: 9JnLtPHKhZ-gwSBoAAAL Client count: 0",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\server"
+  },
+  "272 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\server",
+    "line": "Connected: hRDZYxv3vEj7bt9YAAAN Client count: 1",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\server"
+  },
+  "273 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\server",
+    "line": "\u001b[1;31m{\"errno\":-4078,\"code\":\"ECONNREFUSED\",\"syscall\":\"connect\",\"address\":\"127.0.0.1\",\"port\":3501}\u001b[0m",
+    "stage": "dev",
+    "stdio": "stderr",
+    "wd": "C:\\dev\\c2app\\packages\\server"
+  },
+  "274 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\server",
+    "line": "\u001b[1;31m{\"errno\":-4078,\"code\":\"ECONNREFUSED\",\"syscall\":\"connect\",\"address\":\"127.0.0.1\",\"port\":3501}\u001b[0m",
+    "stage": "dev",
+    "stdio": "stderr",
+    "wd": "C:\\dev\\c2app\\packages\\server"
+  },
+  "275 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\server",
+    "line": "\u001b[1;31m{\"errno\":-4078,\"code\":\"ECONNREFUSED\",\"syscall\":\"connect\",\"address\":\"127.0.0.1\",\"port\":3501}\u001b[0m",
+    "stage": "dev",
+    "stdio": "stderr",
+    "wd": "C:\\dev\\c2app\\packages\\server"
+  },
+  "276 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\server",
+    "line": "\u001b[1;31m{\"errno\":-4078,\"code\":\"ECONNREFUSED\",\"syscall\":\"connect\",\"address\":\"127.0.0.1\",\"port\":3501}\u001b[0m",
+    "stage": "dev",
+    "stdio": "stderr",
+    "wd": "C:\\dev\\c2app\\packages\\server"
+  },
+  "277 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\server",
+    "line": "\u001b[1;31m{\"errno\":-4078,\"code\":\"ECONNREFUSED\",\"syscall\":\"connect\",\"address\":\"127.0.0.1\",\"port\":3501}\u001b[0m",
+    "stage": "dev",
+    "stdio": "stderr",
+    "wd": "C:\\dev\\c2app\\packages\\server"
+  },
+  "278 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\server",
+    "line": "\u001b[1;31m{\"errno\":-4078,\"code\":\"ECONNREFUSED\",\"syscall\":\"connect\",\"address\":\"127.0.0.1\",\"port\":3501}\u001b[0m",
+    "stage": "dev",
+    "stdio": "stderr",
+    "wd": "C:\\dev\\c2app\\packages\\server"
+  },
+  "279 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\server",
+    "line": "\u001b[1;31m{\"errno\":-4078,\"code\":\"ECONNREFUSED\",\"syscall\":\"connect\",\"address\":\"127.0.0.1\",\"port\":3501}\u001b[0m",
+    "stage": "dev",
+    "stdio": "stderr",
+    "wd": "C:\\dev\\c2app\\packages\\server"
+  },
+  "280 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\server",
+    "line": "\u001b[1;31m{\"errno\":-4078,\"code\":\"ECONNREFUSED\",\"syscall\":\"connect\",\"address\":\"127.0.0.1\",\"port\":3501}\u001b[0m",
+    "stage": "dev",
+    "stdio": "stderr",
+    "wd": "C:\\dev\\c2app\\packages\\server"
+  },
+  "281 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\server",
+    "line": "\u001b[1;31m{\"errno\":-4078,\"code\":\"ECONNREFUSED\",\"syscall\":\"connect\",\"address\":\"127.0.0.1\",\"port\":3501}\u001b[0m",
+    "stage": "dev",
+    "stdio": "stderr",
+    "wd": "C:\\dev\\c2app\\packages\\server"
+  },
+  "282 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\server",
+    "line": "\u001b[1;31m{\"errno\":-4078,\"code\":\"ECONNREFUSED\",\"syscall\":\"connect\",\"address\":\"127.0.0.1\",\"port\":3501}\u001b[0m",
+    "stage": "dev",
+    "stdio": "stderr",
+    "wd": "C:\\dev\\c2app\\packages\\server"
+  },
+  "283 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "assets by status 1.78 MiB \u001b[1m\u001b[32m[cached]\u001b[39m\u001b[22m 30 assets",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "284 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "assets by status 6.86 MiB \u001b[1m\u001b[32m[emitted]\u001b[39m\u001b[22m",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "285 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "  assets by path \u001b[1m\u001b[32mcomponents/\u001b[39m\u001b[22m 5.67 KiB 22 assets",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "286 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "  assets by path \u001b[1m\u001b[32mservices/*.ts\u001b[39m\u001b[22m 9.32 KiB",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "287 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "    asset \u001b[1m\u001b[32mservices/meiosis.d.ts\u001b[39m\u001b[22m 7.77 KiB \u001b[1m\u001b[32m[emitted]\u001b[39m\u001b[22m",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "288 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "    asset \u001b[1m\u001b[32mservices/socket.d.ts\u001b[39m\u001b[22m 824 bytes \u001b[1m\u001b[32m[emitted]\u001b[39m\u001b[22m",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "289 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "    asset \u001b[1m\u001b[32mservices/routing-service.d.ts\u001b[39m\u001b[22m 755 bytes \u001b[1m\u001b[32m[emitted]\u001b[39m\u001b[22m",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "290 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "  assets by path \u001b[1m\u001b[32m*.js\u001b[39m\u001b[22m 6.84 MiB",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "291 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "    asset \u001b[1m\u001b[32mbundle.js\u001b[39m\u001b[22m 6.82 MiB \u001b[1m\u001b[32m[emitted]\u001b[39m\u001b[22m (name: main)",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "292 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "    asset \u001b[1m\u001b[32mmain.ac47f77e892cedcce348.hot-update.js\u001b[39m\u001b[22m 20.5 KiB \u001b[1m\u001b[32m[emitted]\u001b[39m\u001b[22m \u001b[1m\u001b[32m[immutable]\u001b[39m\u001b[22m \u001b[1m\u001b[32m[hmr]\u001b[39m\u001b[22m (name: main)",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "293 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "  asset \u001b[1m\u001b[32mindex.html\u001b[39m\u001b[22m 890 bytes \u001b[1m\u001b[32m[emitted]\u001b[39m\u001b[22m",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "294 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "  asset \u001b[1m\u001b[32mapp.d.ts\u001b[39m\u001b[22m 236 bytes \u001b[1m\u001b[32m[emitted]\u001b[39m\u001b[22m",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "295 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "  asset \u001b[1m\u001b[32mmain.ac47f77e892cedcce348.hot-update.json\u001b[39m\u001b[22m 28 bytes \u001b[1m\u001b[32m[emitted]\u001b[39m\u001b[22m \u001b[1m\u001b[32m[immutable]\u001b[39m\u001b[22m \u001b[1m\u001b[32m[hmr]\u001b[39m\u001b[22m",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "296 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "Entrypoint \u001b[1mmain\u001b[39m\u001b[22m 6.84 MiB (1.77 MiB) = \u001b[1m\u001b[32mbundle.js\u001b[39m\u001b[22m 6.82 MiB \u001b[1m\u001b[32mmain.ac47f77e892cedcce348.hot-update.js\u001b[39m\u001b[22m 20.5 KiB 27 auxiliary assets",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "297 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "cached modules 2.43 MiB (javascript) 1.77 MiB (asset) \u001b[1m\u001b[32m[cached]\u001b[39m\u001b[22m 251 modules",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "298 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "runtime modules 26.2 KiB 12 modules",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "299 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "javascript modules 10.9 KiB",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "300 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "  \u001b[1m./src/services/routing-service.ts\u001b[39m\u001b[22m 4.15 KiB \u001b[1m\u001b[33m[built]\u001b[39m\u001b[22m \u001b[1m\u001b[33m[code generated]\u001b[39m\u001b[22m",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "301 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "  \u001b[1m./src/components/map/map.ts\u001b[39m\u001b[22m 6.75 KiB \u001b[1m\u001b[33m[built]\u001b[39m\u001b[22m \u001b[1m\u001b[33m[code generated]\u001b[39m\u001b[22m \u001b[1m\u001b[31m[1 error]\u001b[39m\u001b[22m",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "302 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "\u001b[1m\u001b[31mERROR\u001b[39m\u001b[22m in \u001b[1mC:\\dev\\c2app\\packages\\gui\\src\\components\\map\\map.ts\u001b[39m\u001b[22m",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "303 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "\u001b[1m./src/components/map/map.ts\u001b[39m\u001b[22m \u001b[1m\u001b[32m144:43-44\u001b[39m\u001b[22m",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "304 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "\u001b[1m[tsl] \u001b[1m\u001b[31mERROR\u001b[39m\u001b[22m\u001b[1m in C:\\dev\\c2app\\packages\\gui\\src\\components\\map\\map.ts(144,44)",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "305 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "      TS6133: 'x' is declared but its value is never read.\u001b[39m\u001b[22m",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "306 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "ts-loader-default_e0778f1916566f3c",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "307 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": " @ ./src/services/routing-service.ts 9:12-44",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "308 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": " @ ./src/app.ts 5:24-61",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "309 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "webpack 5.69.1 compiled with \u001b[1m\u001b[31m1 error\u001b[39m\u001b[22m in 2085 ms",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "310 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\server",
+    "line": "\u001b[1;31m{\"errno\":-4078,\"code\":\"ECONNREFUSED\",\"syscall\":\"connect\",\"address\":\"127.0.0.1\",\"port\":3501}\u001b[0m",
+    "stage": "dev",
+    "stdio": "stderr",
+    "wd": "C:\\dev\\c2app\\packages\\server"
+  },
+  "311 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\server",
+    "line": "\u001b[1;31m{\"errno\":-4078,\"code\":\"ECONNREFUSED\",\"syscall\":\"connect\",\"address\":\"127.0.0.1\",\"port\":3501}\u001b[0m",
+    "stage": "dev",
+    "stdio": "stderr",
+    "wd": "C:\\dev\\c2app\\packages\\server"
+  },
+  "312 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "assets by status 1.78 MiB \u001b[1m\u001b[32m[cached]\u001b[39m\u001b[22m 30 assets",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "313 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "assets by status 6.86 MiB \u001b[1m\u001b[32m[emitted]\u001b[39m\u001b[22m",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "314 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "  assets by path \u001b[1m\u001b[32mcomponents/\u001b[39m\u001b[22m 5.67 KiB 22 assets",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "315 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "  assets by path \u001b[1m\u001b[32mservices/*.ts\u001b[39m\u001b[22m 9.32 KiB",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "316 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "    asset \u001b[1m\u001b[32mservices/meiosis.d.ts\u001b[39m\u001b[22m 7.77 KiB \u001b[1m\u001b[32m[emitted]\u001b[39m\u001b[22m",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "317 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "    asset \u001b[1m\u001b[32mservices/socket.d.ts\u001b[39m\u001b[22m 824 bytes \u001b[1m\u001b[32m[emitted]\u001b[39m\u001b[22m",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "318 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "    asset \u001b[1m\u001b[32mservices/routing-service.d.ts\u001b[39m\u001b[22m 755 bytes \u001b[1m\u001b[32m[emitted]\u001b[39m\u001b[22m",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "319 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "  assets by path \u001b[1m\u001b[32m*.js\u001b[39m\u001b[22m 6.84 MiB",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "320 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "    asset \u001b[1m\u001b[32mbundle.js\u001b[39m\u001b[22m 6.82 MiB \u001b[1m\u001b[32m[emitted]\u001b[39m\u001b[22m (name: main)",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "321 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "    asset \u001b[1m\u001b[32mmain.78107667785081c8c39e.hot-update.js\u001b[39m\u001b[22m 20.4 KiB \u001b[1m\u001b[32m[emitted]\u001b[39m\u001b[22m \u001b[1m\u001b[32m[immutable]\u001b[39m\u001b[22m \u001b[1m\u001b[32m[hmr]\u001b[39m\u001b[22m (name: main)",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "322 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "  asset \u001b[1m\u001b[32mindex.html\u001b[39m\u001b[22m 890 bytes \u001b[1m\u001b[32m[emitted]\u001b[39m\u001b[22m",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "323 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "  asset \u001b[1m\u001b[32mapp.d.ts\u001b[39m\u001b[22m 236 bytes \u001b[1m\u001b[32m[emitted]\u001b[39m\u001b[22m",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "324 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "  asset \u001b[1m\u001b[32mmain.78107667785081c8c39e.hot-update.json\u001b[39m\u001b[22m 28 bytes \u001b[1m\u001b[32m[emitted]\u001b[39m\u001b[22m \u001b[1m\u001b[32m[immutable]\u001b[39m\u001b[22m \u001b[1m\u001b[32m[hmr]\u001b[39m\u001b[22m",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "325 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "Entrypoint \u001b[1mmain\u001b[39m\u001b[22m 6.84 MiB (1.77 MiB) = \u001b[1m\u001b[32mbundle.js\u001b[39m\u001b[22m 6.82 MiB \u001b[1m\u001b[32mmain.78107667785081c8c39e.hot-update.js\u001b[39m\u001b[22m 20.4 KiB 27 auxiliary assets",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "326 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "cached modules 2.43 MiB (javascript) 1.77 MiB (asset) \u001b[1m\u001b[32m[cached]\u001b[39m\u001b[22m 251 modules",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "327 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "runtime modules 26.2 KiB 12 modules",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "328 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "javascript modules 10.9 KiB",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "329 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "  \u001b[1m./src/services/routing-service.ts\u001b[39m\u001b[22m 4.15 KiB \u001b[1m\u001b[33m[built]\u001b[39m\u001b[22m \u001b[1m\u001b[33m[code generated]\u001b[39m\u001b[22m",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "330 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "  \u001b[1m./src/components/map/map.ts\u001b[39m\u001b[22m 6.75 KiB \u001b[1m\u001b[33m[built]\u001b[39m\u001b[22m \u001b[1m\u001b[33m[code generated]\u001b[39m\u001b[22m",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "331 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "webpack 5.69.1 compiled \u001b[1m\u001b[32msuccessfully\u001b[39m\u001b[22m in 1945 ms",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "332 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\server",
+    "line": "Disconnected: hRDZYxv3vEj7bt9YAAAN Client count: 0",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\server"
+  },
+  "333 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\server",
+    "line": "Connected: ON_V2frRs4yKV4htAAAP Client count: 1",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\server"
+  },
+  "334 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\server",
+    "line": "\u001b[1;31m{\"errno\":-4078,\"code\":\"ECONNREFUSED\",\"syscall\":\"connect\",\"address\":\"127.0.0.1\",\"port\":3501}\u001b[0m",
+    "stage": "dev",
+    "stdio": "stderr",
+    "wd": "C:\\dev\\c2app\\packages\\server"
+  },
+  "335 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\server",
+    "line": "\u001b[1;31m{\"errno\":-4078,\"code\":\"ECONNREFUSED\",\"syscall\":\"connect\",\"address\":\"127.0.0.1\",\"port\":3501}\u001b[0m",
+    "stage": "dev",
+    "stdio": "stderr",
+    "wd": "C:\\dev\\c2app\\packages\\server"
+  },
+  "336 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\server",
+    "line": "\u001b[1;31m{\"errno\":-4078,\"code\":\"ECONNREFUSED\",\"syscall\":\"connect\",\"address\":\"127.0.0.1\",\"port\":3501}\u001b[0m",
+    "stage": "dev",
+    "stdio": "stderr",
+    "wd": "C:\\dev\\c2app\\packages\\server"
+  },
+  "337 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\server",
+    "line": "\u001b[1;31m{\"errno\":-4078,\"code\":\"ECONNREFUSED\",\"syscall\":\"connect\",\"address\":\"127.0.0.1\",\"port\":3501}\u001b[0m",
+    "stage": "dev",
+    "stdio": "stderr",
+    "wd": "C:\\dev\\c2app\\packages\\server"
+  },
+  "338 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\server",
+    "line": "\u001b[1;31m{\"errno\":-4078,\"code\":\"ECONNREFUSED\",\"syscall\":\"connect\",\"address\":\"127.0.0.1\",\"port\":3501}\u001b[0m",
+    "stage": "dev",
+    "stdio": "stderr",
+    "wd": "C:\\dev\\c2app\\packages\\server"
+  },
+  "339 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\server",
+    "line": "\u001b[1;31m{\"errno\":-4078,\"code\":\"ECONNREFUSED\",\"syscall\":\"connect\",\"address\":\"127.0.0.1\",\"port\":3501}\u001b[0m",
+    "stage": "dev",
+    "stdio": "stderr",
+    "wd": "C:\\dev\\c2app\\packages\\server"
+  },
+  "340 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\server",
+    "line": "\u001b[1;31m{\"errno\":-4078,\"code\":\"ECONNREFUSED\",\"syscall\":\"connect\",\"address\":\"127.0.0.1\",\"port\":3501}\u001b[0m",
+    "stage": "dev",
+    "stdio": "stderr",
+    "wd": "C:\\dev\\c2app\\packages\\server"
+  },
+  "341 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\server",
+    "line": "\u001b[1;31m{\"errno\":-4078,\"code\":\"ECONNREFUSED\",\"syscall\":\"connect\",\"address\":\"127.0.0.1\",\"port\":3501}\u001b[0m",
+    "stage": "dev",
+    "stdio": "stderr",
+    "wd": "C:\\dev\\c2app\\packages\\server"
+  },
+  "342 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\server",
+    "line": "\u001b[1;31m{\"errno\":-4078,\"code\":\"ECONNREFUSED\",\"syscall\":\"connect\",\"address\":\"127.0.0.1\",\"port\":3501}\u001b[0m",
+    "stage": "dev",
+    "stdio": "stderr",
+    "wd": "C:\\dev\\c2app\\packages\\server"
+  },
+  "343 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\server",
+    "line": "\u001b[1;31m{\"errno\":-4078,\"code\":\"ECONNREFUSED\",\"syscall\":\"connect\",\"address\":\"127.0.0.1\",\"port\":3501}\u001b[0m",
+    "stage": "dev",
+    "stdio": "stderr",
+    "wd": "C:\\dev\\c2app\\packages\\server"
+  },
+  "344 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\server",
+    "line": "\u001b[1;31m{\"errno\":-4078,\"code\":\"ECONNREFUSED\",\"syscall\":\"connect\",\"address\":\"127.0.0.1\",\"port\":3501}\u001b[0m",
+    "stage": "dev",
+    "stdio": "stderr",
+    "wd": "C:\\dev\\c2app\\packages\\server"
+  },
+  "345 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\server",
+    "line": "\u001b[1;31m{\"errno\":-4078,\"code\":\"ECONNREFUSED\",\"syscall\":\"connect\",\"address\":\"127.0.0.1\",\"port\":3501}\u001b[0m",
+    "stage": "dev",
+    "stdio": "stderr",
+    "wd": "C:\\dev\\c2app\\packages\\server"
+  },
+  "346 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\server",
+    "line": "\u001b[1;31m{\"errno\":-4078,\"code\":\"ECONNREFUSED\",\"syscall\":\"connect\",\"address\":\"127.0.0.1\",\"port\":3501}\u001b[0m",
+    "stage": "dev",
+    "stdio": "stderr",
+    "wd": "C:\\dev\\c2app\\packages\\server"
+  },
+  "347 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\server",
+    "line": "\u001b[1;31m{\"errno\":-4078,\"code\":\"ECONNREFUSED\",\"syscall\":\"connect\",\"address\":\"127.0.0.1\",\"port\":3501}\u001b[0m",
+    "stage": "dev",
+    "stdio": "stderr",
+    "wd": "C:\\dev\\c2app\\packages\\server"
+  },
+  "348 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\server",
+    "line": "\u001b[1;31m{\"errno\":-4078,\"code\":\"ECONNREFUSED\",\"syscall\":\"connect\",\"address\":\"127.0.0.1\",\"port\":3501}\u001b[0m",
+    "stage": "dev",
+    "stdio": "stderr",
+    "wd": "C:\\dev\\c2app\\packages\\server"
+  },
+  "349 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\server",
+    "line": "\u001b[1;31m{\"errno\":-4078,\"code\":\"ECONNREFUSED\",\"syscall\":\"connect\",\"address\":\"127.0.0.1\",\"port\":3501}\u001b[0m",
+    "stage": "dev",
+    "stdio": "stderr",
+    "wd": "C:\\dev\\c2app\\packages\\server"
+  },
+  "350 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\server",
+    "line": "\u001b[1;31m{\"errno\":-4078,\"code\":\"ECONNREFUSED\",\"syscall\":\"connect\",\"address\":\"127.0.0.1\",\"port\":3501}\u001b[0m",
+    "stage": "dev",
+    "stdio": "stderr",
+    "wd": "C:\\dev\\c2app\\packages\\server"
+  },
+  "351 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\server",
+    "line": "\u001b[1;31m{\"errno\":-4078,\"code\":\"ECONNREFUSED\",\"syscall\":\"connect\",\"address\":\"127.0.0.1\",\"port\":3501}\u001b[0m",
+    "stage": "dev",
+    "stdio": "stderr",
+    "wd": "C:\\dev\\c2app\\packages\\server"
+  },
+  "352 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\server",
+    "line": "\u001b[1;31m{\"errno\":-4078,\"code\":\"ECONNREFUSED\",\"syscall\":\"connect\",\"address\":\"127.0.0.1\",\"port\":3501}\u001b[0m",
+    "stage": "dev",
+    "stdio": "stderr",
+    "wd": "C:\\dev\\c2app\\packages\\server"
+  },
+  "353 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\server",
+    "line": "\u001b[1;31m{\"errno\":-4078,\"code\":\"ECONNREFUSED\",\"syscall\":\"connect\",\"address\":\"127.0.0.1\",\"port\":3501}\u001b[0m",
+    "stage": "dev",
+    "stdio": "stderr",
+    "wd": "C:\\dev\\c2app\\packages\\server"
+  },
+  "354 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\server",
+    "line": "\u001b[1;31m{\"errno\":-4078,\"code\":\"ECONNREFUSED\",\"syscall\":\"connect\",\"address\":\"127.0.0.1\",\"port\":3501}\u001b[0m",
+    "stage": "dev",
+    "stdio": "stderr",
+    "wd": "C:\\dev\\c2app\\packages\\server"
+  },
+  "355 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\server",
+    "line": "\u001b[1;31m{\"errno\":-4078,\"code\":\"ECONNREFUSED\",\"syscall\":\"connect\",\"address\":\"127.0.0.1\",\"port\":3501}\u001b[0m",
+    "stage": "dev",
+    "stdio": "stderr",
+    "wd": "C:\\dev\\c2app\\packages\\server"
+  },
+  "356 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\server",
+    "line": "\u001b[1;31m{\"errno\":-4078,\"code\":\"ECONNREFUSED\",\"syscall\":\"connect\",\"address\":\"127.0.0.1\",\"port\":3501}\u001b[0m",
+    "stage": "dev",
+    "stdio": "stderr",
+    "wd": "C:\\dev\\c2app\\packages\\server"
+  },
+  "357 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\server",
+    "line": "\u001b[1;31m{\"errno\":-4078,\"code\":\"ECONNREFUSED\",\"syscall\":\"connect\",\"address\":\"127.0.0.1\",\"port\":3501}\u001b[0m",
+    "stage": "dev",
+    "stdio": "stderr",
+    "wd": "C:\\dev\\c2app\\packages\\server"
+  },
+  "358 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\server",
+    "line": "\u001b[1;31m{\"errno\":-4078,\"code\":\"ECONNREFUSED\",\"syscall\":\"connect\",\"address\":\"127.0.0.1\",\"port\":3501}\u001b[0m",
+    "stage": "dev",
+    "stdio": "stderr",
+    "wd": "C:\\dev\\c2app\\packages\\server"
+  },
+  "359 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\server",
+    "line": "\u001b[1;31m{\"errno\":-4078,\"code\":\"ECONNREFUSED\",\"syscall\":\"connect\",\"address\":\"127.0.0.1\",\"port\":3501}\u001b[0m",
+    "stage": "dev",
+    "stdio": "stderr",
+    "wd": "C:\\dev\\c2app\\packages\\server"
+  },
+  "360 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\server",
+    "line": "\u001b[1;31m{\"errno\":-4078,\"code\":\"ECONNREFUSED\",\"syscall\":\"connect\",\"address\":\"127.0.0.1\",\"port\":3501}\u001b[0m",
+    "stage": "dev",
+    "stdio": "stderr",
+    "wd": "C:\\dev\\c2app\\packages\\server"
+  },
+  "361 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\server",
+    "line": "\u001b[1;31m{\"errno\":-4078,\"code\":\"ECONNREFUSED\",\"syscall\":\"connect\",\"address\":\"127.0.0.1\",\"port\":3501}\u001b[0m",
+    "stage": "dev",
+    "stdio": "stderr",
+    "wd": "C:\\dev\\c2app\\packages\\server"
+  },
+  "362 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\server",
+    "line": "\u001b[1;31m{\"errno\":-4078,\"code\":\"ECONNREFUSED\",\"syscall\":\"connect\",\"address\":\"127.0.0.1\",\"port\":3501}\u001b[0m",
+    "stage": "dev",
+    "stdio": "stderr",
+    "wd": "C:\\dev\\c2app\\packages\\server"
+  },
+  "363 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\server",
+    "line": "\u001b[1;31m{\"errno\":-4078,\"code\":\"ECONNREFUSED\",\"syscall\":\"connect\",\"address\":\"127.0.0.1\",\"port\":3501}\u001b[0m",
+    "stage": "dev",
+    "stdio": "stderr",
+    "wd": "C:\\dev\\c2app\\packages\\server"
+  },
+  "364 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\server",
+    "line": "\u001b[1;31m{\"errno\":-4078,\"code\":\"ECONNREFUSED\",\"syscall\":\"connect\",\"address\":\"127.0.0.1\",\"port\":3501}\u001b[0m",
+    "stage": "dev",
+    "stdio": "stderr",
+    "wd": "C:\\dev\\c2app\\packages\\server"
+  },
+  "365 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\server",
+    "line": "\u001b[1;31m{\"errno\":-4078,\"code\":\"ECONNREFUSED\",\"syscall\":\"connect\",\"address\":\"127.0.0.1\",\"port\":3501}\u001b[0m",
+    "stage": "dev",
+    "stdio": "stderr",
+    "wd": "C:\\dev\\c2app\\packages\\server"
+  },
+  "366 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\server",
+    "line": "\u001b[1;31m{\"errno\":-4078,\"code\":\"ECONNREFUSED\",\"syscall\":\"connect\",\"address\":\"127.0.0.1\",\"port\":3501}\u001b[0m",
+    "stage": "dev",
+    "stdio": "stderr",
+    "wd": "C:\\dev\\c2app\\packages\\server"
+  },
+  "367 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\server",
+    "line": "\u001b[1;31m{\"errno\":-4078,\"code\":\"ECONNREFUSED\",\"syscall\":\"connect\",\"address\":\"127.0.0.1\",\"port\":3501}\u001b[0m",
+    "stage": "dev",
+    "stdio": "stderr",
+    "wd": "C:\\dev\\c2app\\packages\\server"
+  },
+  "368 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\server",
+    "line": "\u001b[1;31m{\"errno\":-4078,\"code\":\"ECONNREFUSED\",\"syscall\":\"connect\",\"address\":\"127.0.0.1\",\"port\":3501}\u001b[0m",
+    "stage": "dev",
+    "stdio": "stderr",
+    "wd": "C:\\dev\\c2app\\packages\\server"
+  },
+  "369 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\server",
+    "line": "\u001b[1;31m{\"errno\":-4078,\"code\":\"ECONNREFUSED\",\"syscall\":\"connect\",\"address\":\"127.0.0.1\",\"port\":3501}\u001b[0m",
+    "stage": "dev",
+    "stdio": "stderr",
+    "wd": "C:\\dev\\c2app\\packages\\server"
+  },
+  "370 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "assets by status 1.78 MiB \u001b[1m\u001b[32m[cached]\u001b[39m\u001b[22m 30 assets",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "371 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "assets by status 6.86 MiB \u001b[1m\u001b[32m[emitted]\u001b[39m\u001b[22m",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "372 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "  assets by path \u001b[1m\u001b[32mcomponents/\u001b[39m\u001b[22m 5.67 KiB 22 assets",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "373 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "  assets by path \u001b[1m\u001b[32mservices/*.ts\u001b[39m\u001b[22m 9.32 KiB",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "374 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "    asset \u001b[1m\u001b[32mservices/meiosis.d.ts\u001b[39m\u001b[22m 7.77 KiB \u001b[1m\u001b[32m[emitted]\u001b[39m\u001b[22m",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "375 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "    asset \u001b[1m\u001b[32mservices/socket.d.ts\u001b[39m\u001b[22m 824 bytes \u001b[1m\u001b[32m[emitted]\u001b[39m\u001b[22m",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "376 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "    asset \u001b[1m\u001b[32mservices/routing-service.d.ts\u001b[39m\u001b[22m 755 bytes \u001b[1m\u001b[32m[emitted]\u001b[39m\u001b[22m",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "377 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "  assets by path \u001b[1m\u001b[32m*.js\u001b[39m\u001b[22m 6.84 MiB",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "378 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "    asset \u001b[1m\u001b[32mbundle.js\u001b[39m\u001b[22m 6.82 MiB \u001b[1m\u001b[32m[emitted]\u001b[39m\u001b[22m (name: main)",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "379 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "    asset \u001b[1m\u001b[32mmain.db21bd7b98f1b9e7a1fc.hot-update.js\u001b[39m\u001b[22m 20.5 KiB \u001b[1m\u001b[32m[emitted]\u001b[39m\u001b[22m \u001b[1m\u001b[32m[immutable]\u001b[39m\u001b[22m \u001b[1m\u001b[32m[hmr]\u001b[39m\u001b[22m (name: main)",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "380 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "  asset \u001b[1m\u001b[32mindex.html\u001b[39m\u001b[22m 890 bytes \u001b[1m\u001b[32m[emitted]\u001b[39m\u001b[22m",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "381 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "  asset \u001b[1m\u001b[32mapp.d.ts\u001b[39m\u001b[22m 236 bytes \u001b[1m\u001b[32m[emitted]\u001b[39m\u001b[22m",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "382 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "  asset \u001b[1m\u001b[32mmain.db21bd7b98f1b9e7a1fc.hot-update.json\u001b[39m\u001b[22m 28 bytes \u001b[1m\u001b[32m[emitted]\u001b[39m\u001b[22m \u001b[1m\u001b[32m[immutable]\u001b[39m\u001b[22m \u001b[1m\u001b[32m[hmr]\u001b[39m\u001b[22m",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "383 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "Entrypoint \u001b[1mmain\u001b[39m\u001b[22m 6.84 MiB (1.77 MiB) = \u001b[1m\u001b[32mbundle.js\u001b[39m\u001b[22m 6.82 MiB \u001b[1m\u001b[32mmain.db21bd7b98f1b9e7a1fc.hot-update.js\u001b[39m\u001b[22m 20.5 KiB 27 auxiliary assets",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "384 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "cached modules 2.43 MiB (javascript) 1.77 MiB (asset) \u001b[1m\u001b[32m[cached]\u001b[39m\u001b[22m 251 modules",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "385 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "runtime modules 26.2 KiB 12 modules",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "386 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "javascript modules 10.8 KiB",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "387 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "  \u001b[1m./src/services/routing-service.ts\u001b[39m\u001b[22m 4.15 KiB \u001b[1m\u001b[33m[built]\u001b[39m\u001b[22m \u001b[1m\u001b[33m[code generated]\u001b[39m\u001b[22m",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "388 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "  \u001b[1m./src/components/map/map.ts\u001b[39m\u001b[22m 6.64 KiB \u001b[1m\u001b[33m[built]\u001b[39m\u001b[22m \u001b[1m\u001b[33m[code generated]\u001b[39m\u001b[22m",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "389 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "webpack 5.69.1 compiled \u001b[1m\u001b[32msuccessfully\u001b[39m\u001b[22m in 1842 ms",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "390 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "<i> [webpack-dev-middleware] wait until bundle finished: /main.db21bd7b98f1b9e7a1fc.hot-update.json",
+    "stage": "dev",
+    "stdio": "stderr",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "391 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "assets by status 8.61 MiB \u001b[1m\u001b[32m[cached]\u001b[39m\u001b[22m 31 assets",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "392 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "assets by path \u001b[1m\u001b[32m.\u001b[39m\u001b[22m 16.1 KiB",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "393 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "  assets by path \u001b[1m\u001b[32mcomponents/\u001b[39m\u001b[22m 5.67 KiB",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "394 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "    assets by path \u001b[1m\u001b[32mcomponents/sidebars/\u001b[39m\u001b[22m 3.71 KiB 16 assets",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "395 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "    assets by path \u001b[1m\u001b[32mcomponents/map/*.ts\u001b[39m\u001b[22m 1.25 KiB",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "396 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "      asset \u001b[1m\u001b[32mcomponents/map/map-utils.d.ts\u001b[39m\u001b[22m 1.14 KiB \u001b[1m\u001b[32m[emitted]\u001b[39m\u001b[22m",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "397 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "      asset \u001b[1m\u001b[32mcomponents/map/map.d.ts\u001b[39m\u001b[22m 105 bytes \u001b[1m\u001b[32m[emitted]\u001b[39m\u001b[22m",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "398 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "    + 4 assets",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "399 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "  assets by path \u001b[1m\u001b[32mservices/*.ts\u001b[39m\u001b[22m 9.32 KiB",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "400 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "    asset \u001b[1m\u001b[32mservices/meiosis.d.ts\u001b[39m\u001b[22m 7.77 KiB \u001b[1m\u001b[32m[emitted]\u001b[39m\u001b[22m",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "401 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "    asset \u001b[1m\u001b[32mservices/socket.d.ts\u001b[39m\u001b[22m 824 bytes \u001b[1m\u001b[32m[emitted]\u001b[39m\u001b[22m",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "402 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "    asset \u001b[1m\u001b[32mservices/routing-service.d.ts\u001b[39m\u001b[22m 755 bytes \u001b[1m\u001b[32m[emitted]\u001b[39m\u001b[22m",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "403 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "  asset \u001b[1m\u001b[32mindex.html\u001b[39m\u001b[22m 890 bytes \u001b[1m\u001b[32m[emitted]\u001b[39m\u001b[22m",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "404 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "  asset \u001b[1m\u001b[32mapp.d.ts\u001b[39m\u001b[22m 236 bytes \u001b[1m\u001b[32m[emitted]\u001b[39m\u001b[22m",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "405 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "cached modules 2.43 MiB (javascript) 1.77 MiB (asset) 26.2 KiB (runtime) \u001b[1m\u001b[32m[cached]\u001b[39m\u001b[22m 263 modules",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "406 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "javascript modules 10.8 KiB",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "407 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "  \u001b[1m./src/services/routing-service.ts\u001b[39m\u001b[22m 4.15 KiB \u001b[1m\u001b[33m[built]\u001b[39m\u001b[22m",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "408 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "  \u001b[1m./src/components/map/map.ts\u001b[39m\u001b[22m 6.64 KiB \u001b[1m\u001b[33m[built]\u001b[39m\u001b[22m",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "409 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\gui",
+    "line": "webpack 5.69.1 compiled \u001b[1m\u001b[32msuccessfully\u001b[39m\u001b[22m in 858 ms",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\gui"
+  },
+  "410 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\server",
+    "line": "Disconnected: ON_V2frRs4yKV4htAAAP Client count: 0",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\server"
+  },
+  "411 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\server",
+    "line": "Connected: XOTj-4tH5kGZXCEZAAAR Client count: 1",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\server"
+  },
+  "412 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\server",
+    "line": "Disconnected: XOTj-4tH5kGZXCEZAAAR Client count: 0",
+    "stage": "dev",
+    "stdio": "stdout",
+    "wd": "C:\\dev\\c2app\\packages\\server"
+  },
+  "413 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\shared",
+    "line": "^C",
+    "stage": "dev",
+    "stdio": "stderr",
+    "wd": "C:\\dev\\c2app\\packages\\shared"
+  },
+  "414 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\shared",
+    "exitCode": 3221225786,
+    "optional": false,
+    "stage": "dev",
+    "wd": "C:\\dev\\c2app\\packages\\shared"
+  },
+  "415 info pnpm": {
+    "err": {
+      "name": "Error",
+      "message": "c2app-models-utils@0.0.1 dev: `tsc -w`\nExit status 3221225786",
+      "code": "ELIFECYCLE",
+      "stack": "Error: c2app-models-utils@0.0.1 dev: `tsc -w`\nExit status 3221225786\n    at EventEmitter.<anonymous> (C:\\Users\\Admin\\AppData\\Roaming\\npm\\pnpm-global\\5\\node_modules\\.pnpm\\pnpm@6.32.2\\node_modules\\pnpm\\dist\\pnpm.cjs:105700:20)\n    at EventEmitter.emit (node:events:520:28)\n    at ChildProcess.<anonymous> (C:\\Users\\Admin\\AppData\\Roaming\\npm\\pnpm-global\\5\\node_modules\\.pnpm\\pnpm@6.32.2\\node_modules\\pnpm\\dist\\pnpm.cjs:92261:18)\n    at ChildProcess.emit (node:events:520:28)\n    at maybeClose (node:internal/child_process:1092:16)\n    at Process.ChildProcess._handle.onexit (node:internal/child_process:302:5)"
+    }
+  },
+  "416 error pnpm": {
+    "errno": 3221225786,
+    "code": "ERR_PNPM_RECURSIVE_RUN_FIRST_FAIL",
+    "pkgid": "c2app-models-utils@0.0.1",
+    "stage": "dev",
+    "script": "tsc -w",
+    "pkgname": "c2app-models-utils",
+    "prefix": "C:\\dev\\c2app\\packages\\shared",
+    "err": {
+      "name": "pnpm",
+      "message": "c2app-models-utils@0.0.1 dev: `tsc -w`\nExit status 3221225786",
+      "code": "ERR_PNPM_RECURSIVE_RUN_FIRST_FAIL",
+      "stack": "Error: c2app-models-utils@0.0.1 dev: `tsc -w`\nExit status 3221225786\n    at EventEmitter.<anonymous> (C:\\Users\\Admin\\AppData\\Roaming\\npm\\pnpm-global\\5\\node_modules\\.pnpm\\pnpm@6.32.2\\node_modules\\pnpm\\dist\\pnpm.cjs:105700:20)\n    at EventEmitter.emit (node:events:520:28)\n    at ChildProcess.<anonymous> (C:\\Users\\Admin\\AppData\\Roaming\\npm\\pnpm-global\\5\\node_modules\\.pnpm\\pnpm@6.32.2\\node_modules\\pnpm\\dist\\pnpm.cjs:92261:18)\n    at ChildProcess.emit (node:events:520:28)\n    at maybeClose (node:internal/child_process:1092:16)\n    at Process.ChildProcess._handle.onexit (node:internal/child_process:302:5)"
+    }
+  },
+  "417 debug pnpm:lifecycle": {
+    "depPath": "C:\\dev\\c2app\\packages\\server",
+    "exitCode": 3221225786,
     "optional": false,
     "stage": "dev",
     "wd": "C:\\dev\\c2app\\packages\\server"
   },
-  "7 info pnpm": {
+  "418 info pnpm": {
     "err": {
       "name": "Error",
-      "message": "c2app-server@0.0.1 dev: `ts-node-dev src/index.ts`\nExit status 1",
+      "message": "c2app-server@0.0.1 dev: `ts-node-dev src/index.ts`\nExit status 3221225786",
       "code": "ELIFECYCLE",
-      "stack": "Error: c2app-server@0.0.1 dev: `ts-node-dev src/index.ts`\nExit status 1\n    at EventEmitter.<anonymous> (C:\\Users\\Admin\\AppData\\Roaming\\npm\\pnpm-global\\5\\node_modules\\.pnpm\\pnpm@6.32.1\\node_modules\\pnpm\\dist\\pnpm.cjs:105685:20)\n    at EventEmitter.emit (node:events:520:28)\n    at ChildProcess.<anonymous> (C:\\Users\\Admin\\AppData\\Roaming\\npm\\pnpm-global\\5\\node_modules\\.pnpm\\pnpm@6.32.1\\node_modules\\pnpm\\dist\\pnpm.cjs:92232:18)\n    at ChildProcess.emit (node:events:520:28)\n    at maybeClose (node:internal/child_process:1092:16)\n    at Process.ChildProcess._handle.onexit (node:internal/child_process:302:5)"
-    }
-  },
-  "8 error pnpm": {
-    "errno": 1,
-    "code": "ERR_PNPM_RECURSIVE_RUN_FIRST_FAIL",
-    "pkgid": "c2app-server@0.0.1",
-    "stage": "dev",
-    "script": "ts-node-dev src/index.ts",
-    "pkgname": "c2app-server",
-    "prefix": "C:\\dev\\c2app\\packages\\server",
-    "err": {
-      "name": "pnpm",
-      "message": "c2app-server@0.0.1 dev: `ts-node-dev src/index.ts`\nExit status 1",
-      "code": "ERR_PNPM_RECURSIVE_RUN_FIRST_FAIL",
-      "stack": "Error: c2app-server@0.0.1 dev: `ts-node-dev src/index.ts`\nExit status 1\n    at EventEmitter.<anonymous> (C:\\Users\\Admin\\AppData\\Roaming\\npm\\pnpm-global\\5\\node_modules\\.pnpm\\pnpm@6.32.1\\node_modules\\pnpm\\dist\\pnpm.cjs:105685:20)\n    at EventEmitter.emit (node:events:520:28)\n    at ChildProcess.<anonymous> (C:\\Users\\Admin\\AppData\\Roaming\\npm\\pnpm-global\\5\\node_modules\\.pnpm\\pnpm@6.32.1\\node_modules\\pnpm\\dist\\pnpm.cjs:92232:18)\n    at ChildProcess.emit (node:events:520:28)\n    at maybeClose (node:internal/child_process:1092:16)\n    at Process.ChildProcess._handle.onexit (node:internal/child_process:302:5)"
+      "stack": "Error: c2app-server@0.0.1 dev: `ts-node-dev src/index.ts`\nExit status 3221225786\n    at EventEmitter.<anonymous> (C:\\Users\\Admin\\AppData\\Roaming\\npm\\pnpm-global\\5\\node_modules\\.pnpm\\pnpm@6.32.2\\node_modules\\pnpm\\dist\\pnpm.cjs:105700:20)\n    at EventEmitter.emit (node:events:520:28)\n    at ChildProcess.<anonymous> (C:\\Users\\Admin\\AppData\\Roaming\\npm\\pnpm-global\\5\\node_modules\\.pnpm\\pnpm@6.32.2\\node_modules\\pnpm\\dist\\pnpm.cjs:92261:18)\n    at ChildProcess.emit (node:events:520:28)\n    at maybeClose (node:internal/child_process:1092:16)\n    at Socket.<anonymous> (node:internal/child_process:451:11)\n    at Socket.emit (node:events:520:28)\n    at Pipe.<anonymous> (node:net:687:12)"
     }
   }
 }

@@ -1,11 +1,12 @@
 import { GeoJSONSource, GeoJSONFeature } from 'maplibre-gl';
 import bbox from '@turf/bbox';
 import booleanPointInPolygon from '@turf/boolean-point-in-polygon';
-import { Point, Feature, Polygon, FeatureCollection, Geometry } from 'geojson';
+import { Point, Feature, Polygon, FeatureCollection, Geometry, Position } from 'geojson';
 import { IActions, IAppModel, ILayer, ISource } from '../../services/meiosis';
 import SquareGrid from '@turf/square-grid';
 import polylabel from 'polylabel';
 import { appIcons } from './map-icons';
+import * as turf from '@turf/turf'
 
 export const drawConfig = {
   displayControlsDefault: false,
@@ -136,7 +137,13 @@ export const updateSourcesAndLayers = (appState: IAppModel, actions: IActions, m
         data: source.source,
       });
     } else {
-      (map.getSource(sourceName) as GeoJSONSource).setData(source.source);
+      if (source.id === 'circleData') {
+        console.log(appState.app.clickedFeature?.geometry);
+        (map.getSource('circleData') as GeoJSONSource).setData(turf.circle((appState.app.clickedFeature?.geometry as Point).coordinates, 0.5))
+      } else {
+
+        (map.getSource(sourceName) as GeoJSONSource).setData(source.source);
+      }
     }
 
     // Set Layers
@@ -153,9 +160,32 @@ export const updateSourcesAndLayers = (appState: IAppModel, actions: IActions, m
           paint: layer.paint ? layer.paint : {},
           filter: layer.filter ? layer.filter : ['all'],
         });
-        map.on('click', layerName, ({ features }) => displayInfoSidebar(features as GeoJSONFeature[], actions));
+        map.on('click', layerName, ({ features }) => {
+          displayInfoSidebar(features as GeoJSONFeature[], actions);
+          if (features && features[0].properties?.type === "man") {
+            const position: Position = (features[0].geometry as Point).coordinates;
+            console.log(position);
+            (map.getSource('circleData') as GeoJSONSource).setData(turf.circle((features![0].geometry as Point).coordinates, 0.5));
+            map.addLayer({
+              id: "area-of-movement",
+              type: "fill",
+              source: "circleData",
+              'layout': {
+                'visibility': 'visible'
+              },
+              paint: {
+                "fill-color": "red",
+                "fill-opacity": 0.5,
+              },
+            }, 'urban_z0-Z12');
+              // new: place geojson that shows movement radius?
+          }
+        });
         map.on('mouseenter', layerName, () => (map.getCanvas().style.cursor = 'pointer'));
         map.on('mouseleave', layerName, () => (map.getCanvas().style.cursor = ''));
+        map.on('mouseleave', 'area-of-movement', () => {
+          map.removeLayer('area-of-movement');
+        });
       }
       map.setLayoutProperty(layerName, 'visibility', layer.showLayer ? 'visible' : 'none');
       

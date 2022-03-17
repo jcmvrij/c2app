@@ -46,7 +46,7 @@ export const poiSidebar: MeiosisComponent = () => {
                 ? m(alertFormatComponent, { state, actions })
                 : clickedFeature?.properties?.type === 'incidentLocation'
                 ? m(incidentLocationFormatComponent, { state, actions })
-                : clickedFeature?.properties?.type === 'MAN'
+                : clickedFeature?.properties?.type === 'man'
                 ? formatMan(clickedFeature)
                 : clickedFeature?.properties?.type === 'CAR'
                 ? formatCar(clickedFeature)

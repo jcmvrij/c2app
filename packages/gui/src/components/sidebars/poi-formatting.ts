@@ -20,10 +20,13 @@ export interface IGeoJSONFeatureTwo extends GeoJSON.Feature<GeoJSON.Geometry> {
 
 export const formatMan = (ft: IGeoJSONFeatureTwo) => {
   const props = ft?.properties;
+  console.log(ft);
   return m('div', [
     m('p', 'Layer Name: ' + ft.layer.id),
+    m('p', 'ID: ' + props?.id),
     m('p', 'Type: ' + props?.type),
     m('p', 'Callsign: ' + props?.name),
+    m('p', 'Everything: ' + JSON.stringify(ft)),
   ]);
 };
 export const formatCar = (ft: IGeoJSONFeatureTwo) => {
@@ -37,6 +40,7 @@ export const formatUnknown = (ft: IGeoJSONFeatureTwo) => {
     m('p', 'Layer Name: ' + ft.layer.id),
     m('p', 'ID: ' + props?.id),
     m('p', 'Height: ' + props?.height),
+    m('p', 'Type: ' + props?.type),
   ]);
 };
 
