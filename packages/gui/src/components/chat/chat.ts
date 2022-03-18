@@ -45,16 +45,18 @@ export const Chat: FactoryComponent<{
                 m('.card-panel', [
                   m(
                     'div',
-                    vnode.attrs.state.app.messages.get(vnode.attrs.state.app.chat.id)?.map((message: IMessage) => {
-                      return m(
-                        'div',
-                        `${
-                          message.sender === vnode.attrs.state.app.callsign
-                            ? 'You: ' + message.message
-                            : message.sender + ': ' + message.message
-                        }`
-                      );
-                    })
+                    vnode.attrs.state.app.messages
+                      .get(vnode.attrs.state.app.chat.id)
+                      ?.map((message: IMessage) => {
+                        return m(
+                          'div',
+                          `${
+                            message.sender === vnode.attrs.state.app.callsign
+                              ? 'You: ' + message.message
+                              : message.sender + ': ' + message.message
+                          }`
+                        );
+                      })
                   ),
                 ]),
                 m(

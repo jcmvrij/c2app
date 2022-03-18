@@ -464,7 +464,8 @@ export const appStateMgmt = {
               }
               // Toggle one layer (layerIndex) of a source
               else {
-                sources[sourceIndex].layers[layerIndex].showLayer = !sources[sourceIndex].layers[layerIndex].showLayer;
+                sources[sourceIndex].layers[layerIndex].showLayer =
+                  !sources[sourceIndex].layers[layerIndex].showLayer;
                 return sources;
               }
             },
@@ -728,7 +729,8 @@ export const appStateMgmt = {
                     properties: {
                       type: 'incidentLocation',
                       scenario: chemicalIncident.scenario as IChemicalIncidentScenario,
-                      control_parameters: chemicalIncident.control_parameters as IChemicalIncidentControlParameters,
+                      control_parameters:
+                        chemicalIncident.control_parameters as IChemicalIncidentControlParameters,
                       context: chemicalIncident.context,
                       timestamp: chemicalIncident.timestamp,
                       id: chemicalIncident._id,
@@ -739,7 +741,8 @@ export const appStateMgmt = {
 
               const index = sources.findIndex((source: ISource) => {
                 return (
-                  source.id === chemicalIncident._id && source.sourceName === 'IncidentLocation' + chemicalIncident._id
+                  source.id === chemicalIncident._id &&
+                  source.sourceName === 'IncidentLocation' + chemicalIncident._id
                 );
               });
 
@@ -822,7 +825,8 @@ const app = {
   // Services that run everytime the state is updated (so after the action is done)
   services: [] as Array<(s: IAppModel) => Partial<IAppModel> | void>,
   // Effects run from state update until some condition is met (can cause infinite loop)
-  effects: (_update: UpdateStream, _actions: IActions) => [] as Array<(state: IAppModel) => Promise<void> | void>,
+  effects: (_update: UpdateStream, _actions: IActions) =>
+    [] as Array<(state: IAppModel) => Promise<void> | void>,
 };
 
 const runServices = (startingState: IAppModel) =>

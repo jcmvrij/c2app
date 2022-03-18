@@ -62,7 +62,11 @@ export const customLayerModal: FactoryComponent<{
                 m('option', { value: '', disabled: true, selected: true }, 'Choose the icon'),
                 m('option.left', { value: 'CAR', 'data-icon': car }, 'Car'),
                 m('option.left', { value: 'CONTROLPOINT', 'data-icon': controlPoint }, 'Control Point'),
-                m('option.left', { value: 'DIVISION_COMMAND', 'data-icon': divisionCommand }, 'Division Command'),
+                m(
+                  'option.left',
+                  { value: 'DIVISION_COMMAND', 'data-icon': divisionCommand },
+                  'Division Command'
+                ),
                 m('option.left', { value: 'EVACUATION', 'data-icon': evacuation }, 'Evacuation'),
                 m('option.left', { value: 'FIREFIGHTER', 'data-icon': fireman }, 'Firefighter'),
                 m('option.left', { value: 'ROADBLOCK', 'data-icon': roadBlock }, 'Road Block'),
@@ -126,7 +130,9 @@ export const customLayerModal: FactoryComponent<{
                   layerName,
                   icon,
                   share,
-                  M.FormSelect.getInstance(document.getElementById('sharewith') as HTMLElement).getSelectedValues()
+                  M.FormSelect.getInstance(
+                    document.getElementById('sharewith') as HTMLElement
+                  ).getSelectedValues()
                 );
               },
             },

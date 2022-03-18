@@ -29,9 +29,9 @@ const transform = (dir: 'from' | 'to', v: string | Date) => {
     return new Date();
   } else {
     const d = v as Date;
-    return `${padLeft(d.getDate())}-${padLeft(d.getMonth() + 1)}-${d.getFullYear()} ${padLeft(d.getHours())}:${padLeft(
-      d.getMinutes()
-    )}`;
+    return `${padLeft(d.getDate())}-${padLeft(d.getMonth() + 1)}-${d.getFullYear()} ${padLeft(
+      d.getHours()
+    )}:${padLeft(d.getMinutes())}`;
   }
 };
 

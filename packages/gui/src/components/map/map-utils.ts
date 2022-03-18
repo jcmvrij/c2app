@@ -6,7 +6,7 @@ import { IActions, IAppModel, ILayer, ISource } from '../../services/meiosis';
 import SquareGrid from '@turf/square-grid';
 import polylabel from 'polylabel';
 import { appIcons } from './map-icons';
-import * as turf from '@turf/turf'
+import * as turf from '@turf/turf';
 
 export const drawConfig = {
   displayControlsDefault: false,
@@ -32,11 +32,14 @@ export const handleDrawEvent = (map: maplibregl.Map, features: GeoJSONFeature[],
 const getFeaturesInPolygon = (map: maplibregl.Map, features: GeoJSONFeature[], actions: IActions) => {
   let layers: Array<string> = [];
 
-  if (map.getLayer('ResourcesresourcesIDfiremanResources')) layers.push('ResourcesresourcesIDfiremanResources');
-  if (map.getLayer('ResourcesresourcesIDpolicemanResources')) layers.push('ResourcesresourcesIDpolicemanResources');
+  if (map.getLayer('ResourcesresourcesIDfiremanResources'))
+    layers.push('ResourcesresourcesIDfiremanResources');
+  if (map.getLayer('ResourcesresourcesIDpolicemanResources'))
+    layers.push('ResourcesresourcesIDpolicemanResources');
   if (map.getLayer('ResourcesresourcesIDfirst_responderResources'))
     layers.push('ResourcesresourcesIDfirst_responderResources');
-  if (map.getLayer('ResourcesresourcesIDsanitaryResources')) layers.push('ResourcesresourcesIDsanitaryResources');
+  if (map.getLayer('ResourcesresourcesIDsanitaryResources'))
+    layers.push('ResourcesresourcesIDsanitaryResources');
   if (map.getLayer('ResourcesresourcesIDcarResources')) layers.push('ResourcesresourcesIDcarResources');
   if (map.getLayer('ResourcesresourcesIDvanResources')) layers.push('ResourcesresourcesIDvanResources');
   if (map.getLayer('ResourcesresourcesIDtruckResources')) layers.push('ResourcesresourcesIDtruckResources');
@@ -73,7 +76,12 @@ export const getGridSource = (
   if (appState.app.gridOptions.updateLocation) {
     const bounds = map.getBounds();
     actions.updateGridLocation([bounds.getWest(), bounds.getSouth(), bounds.getEast(), bounds.getNorth()]);
-    appState.app.gridOptions.gridLocation = [bounds.getWest(), bounds.getSouth(), bounds.getEast(), bounds.getNorth()];
+    appState.app.gridOptions.gridLocation = [
+      bounds.getWest(),
+      bounds.getSouth(),
+      bounds.getEast(),
+      bounds.getNorth(),
+    ];
   }
 
   return SquareGrid(appState.app.gridOptions.gridLocation, appState.app.gridOptions.gridCellSize, {
@@ -139,9 +147,10 @@ export const updateSourcesAndLayers = (appState: IAppModel, actions: IActions, m
     } else {
       if (source.id === 'circleData') {
         console.log(appState.app.clickedFeature?.geometry);
-        (map.getSource('circleData') as GeoJSONSource).setData(turf.circle((appState.app.clickedFeature?.geometry as Point).coordinates, 0.5))
+        (map.getSource('circleData') as GeoJSONSource).setData(
+          turf.circle((appState.app.clickedFeature?.geometry as Point).coordinates, 0.5)
+        );
       } else {
-
         (map.getSource(sourceName) as GeoJSONSource).setData(source.source);
       }
     }
@@ -162,23 +171,28 @@ export const updateSourcesAndLayers = (appState: IAppModel, actions: IActions, m
         });
         map.on('click', layerName, ({ features }) => {
           displayInfoSidebar(features as GeoJSONFeature[], actions);
-          if (features && features[0].properties?.type === "man") {
+          if (features && features[0].properties?.type === 'man') {
             const position: Position = (features[0].geometry as Point).coordinates;
             console.log(position);
-            (map.getSource('circleData') as GeoJSONSource).setData(turf.circle((features![0].geometry as Point).coordinates, 0.5));
-            map.addLayer({
-              id: "area-of-movement",
-              type: "fill",
-              source: "circleData",
-              'layout': {
-                'visibility': 'visible'
+            (map.getSource('circleData') as GeoJSONSource).setData(
+              turf.circle((features![0].geometry as Point).coordinates, 0.5)
+            );
+            map.addLayer(
+              {
+                id: 'area-of-movement',
+                type: 'fill',
+                source: 'circleData',
+                layout: {
+                  visibility: 'visible',
+                },
+                paint: {
+                  'fill-color': 'red',
+                  'fill-opacity': 0.5,
+                },
               },
-              paint: {
-                "fill-color": "red",
-                "fill-opacity": 0.5,
-              },
-            }, 'urban_z0-Z12');
-              // new: place geojson that shows movement radius?
+              'urban_z0-Z12'
+            );
+            // new: place geojson that shows movement radius?
           }
         });
         map.on('mouseenter', layerName, () => (map.getCanvas().style.cursor = 'pointer'));
@@ -188,7 +202,7 @@ export const updateSourcesAndLayers = (appState: IAppModel, actions: IActions, m
         });
       }
       map.setLayoutProperty(layerName, 'visibility', layer.showLayer ? 'visible' : 'none');
-      
+
       // if (source.sourceCategory === SourceType.alert || source.sourceCategory === SourceType.plume)
       // map.setPaintProperty(layerName, 'line-opacity', (layer.paint as LineLayerSpecification['paint'])!['line-opacity']);
     });
@@ -208,7 +222,9 @@ export const updateSatellite = (appState: IAppModel, map: maplibregl.Map) => {
   if (!map.getSource(sourceName)) {
     map.addSource(sourceName, {
       type: 'raster',
-      tiles: ['https://service.pdok.nl/hwh/luchtfotorgb/wmts/v1_0/Actueel_ortho25/EPSG:3857/{z}/{x}/{y}.jpeg'],
+      tiles: [
+        'https://service.pdok.nl/hwh/luchtfotorgb/wmts/v1_0/Actueel_ortho25/EPSG:3857/{z}/{x}/{y}.jpeg',
+      ],
       tileSize: 256,
       maxzoom: 18,
     });

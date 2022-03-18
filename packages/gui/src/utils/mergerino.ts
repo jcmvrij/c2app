@@ -3,7 +3,8 @@
  * Source: https://github.com/fuzetsu/mergerino
  */
 
-export const assign = Object.assign || ((a: any, b: any) => (b && Object.keys(b).forEach((k) => (a[k] = b[k])), a));
+export const assign =
+  Object.assign || ((a: any, b: any) => (b && Object.keys(b).forEach((k) => (a[k] = b[k])), a));
 
 const run = (isArr: boolean, copy: any, patch: any) => {
   const type = typeof patch;

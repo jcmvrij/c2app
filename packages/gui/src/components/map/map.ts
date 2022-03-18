@@ -1,11 +1,17 @@
 import m from 'mithril';
-import maplibregl, { GeoJSONFeature, IControl, Listener, MapEvent, MapEventType, MapLayerEventType } from 'maplibre-gl';
+import maplibregl, {
+  GeoJSONFeature,
+  IControl,
+  Listener,
+  MapEvent,
+  MapEventType,
+  MapLayerEventType,
+} from 'maplibre-gl';
 import MapboxDraw from '@mapbox/mapbox-gl-draw';
 import { RulerControl } from '@prashis/maplibre-gl-controls';
 import { MeiosisComponent } from '../../services/meiosis';
 import * as MapUtils from './map-utils';
 import { experimentalFunctionality } from './map-experimental';
-
 
 declare type MapLayerEventTypeTwo = MapLayerEventType & {
   'draw.create': (e: { type: string; features: GeoJSONFeature[] }) => void;
@@ -42,7 +48,7 @@ export const Map: MeiosisComponent = () => {
         center: [4.27, 52.05] as [number, number],
         zoom: 14,
         doubleClickZoom: false,
-        maxZoom: 15.99
+        maxZoom: 15.99,
       }) as DrawableMap;
       MapUtils.loadImages(map);
       MapUtils.updateGrid(appState, actions, map);
@@ -64,20 +70,19 @@ export const Map: MeiosisComponent = () => {
         map.once('styledata', () => {
           MapUtils.updateSourcesAndLayers(appState, actions, map);
           MapUtils.updateSatellite(appState, map);
-          
+
           experimentalFunctionality(map, actions);
 
           map.on('styleimagemissing', (e) => {
             console.log(`Image ${e.id} is missing!`);
           });
         });
-
       });
     },
 
     // Executes on every redraw
     onupdate: ({ attrs: { state: appState, actions } }) => {
-      console.log("map redrawn")
+      console.log('map redrawn');
       if (!map.loaded()) return;
       // Check if drawings should be removed from the map
       if (appState.app.clearDrawing.delete) {

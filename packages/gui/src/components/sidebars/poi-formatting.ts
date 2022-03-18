@@ -10,6 +10,7 @@ import {
   ICbrnProperties,
 } from 'c2app-models-utils';
 import { LayerSpecification } from 'maplibre-gl';
+import { Collapsible } from 'mithril-materialized';
 
 export interface IGeoJSONFeatureTwo extends GeoJSON.Feature<GeoJSON.Geometry> {
   layer: LayerSpecification;
@@ -21,13 +22,16 @@ export interface IGeoJSONFeatureTwo extends GeoJSON.Feature<GeoJSON.Geometry> {
 export const formatMan = (ft: IGeoJSONFeatureTwo) => {
   const props = ft?.properties;
   console.log(ft);
-  return m('div', [
-    m('p', 'Layer Name: ' + ft.layer.id),
-    m('p', 'ID: ' + props?.id),
-    m('p', 'Type: ' + props?.type),
-    m('p', 'Callsign: ' + props?.name),
-    m('p', 'Everything: ' + JSON.stringify(ft)),
-  ]);
+  return m(Collapsible, {
+    accordion: false,
+    items: [
+      { header: 'ID', body: props?.id || 'No ID', iconName: 'person_pin_circle', active: true },
+      { header: 'Type', body: props?.type || 'No Type', iconName: 'group', active: true },
+      { header: 'Callsign', body: props?.name || 'No Callsign', iconName: 'group_work', active: true },
+      { header: 'Layer Name', body: ft.layer.id || 'No Layer', iconName: 'layers', active: true },
+      { header: 'Everything', body: JSON.stringify(ft), iconName: 'build' },
+    ],
+  });
 };
 export const formatCar = (ft: IGeoJSONFeatureTwo) => {
   const props = ft?.properties;
@@ -135,7 +139,14 @@ export const sensorFormatComponent: FactoryComponent<{
             m('p', 'ID: ' + sensor.id),
             m('p', 'Type: ' + sensor.sensorType),
             m('p', 'Height: ' + sensor.height),
-            m('p', sensor.measurement.metricFeature + ': ' + sensor.measurement.value + ' ' + sensor.measurement.unit),
+            m(
+              'p',
+              sensor.measurement.metricFeature +
+                ': ' +
+                sensor.measurement.value +
+                ' ' +
+                sensor.measurement.unit
+            ),
           ];
         })
       );

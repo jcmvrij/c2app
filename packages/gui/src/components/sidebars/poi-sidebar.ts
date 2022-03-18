@@ -33,9 +33,8 @@ export const poiSidebar: MeiosisComponent = () => {
             m('i.material-icons', 'clear')
           ),
           m('h5', 'Details'),
-          // If there is a clicked feature
           m('.col.s12', [
-            clickedFeature
+            clickedFeature // If there is a clicked feature
               ? clickedFeature?.properties?.type === 'resource'
                 ? m(resourceFormatComponent, { state, actions })
                 : clickedFeature?.properties?.type === 'sensor'

@@ -11,7 +11,10 @@ export const editLayerModal: FactoryComponent<{
       return m(
         '.modal.modal-fixed-footer',
         { id: 'editLayerModal' },
-        m('.modal-content', [m('h4', 'Edit Layer'), m('p', `${'layerId: ' + vnode.attrs.state.app.editLayer}`)]),
+        m('.modal-content', [
+          m('h4', 'Edit Layer'),
+          m('p', `${'layerId: ' + vnode.attrs.state.app.editLayer}`),
+        ]),
         m(
           '.modal-footer',
           m('a.modal-close.waves-effect.waves-green.btn-flat', 'Cancel'),

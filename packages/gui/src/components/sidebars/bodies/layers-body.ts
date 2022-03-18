@@ -83,7 +83,11 @@ export const layersBody: FactoryComponent<{
               '.collapsible-body',
               m(
                 '.row',
-                m('button.btn.modal-trigger.col.s10.offset-s1', { 'data-target': 'gridModal' }, 'Create Grid'),
+                m(
+                  'button.btn.modal-trigger.col.s10.offset-s1',
+                  { 'data-target': 'gridModal' },
+                  'Create Grid'
+                ),
                 m(
                   '.col.s12',
                   vnode.attrs.state.app.sources.map((source: ISource, sourceIndex: number) => {
@@ -122,7 +126,11 @@ export const layersBody: FactoryComponent<{
               '.collapsible-body',
               m(
                 '.row',
-                m('button.btn.modal-trigger.col.s10.offset-s1', { 'data-target': 'customLayerModal' }, 'Create Layer'),
+                m(
+                  'button.btn.modal-trigger.col.s10.offset-s1',
+                  { 'data-target': 'customLayerModal' },
+                  'Create Layer'
+                ),
                 m(
                   '.col.s12',
                   vnode.attrs.state.app.sources.map((source: ISource, sourceIndex: number) => {
