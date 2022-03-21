@@ -21,7 +21,6 @@ export interface IGeoJSONFeatureTwo extends GeoJSON.Feature<GeoJSON.Geometry> {
 
 export const formatMan = (ft: IGeoJSONFeatureTwo) => {
   const props = ft?.properties;
-  console.log(ft);
   return m(Collapsible, {
     accordion: false,
     items: [
@@ -29,10 +28,11 @@ export const formatMan = (ft: IGeoJSONFeatureTwo) => {
       { header: 'Type', body: props?.type || 'No Type', iconName: 'group', active: true },
       { header: 'Callsign', body: props?.name || 'No Callsign', iconName: 'group_work', active: true },
       { header: 'Layer Name', body: ft.layer.id || 'No Layer', iconName: 'layers', active: true },
-      { header: 'Everything', body: JSON.stringify(ft), iconName: 'build' },
+      { header: 'Everything', body: JSON.stringify(ft), iconName: 'build', active: true },
     ],
   });
 };
+
 export const formatCar = (ft: IGeoJSONFeatureTwo) => {
   const props = ft?.properties;
   return m('div', [m('p', 'Layer Name: ' + ft.layer.id), m('p', 'Type: ' + props?.type)]);

@@ -47,9 +47,9 @@ export const Map: MeiosisComponent = () => {
         style: 'https://geodata.nationaalgeoregister.nl/beta/topotiles-viewer/styles/achtergrond.json',
         center: [4.27, 52.05] as [number, number],
         zoom: 14,
-        doubleClickZoom: false,
         maxZoom: 15.99,
       }) as DrawableMap;
+      map.doubleClickZoom.disable();
       MapUtils.loadImages(map);
       MapUtils.updateGrid(appState, actions, map);
 
@@ -68,21 +68,28 @@ export const Map: MeiosisComponent = () => {
         map.on('draw.update', ({ features }) => MapUtils.handleDrawEvent(map, features, actions));
 
         map.once('styledata', () => {
+          experimentalFunctionality(appState, map);
+
           MapUtils.updateSourcesAndLayers(appState, actions, map);
           MapUtils.updateSatellite(appState, map);
+          // MapUtils.updateAreaOfMovement(appState, map);
 
-          experimentalFunctionality(map, actions);
+          console.log(map.getStyle());
 
           map.on('styleimagemissing', (e) => {
             console.log(`Image ${e.id} is missing!`);
           });
+        });
+
+        map.on('mouseleave', 'area-of-movement', () => {
+          map.removeLayer('area-of-movement');
+          MapUtils.toggleAreaOfMovementVisibility(map, false);
         });
       });
     },
 
     // Executes on every redraw
     onupdate: ({ attrs: { state: appState, actions } }) => {
-      console.log('map redrawn');
       if (!map.loaded()) return;
       // Check if drawings should be removed from the map
       if (appState.app.clearDrawing.delete) {
@@ -97,6 +104,9 @@ export const Map: MeiosisComponent = () => {
 
       MapUtils.updateSourcesAndLayers(appState, actions, map);
       MapUtils.updateSatellite(appState, map);
+      // MapUtils.updateAreaOfMovement(appState, map);
+
+      console.log('map update executed');
     },
   };
 };
