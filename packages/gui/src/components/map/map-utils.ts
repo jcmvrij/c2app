@@ -1,8 +1,8 @@
-import { GeoJSONSource, GeoJSONFeature } from 'maplibre-gl';
+import { GeoJSONSource, GeoJSONFeature, LineLayerSpecification } from 'maplibre-gl';
 import bbox from '@turf/bbox';
 import booleanPointInPolygon from '@turf/boolean-point-in-polygon';
 import { Point, Feature, Polygon, FeatureCollection, Geometry } from 'geojson';
-import { IActions, IAppModel, ILayer, ISource } from '../../services/meiosis';
+import { IActions, IAppModel, ILayer, ISource, SourceType } from '../../services/meiosis';
 import SquareGrid from '@turf/square-grid';
 import polylabel from 'polylabel';
 import { appIcons } from './map-icons';
@@ -151,7 +151,6 @@ export const updateSourcesAndLayers = (appState: IAppModel, actions: IActions, m
     // Set Layers
     source.layers.forEach((layer: ILayer) => {
       const layerName = sourceName.concat(layer.layerName);
-
       if (!map.getLayer(layerName)) {
         map.addLayer({
           id: layerName,
@@ -166,46 +165,22 @@ export const updateSourcesAndLayers = (appState: IAppModel, actions: IActions, m
           displayInfoSidebar(features as GeoJSONFeature[], actions);
 
           if (features && features[0].properties?.type === 'man') {
-            toggleAreaOfMovementVisibility(map, true);
-            const positionOfMan = (features[0].geometry as Point).coordinates;
-            (map.getSource('circleData') as GeoJSONSource).setData(turf.circle(positionOfMan, 0.5));
-            if (!map.getLayer('area-of-movement')) {
-              map.addLayer(
-                {
-                  id: 'area-of-movement',
-                  type: 'fill',
-                  source: 'circleData',
-                  layout: {
-                    visibility: 'visible',
-                  },
-                  paint: {
-                    'fill-color': 'red',
-                    'fill-opacity': 0.5,
-                  },
-                },
-                'water'
-              );
-
-              map.on('click', 'area-of-movement', (e) => {
-                const renderedFeaturesAtClick = map.queryRenderedFeatures(e.point);
-                if (renderedFeaturesAtClick[0].layer.id === 'area-of-movement') {
-                  (map.getSource('circleData') as GeoJSONSource).setData(
-                    turf.circle([e.lngLat.lng, e.lngLat.lat], 0.5)
-                  );
-                } else {
-                  console.log('Clicking here is not allowed.');
-                }
-              });
-            }
+            toggleAreaOfMovementVisibility(map, true, layerName);
+            updateAreaOfMovementSourceAndLayer(map, features);
           }
         });
+
         map.on('mouseenter', layerName, () => (map.getCanvas().style.cursor = 'pointer'));
         map.on('mouseleave', layerName, () => (map.getCanvas().style.cursor = ''));
       }
       map.setLayoutProperty(layerName, 'visibility', layer.showLayer ? 'visible' : 'none');
 
-      // if (source.sourceCategory === SourceType.alert || source.sourceCategory === SourceType.plume)
-      // map.setPaintProperty(layerName, 'line-opacity', (layer.paint as LineLayerSpecification['paint'])!['line-opacity']);
+      if (source.sourceCategory === SourceType.alert || source.sourceCategory === SourceType.plume)
+        map.setPaintProperty(
+          layerName,
+          'line-opacity',
+          (layer.paint as LineLayerSpecification['paint'])!['line-opacity']
+        );
     });
   });
 };
@@ -247,14 +222,46 @@ export const updateSatellite = (appState: IAppModel, map: maplibregl.Map) => {
     );
   }
   map.setLayoutProperty(layerName, 'visibility', appState.app.showSatellite ? 'visible' : 'none');
-  // map.setPaintProperty(
-  //   'background',
-  //   'fill-opacity',
-  //   appState.app.showSatellite ? 0 : ['interpolate', ['linear'], ['zoom'], 15, 0, 16, 1]
-  // );
+  map.setPaintProperty(
+    'background',
+    'background-opacity',
+    appState.app.showSatellite ? 0 : ['interpolate', ['linear'], ['zoom'], 15, 0, 16, 1]
+  );
 };
 
-export function toggleAreaOfMovementVisibility(map: maplibregl.Map, visibility: boolean) {
+function updateAreaOfMovementSourceAndLayer(map: maplibregl.Map, features: Feature[]) {
+  const positionOfMan = (features[0].geometry as Point).coordinates;
+
+  if (!map.getSource('area-of-movement-src')) {
+    map.addSource('area-of-movement-src', {
+      type: 'geojson',
+      data: turf.circle((features[0].geometry as Point).coordinates, 0.2),
+    });
+  } else {
+    (map.getSource('area-of-movement-src') as GeoJSONSource).setData(turf.circle(positionOfMan, 0.2));
+  }
+
+  if (!map.getLayer('area-of-movement')) {
+    map.addLayer(
+      {
+        id: 'area-of-movement',
+        type: 'fill',
+        source: 'area-of-movement-src',
+        layout: {
+          visibility: 'visible',
+        },
+        paint: {
+          'fill-color': 'red',
+          'fill-opacity': 0.3,
+        },
+      },
+      'water'
+    );
+  }
+}
+
+export const toggleAreaOfMovementVisibility = (map: maplibregl.Map, visible: boolean, layerName?: string) => {
+  const symbolLayer = layerName || 'Positionstestid1Firemen';
   const layersToToggle = [
     'roads_case',
     'roads_fill',
@@ -264,9 +271,10 @@ export function toggleAreaOfMovementVisibility(map: maplibregl.Map, visibility: 
     'building_labels',
     'labels_roads_top10',
   ];
-  if (visibility) {
+  if (visible) {
     map.moveLayer('water');
     map.moveLayer('urban_z12-Z20');
+    map.moveLayer(symbolLayer);
     layersToToggle.forEach((layer) => {
       map.setLayoutProperty(layer, 'visibility', 'none');
     });
@@ -277,47 +285,21 @@ export function toggleAreaOfMovementVisibility(map: maplibregl.Map, visibility: 
       map.setLayoutProperty(layer, 'visibility', 'visible');
     });
   }
-}
-// export const updateAreaOfMovement = (appState: IAppModel, map: maplibregl.Map) => {
-//   // Set source
-//   const sourceName = 'area-of-movement';
-//   if (!map.getSource(sourceName)) {
-//     console.log('1source create');
-//     map.addSource(sourceName, {
-//       type: 'geojson',
-//       data: turf.circle([4.274904727935791, 52.05700299480173], 0.1),
-//     });
-//   } else {
-//     console.log('2source update');
-//     if (appState.app.clickedFeature !== undefined) {
-//       console.log((appState.app.clickedFeature.geometry as Point).coordinates);
-//       (map.getSource(sourceName) as GeoJSONSource).setData(
-//         turf.circle(appState.app.clickedFeature.geometry as Point, 0.5)
-//       );
-//     }
-//   }
-//   // Set Layer
-//   const layerName = 'area-of-movement-layer';
-//   if (!map.getLayer(layerName)) {
-//     console.log('layer create');
-//     map.addLayer(
-//       {
-//         id: layerName,
-//         type: 'fill',
-//         source: 'area-of-movement',
-//         layout: {
-//           visibility: 'none',
-//         },
-//         paint: {
-//           'fill-color': 'red',
-//           'fill-opacity': 0.5,
-//         },
-//       }
-//       // ,
-//       // 'water'
-//     );
-//   } else {
-//     console.log('layer update');
-//     map.getLayer(layerName).setLayoutProperty('visibility', 'visible');
-//   }
-// };
+};
+
+export const addAreaOfMovementLayerMapListeners = (map: maplibregl.Map) => {
+  map.on('mouseleave', 'area-of-movement', () => {
+    map.removeLayer('area-of-movement');
+    toggleAreaOfMovementVisibility(map, false);
+  });
+  map.on('click', 'area-of-movement', (e) => {
+    const renderedFeaturesAtClick = map.queryRenderedFeatures(e.point);
+    if (renderedFeaturesAtClick[0].layer.id === 'area-of-movement') {
+      (map.getSource('area-of-movement-src') as GeoJSONSource).setData(
+        turf.circle([e.lngLat.lng, e.lngLat.lat], 0.2)
+      );
+    } else {
+      console.log('Clicking here is not allowed.');
+    }
+  });
+};

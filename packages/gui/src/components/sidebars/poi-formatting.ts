@@ -21,16 +21,32 @@ export interface IGeoJSONFeatureTwo extends GeoJSON.Feature<GeoJSON.Geometry> {
 
 export const formatMan = (ft: IGeoJSONFeatureTwo) => {
   const props = ft?.properties;
-  return m(Collapsible, {
-    accordion: false,
-    items: [
-      { header: 'ID', body: props?.id || 'No ID', iconName: 'person_pin_circle', active: true },
-      { header: 'Type', body: props?.type || 'No Type', iconName: 'group', active: true },
-      { header: 'Callsign', body: props?.name || 'No Callsign', iconName: 'group_work', active: true },
-      { header: 'Layer Name', body: ft.layer.id || 'No Layer', iconName: 'layers', active: true },
-      { header: 'Everything', body: JSON.stringify(ft), iconName: 'build', active: true },
-    ],
-  });
+  return (
+    m('div'),
+    [
+      m(Collapsible, {
+        accordion: false,
+        items: [
+          { header: 'ID', body: props?.id || 'No ID', iconName: 'person_pin', active: true },
+          { header: 'Type', body: props?.type || 'No Type', iconName: 'person_outline', active: true },
+          {
+            header: 'Callsign',
+            body: props?.name || 'No Callsign',
+            iconName: 'record_voice_over',
+            active: true,
+          },
+          { header: 'Layer Name', body: ft.layer.id || 'No Layer', iconName: 'layers', active: true },
+        ],
+      }),
+      m('hr'),
+      m('div'),
+      [
+        m(Collapsible, {
+          items: [{ header: 'Full JSON', body: JSON.stringify(ft), iconName: 'remove_red_eye' }],
+        }),
+      ],
+    ]
+  );
 };
 
 export const formatCar = (ft: IGeoJSONFeatureTwo) => {
@@ -54,7 +70,7 @@ export const alertFormatComponent: FactoryComponent<{
 }> = () => {
   return {
     view: (vnode) => {
-      const ft = vnode.attrs.state.app.clickedFeature as unknown as IGeoJSONFeatureTwo;
+      const ft = vnode.attrs.state.app.clickedFeature as IGeoJSONFeatureTwo;
       const alert = vnode.attrs.state.app.sources.find((v: ISource) => {
         return v.sourceName + v.id === ft.source;
       }) as ISource;
@@ -96,7 +112,7 @@ export const contextFormatComponent: FactoryComponent<{
 }> = () => {
   return {
     view: (vnode) => {
-      const ft = vnode.attrs.state.app.clickedFeature as unknown as IGeoJSONFeatureTwo;
+      const ft = vnode.attrs.state.app.clickedFeature as IGeoJSONFeatureTwo;
       return m('div', [
         m('p', 'ID: ' + ft.properties?.id),
         m('p', 'Description: ' + ft.properties?.description),
@@ -112,7 +128,7 @@ export const resourceFormatComponent: FactoryComponent<{
 }> = () => {
   return {
     view: (vnode) => {
-      const ft = vnode.attrs.state.app.clickedFeature as unknown as IGeoJSONFeatureTwo;
+      const ft = vnode.attrs.state.app.clickedFeature as IGeoJSONFeatureTwo;
       return m('div', [
         m('p', 'ID: ' + ft.properties?.id),
         m('p', 'Type: ' + ft.properties?.resourceType),
@@ -129,7 +145,7 @@ export const sensorFormatComponent: FactoryComponent<{
 }> = () => {
   return {
     view: (vnode) => {
-      const ft = vnode.attrs.state.app.clickedFeature as unknown as IGeoJSONFeatureTwo;
+      const ft = vnode.attrs.state.app.clickedFeature as IGeoJSONFeatureTwo;
       const sensors = JSON.parse(ft.properties?.sensors);
       return m(
         'li',
@@ -164,7 +180,7 @@ export const incidentLocationFormatComponent: FactoryComponent<{
   };
   return {
     view: (vnode) => {
-      const ft = vnode.attrs.state.app.clickedFeature as unknown as IGeoJSONFeatureTwo;
+      const ft = vnode.attrs.state.app.clickedFeature as IGeoJSONFeatureTwo;
       const scenario = JSON.parse(ft.properties?.scenario) as IChemicalIncidentScenario;
       const form = formGenerator({});
 

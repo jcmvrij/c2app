@@ -59,7 +59,8 @@ export const Map: MeiosisComponent = () => {
         new maplibregl.NavigationControl({ showCompass: true, showZoom: true, visualizePitch: true }),
         'top-left'
       );
-      map.addControl(draw as unknown as IControl, 'top-left');
+      // @ts-ignore
+      map.addControl(draw as IControl, 'top-left');
       map.addControl(new RulerControl(), 'top-left');
 
       // Add map listeners
@@ -68,23 +69,17 @@ export const Map: MeiosisComponent = () => {
         map.on('draw.update', ({ features }) => MapUtils.handleDrawEvent(map, features, actions));
 
         map.once('styledata', () => {
-          experimentalFunctionality(appState, map);
+          experimentalFunctionality(appState);
 
           MapUtils.updateSourcesAndLayers(appState, actions, map);
           MapUtils.updateSatellite(appState, map);
-          // MapUtils.updateAreaOfMovement(appState, map);
-
-          console.log(map.getStyle());
 
           map.on('styleimagemissing', (e) => {
             console.log(`Image ${e.id} is missing!`);
           });
         });
 
-        map.on('mouseleave', 'area-of-movement', () => {
-          map.removeLayer('area-of-movement');
-          MapUtils.toggleAreaOfMovementVisibility(map, false);
-        });
+        MapUtils.addAreaOfMovementLayerMapListeners(map);
       });
     },
 
@@ -104,8 +99,8 @@ export const Map: MeiosisComponent = () => {
 
       MapUtils.updateSourcesAndLayers(appState, actions, map);
       MapUtils.updateSatellite(appState, map);
-      // MapUtils.updateAreaOfMovement(appState, map);
 
+      console.log(map.getStyle());
       console.log('map update executed');
     },
   };
