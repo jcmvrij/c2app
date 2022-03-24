@@ -21,10 +21,10 @@ export const mapSideBar: MeiosisComponent = () => {
               m('.collapsible-body', m(groupsBody, { state, actions })),
             ]),
           ]),
+          m('.divider'),
           /// LAYERS
           m('ul.collapsible', [
             m('li', [
-              m('.divider'),
               m('.collapsible-header', m('i.material-icons', 'layers'), 'Layers'),
               m('.collapsible-body', m(layersBody, { state, actions })),
             ]),

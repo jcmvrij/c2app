@@ -6,7 +6,7 @@ import { IActions, IAppModel, ILayer, ISource, SourceType } from '../../services
 import SquareGrid from '@turf/square-grid';
 import polylabel from 'polylabel';
 import { appIcons } from './map-icons';
-import * as turf from '@turf/turf';
+import { circle } from '@turf/turf';
 
 export const drawConfig = {
   displayControlsDefault: false,
@@ -229,24 +229,26 @@ export const updateSatellite = (appState: IAppModel, map: maplibregl.Map) => {
   );
 };
 
-function updateAreaOfMovementSourceAndLayer(map: maplibregl.Map, features: Feature[]) {
+async function updateAreaOfMovementSourceAndLayer(map: maplibregl.Map, features: Feature[]) {
   const positionOfMan = (features[0].geometry as Point).coordinates;
-
-  if (!map.getSource('area-of-movement-src')) {
-    map.addSource('area-of-movement-src', {
+  // Set source
+  if (!map.getSource('area_of_movement_src')) {
+    map.addSource('area_of_movement_src', {
       type: 'geojson',
-      data: turf.circle((features[0].geometry as Point).coordinates, 0.2),
+      data: await createIsochrone(positionOfMan[1], positionOfMan[0]),
     });
   } else {
-    (map.getSource('area-of-movement-src') as GeoJSONSource).setData(turf.circle(positionOfMan, 0.2));
+    (map.getSource('area_of_movement_src') as GeoJSONSource).setData(
+      await createIsochrone(positionOfMan[1], positionOfMan[0])
+    );
   }
-
-  if (!map.getLayer('area-of-movement')) {
+  // Set Layer
+  if (!map.getLayer('area_of_movement')) {
     map.addLayer(
       {
-        id: 'area-of-movement',
+        id: 'area_of_movement',
         type: 'fill',
-        source: 'area-of-movement-src',
+        source: 'area_of_movement_src',
         layout: {
           visibility: 'visible',
         },
@@ -288,18 +290,37 @@ export const toggleAreaOfMovementVisibility = (map: maplibregl.Map, visible: boo
 };
 
 export const addAreaOfMovementLayerMapListeners = (map: maplibregl.Map) => {
-  map.on('mouseleave', 'area-of-movement', () => {
-    map.removeLayer('area-of-movement');
+  map.on('mouseleave', 'area_of_movement', () => {
+    map.removeLayer('area_of_movement');
     toggleAreaOfMovementVisibility(map, false);
   });
-  map.on('click', 'area-of-movement', (e) => {
+  map.on('click', 'area_of_movement', async (e) => {
     const renderedFeaturesAtClick = map.queryRenderedFeatures(e.point);
-    if (renderedFeaturesAtClick[0].layer.id === 'area-of-movement') {
-      (map.getSource('area-of-movement-src') as GeoJSONSource).setData(
-        turf.circle([e.lngLat.lng, e.lngLat.lat], 0.2)
+    if (renderedFeaturesAtClick[0].layer.id === 'area_of_movement') {
+      (map.getSource('area_of_movement_src') as GeoJSONSource).setData(
+        await createIsochrone(e.lngLat.lat, e.lngLat.lng)
       );
     } else {
       console.log('Clicking here is not allowed.');
     }
   });
+};
+
+export const createIsochrone = async (
+  lat: number,
+  lon: number,
+  distance: number = 5,
+  bands: number = 1,
+  detail: number = 3
+) => {
+  try {
+    const response = await fetch(
+      `http://localhost:5005/${lat}/${lon}?distance=${distance}&bands=${bands}&detail=${detail}`
+    );
+    const responseJSON = await response.json();
+    const data = responseJSON.features[0];
+    return data as Feature;
+  } catch {
+    return circle([lon, lat], 0.2);
+  }
 };

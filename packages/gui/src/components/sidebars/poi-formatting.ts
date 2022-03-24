@@ -27,8 +27,8 @@ export const formatMan = (ft: IGeoJSONFeatureTwo) => {
       m(Collapsible, {
         accordion: false,
         items: [
-          { header: 'ID', body: props?.id || 'No ID', iconName: 'person_pin', active: true },
-          { header: 'Type', body: props?.type || 'No Type', iconName: 'person_outline', active: true },
+          { header: 'ID', body: props?.id || 'No ID', iconName: 'person', active: true },
+          { header: 'Type', body: props?.type || 'No Type', iconName: 'people', active: true },
           {
             header: 'Callsign',
             body: props?.name || 'No Callsign',

@@ -17,7 +17,7 @@ const testPointSource = {
   ],
 };
 
-export const experimentalFunctionality = (appState: IAppModel) => {
+export const pushTestSource = (appState: IAppModel) => {
   appState.app.sources.push({
     id: 'id-of-test-source',
     source: testPointSource as FeatureCollection,

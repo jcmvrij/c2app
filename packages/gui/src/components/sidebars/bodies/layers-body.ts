@@ -9,10 +9,10 @@ export const layersBody: FactoryComponent<{
   return {
     view: (vnode) => {
       return m('div', [
+        m('.divider'),
         /// BASE LAYERS
         m('ul.collapsible', [
           m('li', [
-            m('.divider'),
             m('.collapsible-header', 'Base Layers'),
             m(
               '.collapsible-body',
@@ -37,10 +37,10 @@ export const layersBody: FactoryComponent<{
             ),
           ]),
         ]),
+        m('.divider'),
         /// REALTIME LAYERS
         m('ul.collapsible', [
           m('li', [
-            m('.divider'),
             m('.collapsible-header', 'Realtime Layers'),
             m(
               '.collapsible-body',
@@ -74,10 +74,10 @@ export const layersBody: FactoryComponent<{
             ),
           ]),
         ]),
+        m('.divider'),
         /// GRID LAYERS
         m('ul.collapsible', [
           m('li', [
-            m('.divider'),
             m('.collapsible-header', 'Grid Layers'),
             m(
               '.collapsible-body',
@@ -117,10 +117,10 @@ export const layersBody: FactoryComponent<{
             ),
           ]),
         ]),
+        m('.divider'),
         /// CUSTOM LAYERS
         m('ul.collapsible', [
           m('li', [
-            m('.divider'),
             m('.collapsible-header', 'Custom Layers'),
             m(
               '.collapsible-body',
@@ -182,10 +182,10 @@ export const layersBody: FactoryComponent<{
             ),
           ]),
         ]),
+        m('.divider'),
         /// Alert Layers
         m('ul.collapsible', [
           m('li', [
-            m('.divider'),
             m('.collapsible-header', 'Alert Layers'),
             m(
               '.collapsible-body',
@@ -218,10 +218,10 @@ export const layersBody: FactoryComponent<{
             ),
           ]),
         ]),
+        m('.divider'),
         /// CHT
         m('ul.collapsible', [
           m('li', [
-            m('.divider'),
             m('.collapsible-header', 'CBRN Hazard Layers'),
             m(
               '.collapsible-body',
