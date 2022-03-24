@@ -136,6 +136,7 @@ services:
       - /data/${PBF_FILE}.osrm
     volumes:
       - ${DATA_FOLDER}/walking:/data
+      
   redis:
     image: 'redis:latest'
     ports:
