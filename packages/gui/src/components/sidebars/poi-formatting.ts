@@ -219,3 +219,55 @@ export const incidentLocationFormatComponent: FactoryComponent<{
     },
   };
 };
+
+export const manFormatComponent: FactoryComponent<{
+  state: IAppModel;
+  actions: IActions;
+}> = () => {
+  return {
+    view: (vnode) => {
+      const ft = vnode.attrs.state.app.clickedFeature as IGeoJSONFeatureTwo;
+      const props = ft?.properties;
+      return (
+        m('div'),
+        [
+          m(Collapsible, {
+            accordion: false,
+            items: [
+              { header: 'ID', body: props?.id || 'No ID', iconName: 'person', active: true },
+              { header: 'Type', body: props?.type || 'No Type', iconName: 'people', active: true },
+              {
+                header: 'Callsign',
+                body: props?.name || 'No Callsign',
+                iconName: 'record_voice_over',
+                active: true,
+              },
+              { header: 'Layer Name', body: ft.layer.id || 'No Layer', iconName: 'layers', active: true },
+            ],
+          }),
+          m('hr'),
+          m('div', [
+            m('p', 'Range in minutes'),
+            m('input', {
+              type: 'number',
+              value: vnode.attrs.state.app.movementMinutes,
+              onchange: (e: Event) => {
+                let minutes = +(e.target as HTMLInputElement).value;
+                vnode.attrs.actions.setMovementMinutes(minutes);
+              },
+            }),
+          ]),
+          m('div'),
+          [
+            m(Collapsible, {
+              items: [{ header: 'Full JSON', body: JSON.stringify(ft), iconName: 'remove_red_eye' }],
+            }),
+          ],
+        ]
+      );
+    },
+    oncreate: () => {
+      M.AutoInit();
+    },
+  };
+};

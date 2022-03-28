@@ -1,5 +1,5 @@
 import { FeatureCollection } from 'geojson';
-import { IAppModel, ILayer, ISource, SourceType } from '../../services/meiosis';
+import { IActions, ILayer, ISource, SourceType } from '../../services/meiosis';
 
 const testPointSource = {
   type: 'FeatureCollection',
@@ -17,8 +17,8 @@ const testPointSource = {
   ],
 };
 
-export const pushTestSource = (appState: IAppModel) => {
-  appState.app.sources.push({
+export const addSource = (actions: IActions) => {
+  const testSource = {
     id: 'id-of-test-source',
     source: testPointSource as FeatureCollection,
     sourceName: 'TESTPOINTSOURCE',
@@ -37,5 +37,6 @@ export const pushTestSource = (appState: IAppModel) => {
         filter: ['all', ['in', 'type', 'man', 'firefighter']],
       },
     ] as ILayer[],
-  } as ISource);
+  } as ISource;
+  actions.addSource(testSource);
 };

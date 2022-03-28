@@ -91,6 +91,7 @@ export interface IAppModel {
     resourceDict: { [id: string]: IAssistanceResource };
     sensorDict: { [id: string]: ISensor };
     showSatellite: boolean;
+    movementMinutes: number;
 
     // CHT
     source: {
@@ -148,6 +149,8 @@ export interface IActions {
   deleteLayer: (sourceIndex: number) => void;
   setLayerEdit: (sourceIndex: number) => void;
   toggleSatellite: () => void;
+  addSource: (source: ISource) => void;
+  setMovementMinutes: (minutes: number) => void;
 
   // CHT
   createCHT: (hazard: Partial<IChemicalIncident>, location: number[]) => void;
@@ -208,6 +211,7 @@ export const appStateMgmt = {
       resourceDict: {} as { [id: string]: IAssistanceResource },
       sensorDict: {} as { [id: string]: ISensor },
       showSatellite: false,
+      movementMinutes: 5,
 
       // CHT
       source: {
@@ -637,6 +641,23 @@ export const appStateMgmt = {
         us({
           app: {
             showSatellite: !states()['app'].showSatellite,
+          },
+        });
+      },
+      addSource: (source: ISource) => {
+        us({
+          app: {
+            sources: (sources: Array<ISource>) => {
+              sources.push(source);
+              return sources;
+            },
+          },
+        });
+      },
+      setMovementMinutes: (minutes: number) => {
+        us({
+          app: {
+            movementMinutes: minutes,
           },
         });
       },

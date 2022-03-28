@@ -1,8 +1,8 @@
-import { GeoJSONSource, GeoJSONFeature, LineLayerSpecification } from 'maplibre-gl';
+import { GeoJSONSource, GeoJSONFeature, LineLayerSpecification, MapLayerMouseEvent } from 'maplibre-gl';
 import bbox from '@turf/bbox';
 import booleanPointInPolygon from '@turf/boolean-point-in-polygon';
 import { Point, Feature, Polygon, FeatureCollection, Geometry } from 'geojson';
-import { IActions, IAppModel, ILayer, ISource, SourceType } from '../../services/meiosis';
+import { IActions, IAppModel, ILayer, ISource, SourceType, states } from '../../services/meiosis';
 import SquareGrid from '@turf/square-grid';
 import polylabel from 'polylabel';
 import { appIcons } from './map-icons';
@@ -229,18 +229,21 @@ export const updateSatellite = (appState: IAppModel, map: maplibregl.Map) => {
   );
 };
 
-async function updateAreaOfMovementSourceAndLayer(map: maplibregl.Map, features: Feature[]) {
+const getCurrentMovementMinutes = () => {
+  return states().app.movementMinutes as Number;
+};
+
+export const updateAreaOfMovementSourceAndLayer = async (map: maplibregl.Map, features: Feature[]) => {
   const positionOfMan = (features[0].geometry as Point).coordinates;
+  const isochrone = await requestIsochrone(positionOfMan[1], positionOfMan[0]);
   // Set source
   if (!map.getSource('area_of_movement_src')) {
     map.addSource('area_of_movement_src', {
       type: 'geojson',
-      data: await createIsochrone(positionOfMan[1], positionOfMan[0]),
+      data: isochrone,
     });
   } else {
-    (map.getSource('area_of_movement_src') as GeoJSONSource).setData(
-      await createIsochrone(positionOfMan[1], positionOfMan[0])
-    );
+    (map.getSource('area_of_movement_src') as GeoJSONSource).setData(isochrone);
   }
   // Set Layer
   if (!map.getLayer('area_of_movement')) {
@@ -259,8 +262,10 @@ async function updateAreaOfMovementSourceAndLayer(map: maplibregl.Map, features:
       },
       'water'
     );
+  } else {
+    map.setLayoutProperty('area_of_movement', 'visibility', 'visible');
   }
-}
+};
 
 export const toggleAreaOfMovementVisibility = (map: maplibregl.Map, visible: boolean, layerName?: string) => {
   const symbolLayer = layerName || 'Positionstestid1Firemen';
@@ -291,32 +296,27 @@ export const toggleAreaOfMovementVisibility = (map: maplibregl.Map, visible: boo
 
 export const addAreaOfMovementLayerMapListeners = (map: maplibregl.Map) => {
   map.on('mouseleave', 'area_of_movement', () => {
-    map.removeLayer('area_of_movement');
+    map.setLayoutProperty('area_of_movement', 'visibility', 'none');
     toggleAreaOfMovementVisibility(map, false);
   });
-  map.on('click', 'area_of_movement', async (e) => {
+  const redrawAreaOfMovement = async (e: MapLayerMouseEvent) => {
     const renderedFeaturesAtClick = map.queryRenderedFeatures(e.point);
     if (renderedFeaturesAtClick[0].layer.id === 'area_of_movement') {
       (map.getSource('area_of_movement_src') as GeoJSONSource).setData(
-        await createIsochrone(e.lngLat.lat, e.lngLat.lng)
+        await requestIsochrone(e.lngLat.lat, e.lngLat.lng)
       );
     } else {
       console.log('Clicking here is not allowed.');
     }
-  });
+  };
+  map.on('click', 'area_of_movement', redrawAreaOfMovement);
 };
 
-export const createIsochrone = async (
-  lat: number,
-  lon: number,
-  distance: number = 5,
-  bands: number = 1,
-  detail: number = 3
-) => {
+export const requestIsochrone = async (lat: number, lon: number, bands: number = 1, detail: number = 3) => {
   try {
-    const response = await fetch(
-      `http://localhost:5005/${lat}/${lon}?distance=${distance}&bands=${bands}&detail=${detail}`
-    );
+    const distance = getCurrentMovementMinutes();
+    const request = `http://localhost:5005/${lat}/${lon}?distance=${distance}&bands=${bands}&detail=${detail}`;
+    const response = await fetch(request);
     const responseJSON = await response.json();
     const data = responseJSON.features[0];
     return data as Feature;
@@ -324,3 +324,5 @@ export const createIsochrone = async (
     return circle([lon, lat], 0.2);
   }
 };
+
+export const updateAreaOfMovement = (_appState: IAppModel, _map: maplibregl.Map) => {};
