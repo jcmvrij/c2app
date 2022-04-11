@@ -6,9 +6,10 @@ import { DefaultWebSocketGateway } from './gateway/default-websocket.gateway';
 import { ConfigModule } from '@nestjs/config';
 import { MessagesModule } from './messages/messages.module';
 import { MessagesService } from './messages/messages.service';
+import { GameStateModule } from './game-state/game-state.module';
 
 @Module({
-  imports: [HttpModule, ConfigModule.forRoot(), MessagesModule],
+  imports: [HttpModule, ConfigModule.forRoot(), MessagesModule, GameStateModule],
   controllers: [AppController],
   providers: [DefaultWebSocketGateway, KafkaService, MessagesService],
 })

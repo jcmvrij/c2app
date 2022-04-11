@@ -116,7 +116,7 @@ export class KafkaService {
           this.socket.server.emit('alert', value as IAlert);
           break;
         case contextTopic:
-          const context = KafkaService.prepareContext(value as IContext)
+          const context = KafkaService.prepareContext(value as IContext);
           this.messagesService.create('contexts', context);
           this.socket.server.emit('context', context);
           break;
@@ -188,11 +188,11 @@ export class KafkaService {
   }
 
   private static prepareContext(context: IContext) {
-      if (context.geometry[`nl.tno.assistance.geojson.geometry.Polygon`]) {
-        context.geometry = context.geometry[`nl.tno.assistance.geojson.geometry.Polygon`];
-      } else if (context.geometry[`nl.tno.assistance.geojson.geometry.MultiPolygon`]) {
-        context.geometry = context.geometry[`nl.tno.assistance.geojson.geometry.MultiPolygon`];
-      }
+    if (context.geometry[`nl.tno.assistance.geojson.geometry.Polygon`]) {
+      context.geometry = context.geometry[`nl.tno.assistance.geojson.geometry.Polygon`];
+    } else if (context.geometry[`nl.tno.assistance.geojson.geometry.MultiPolygon`]) {
+      context.geometry = context.geometry[`nl.tno.assistance.geojson.geometry.MultiPolygon`];
+    }
     return context as IContext;
   }
 }
