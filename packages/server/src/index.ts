@@ -11,9 +11,9 @@ async function bootstrap() {
   const app = await NestFactory.create<NestExpressApplication>(AppModule, { cors: true });
 
   const config = new DocumentBuilder()
-    .setTitle('C2app server')
-    .setDescription('C2app server')
-    .setVersion('1.0')
+    .setTitle('C2app')
+    .setDescription('Message en Gamestate API')
+    .setVersion('0.1')
     .build();
   const document = SwaggerModule.createDocument(app, config);
   SwaggerModule.setup('api', app, document);

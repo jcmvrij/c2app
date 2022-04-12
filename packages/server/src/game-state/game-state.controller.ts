@@ -14,8 +14,7 @@ export class GameStateController {
 
   @Get()
   findAll() {
-    const results = this.gameStateService.findAll();
-    return results;
+    return this.gameStateService.findAll();
   }
 
   @Get('/:stateId')
