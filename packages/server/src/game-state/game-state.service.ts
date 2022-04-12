@@ -4,6 +4,7 @@ import * as loki from 'lokijs';
 import { Collection } from 'lokijs';
 import { dirname, resolve } from 'path';
 import { cwd } from 'process';
+import { DefaultWebSocketGateway } from '../gateway/default-websocket.gateway';
 import { GameStateDto } from './dto/game-state.dto';
 import { UpdateGameStateDto } from './dto/update-game-state.dto';
 
@@ -12,9 +13,9 @@ const dbName = process.env.GAMESTATEDB || 'db/gamestate.db';
 @Injectable()
 export class GameStateService {
   private db: loki;
-  private gamestates: Collection;
+  private gamestates: Collection<GameStateDto>;
 
-  constructor() {
+  constructor(private readonly defaultWebSocketGateway: DefaultWebSocketGateway) {
     const folderPath = dirname(resolve(cwd(), dbName));
     if (!existsSync(folderPath)) mkdirSync(folderPath, { recursive: true });
     this.db = new loki(dbName);
@@ -34,10 +35,14 @@ export class GameStateService {
   }
 
   update(stateId: number, partialState: UpdateGameStateDto) {
-    const state = this.gamestates.findOne({ id: stateId });
+    const state = this.gamestates.findOne({ id: stateId }) as GameStateDto;
     for (const property in partialState) {
       state[property] = partialState[property];
     }
+    for (const player of state.players) {
+      if (!player.turnCompleted) return this.gamestates.update(state);
+    }
+    this.defaultWebSocketGateway.server.emit('gamestate', state);
     return this.gamestates.update(state);
   }
 
