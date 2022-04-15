@@ -52,8 +52,9 @@ export const profileModal: FactoryComponent<{
                   },
                   [
                     m('option', { value: '', disabled: true, selected: true }, 'Choose your profile'),
-                    m('option', { value: 'commander' }, 'commander'),
-                    m('option', { value: 'firefighter' }, 'firefighter'),
+                    m('option', { value: 'red' }, 'red'),
+                    m('option', { value: 'blue' }, 'blue'),
+                    m('option', { value: 'white' }, 'white'),
                   ]
                 ),
                 m('label', 'Profile'),

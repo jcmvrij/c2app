@@ -9,6 +9,8 @@ import { Chat } from '../components/chat/chat';
 import { Settings } from '../components/settings/settings';
 import { Alerts } from '../components/alerts/alerts';
 import { chatSidebar } from '../components/sidebars/chat-sidebar';
+import { Home } from '../components/home/home';
+import { Stockroom } from '../components/stockroom/stockroom';
 
 class RoutingService {
   private pages!: ReadonlyArray<IPage>;
@@ -72,6 +74,27 @@ class RoutingService {
 
 export const routingSvc: RoutingService = new RoutingService(Layout, [
   {
+    id: Pages.HOME,
+    title: 'Home',
+    icon: 'home',
+    route: '/home',
+    visible: true,
+    component: Home,
+    sidebar: sideBar,
+    hasSidebar: false,
+    default: true,
+  },
+  {
+    id: Pages.STOCKROOM,
+    title: 'Stockroom',
+    icon: 'tune',
+    route: '/stockroom',
+    visible: true,
+    component: Stockroom,
+    sidebar: sideBar,
+    hasSidebar: false,
+  },
+  {
     id: Pages.MAP,
     title: 'Map',
     icon: 'map',
@@ -80,7 +103,6 @@ export const routingSvc: RoutingService = new RoutingService(Layout, [
     component: Map,
     sidebar: mapSideBar,
     hasSidebar: true,
-    default: true,
   },
   {
     id: Pages.CHAT,

@@ -7,6 +7,7 @@ import SquareGrid from '@turf/square-grid';
 import polylabel from 'polylabel';
 import { appIcons } from './map-icons';
 import { circle } from '@turf/turf';
+import { IGeoJSONFeatureTwo } from '../sidebars/poi-formatting';
 
 export const drawConfig = {
   displayControlsDefault: false,
@@ -294,35 +295,69 @@ export const toggleAreaOfMovementVisibility = (map: maplibregl.Map, visible: boo
   }
 };
 
-export const addAreaOfMovementLayerMapListeners = (map: maplibregl.Map) => {
+const findCurrentClickedFeatureSource = () => {
+  const clickedFeature = states().app.clickedFeature as IGeoJSONFeatureTwo;
+  return states().app.sources.filter(
+    (source) => source.id === clickedFeature.source.replace(source.sourceName, '')
+  ) as ISource[];
+};
+
+// const findCurrentClickedFeatureSourceId = () => {
+//   const clickedFeature = states().app.clickedFeature as IGeoJSONFeatureTwo;
+//   const clickedFeatureISource = states().app.sources.find(
+//     (source) => source.id === clickedFeature.source.replace(source.sourceName, '')
+//   );
+//   return clickedFeatureISource?.id;
+// };
+
+export const addAreaOfMovementLayerMapListeners = (actions: IActions, map: maplibregl.Map) => {
   map.on('mouseleave', 'area_of_movement', () => {
     map.setLayoutProperty('area_of_movement', 'visibility', 'none');
     toggleAreaOfMovementVisibility(map, false);
   });
-  const redrawAreaOfMovement = async (e: MapLayerMouseEvent) => {
+  // const redrawAreaOfMovement = async (e: MapLayerMouseEvent) => {
+  //   const renderedFeaturesAtClick = map.queryRenderedFeatures(e.point);
+  //   if (renderedFeaturesAtClick[0].layer.id === 'area_of_movement') {
+  //     (map.getSource('area_of_movement_src') as GeoJSONSource).setData(
+  //       await requestIsochrone(e.lngLat.lat, e.lngLat.lng)
+  //     );
+  //   } else {
+  //     console.log('Clicking here is not allowed.');
+  //   }
+  // };
+  // map.on('click', 'area_of_movement', redrawAreaOfMovement);
+  const updateClickedFeaturePosition = (e: MapLayerMouseEvent) => {
     const renderedFeaturesAtClick = map.queryRenderedFeatures(e.point);
     if (renderedFeaturesAtClick[0].layer.id === 'area_of_movement') {
-      (map.getSource('area_of_movement_src') as GeoJSONSource).setData(
-        await requestIsochrone(e.lngLat.lat, e.lngLat.lng)
-      );
+      const sourceToBeUpdated = findCurrentClickedFeatureSource();
+      if (sourceToBeUpdated.length === 1) {
+        const updatedSource = sourceToBeUpdated[0].source;
+        (updatedSource.features[0].geometry as Point).coordinates = [e.lngLat.lng, e.lngLat.lat];
+        actions.updateISource(sourceToBeUpdated[0].id, updatedSource);
+      }
+      map.setLayoutProperty('area_of_movement', 'visibility', 'none');
+      toggleAreaOfMovementVisibility(map, false);
     } else {
       console.log('Clicking here is not allowed.');
     }
   };
-  map.on('click', 'area_of_movement', redrawAreaOfMovement);
+  map.on('click', 'area_of_movement', updateClickedFeaturePosition);
 };
 
-export const requestIsochrone = async (lat: number, lon: number, bands: number = 1, detail: number = 3) => {
+export const requestIsochrone = async (
+  lat: number,
+  lon: number,
+  bands: number = 1,
+  detail: number = 3,
+  howfarService = 'http://localhost:5005'
+) => {
   try {
-    const distance = getCurrentMovementMinutes();
-    const request = `http://localhost:5005/${lat}/${lon}?distance=${distance}&bands=${bands}&detail=${detail}`;
+    const request = `${howfarService}/${lat}/${lon}?distance=${getCurrentMovementMinutes()}&bands=${bands}&detail=${detail}`;
     const response = await fetch(request);
     const responseJSON = await response.json();
-    const data = responseJSON.features[0];
-    return data as Feature;
-  } catch {
+    return responseJSON.features[0] as Feature;
+  } catch (error) {
+    console.log('Error requesting isochrone. Defaulting to circle of radius 0.2. ' + error);
     return circle([lon, lat], 0.2);
   }
 };
-
-export const updateAreaOfMovement = (_appState: IAppModel, _map: maplibregl.Map) => {};

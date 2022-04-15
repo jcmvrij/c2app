@@ -15,6 +15,9 @@ import chemical from '../../assets/Incidents/Chemical.png';
 import air from '../../assets/Operations/air.png';
 import ground from '../../assets/Operations/ground.png';
 import first_responder from '../../assets/Operations/Medical services.png';
+import blue from '../../assets/Units/blue.png';
+import red from '../../assets/Units/red.png';
+import white from '../../assets/Units/white.png';
 
 export const appIcons = [
   [car, 'CAR'],
@@ -34,4 +37,7 @@ export const appIcons = [
   [air, 'AIR'],
   [ground, 'GROUND'],
   [first_responder, 'OTHER'],
+  [blue, 'BLUE'],
+  [red, 'RED'],
+  [white, 'WHITE'],
 ] as Array<[img: any, name: string]>;

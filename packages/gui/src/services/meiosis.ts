@@ -21,6 +21,7 @@ import { GeoJSONFeature, LayerSpecification, LineLayerSpecification } from 'mapl
 import { routingSvc } from './routing-service';
 import { Pages } from '../models';
 import { IGeoJSONFeatureTwo } from '../components/sidebars/poi-formatting';
+import { initGameState } from '../components/stockroom/stockroom';
 
 export interface ILayer {
   layerName: string;
@@ -74,7 +75,7 @@ export interface IAppModel {
     editGroup: number;
 
     // Profile
-    profile: '' | 'commander' | 'firefighter';
+    profile: '' | 'Blue' | 'Red';
     callsign?: string;
 
     // Chat
@@ -136,6 +137,9 @@ export interface IActions {
   openChat: (group: IGroup) => void;
   sendChat: (group: IGroup, message: string) => void;
 
+  // Gamestate
+  sendStockroomConfiguration: (configuration: initGameState) => void;
+
   // Layers/styles
   switchStyle: (style: string) => void;
   toggleLayer: (sourceIndex: number, layerIndex: number) => void;
@@ -149,7 +153,8 @@ export interface IActions {
   deleteLayer: (sourceIndex: number) => void;
   setLayerEdit: (sourceIndex: number) => void;
   toggleSatellite: () => void;
-  addSource: (source: ISource) => void;
+  addISource: (source: ISource) => void;
+  updateISource: (sourceid: string, sourceSource: FeatureCollection) => void;
   setMovementMinutes: (minutes: number) => void;
 
   // CHT
@@ -447,6 +452,11 @@ export const appStateMgmt = {
         });
       },
 
+      // Gamestate
+      sendStockroomConfiguration: (configuration: initGameState) => {
+        states()['app'].socket.sendStockroomConfiguration(configuration);
+      },
+
       // Layers/style
       switchStyle: (style: string) => {
         us({
@@ -644,12 +654,23 @@ export const appStateMgmt = {
           },
         });
       },
-      addSource: (source: ISource) => {
+      addISource: (source: ISource) => {
         us({
           app: {
             sources: (sources: Array<ISource>) => {
               sources.push(source);
               return sources;
+            },
+          },
+        });
+      },
+      updateISource: (sourceid: string, sourceSource: FeatureCollection) => {
+        us({
+          app: {
+            sources: (sources: Array<ISource>) => {
+              return sources.map((source) =>
+                source.id === sourceid ? { ...source, source: sourceSource } : source
+              );
             },
           },
         });

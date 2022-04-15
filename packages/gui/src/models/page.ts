@@ -4,6 +4,8 @@ type IconResolver = () => string;
 type IconOrResolver = string | IconResolver;
 
 export enum Pages {
+  HOME = 'HOME',
+  STOCKROOM = 'STOCKROOM',
   MAP = 'MAP',
   CHAT = 'CHAT',
   SETTINGS = 'SETTINGS',

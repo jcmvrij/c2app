@@ -110,6 +110,13 @@ export class DefaultWebSocketGateway implements OnGatewayConnection, OnGatewayDi
     return JSON.stringify(response.data);
   }
 
+  @SubscribeMessage('game-configuration')
+  handleGameConfiguration(client: Socket, data: any): string {
+    console.log('server received: ' + JSON.stringify(data));
+
+    return 'server response!';
+  }
+
   /** Helper Funcs */
   getGroupIdsForCallsign(callsign: string): string {
     let returnArray: Array<IReturnGroup> = new Array<IReturnGroup>();

@@ -11,7 +11,7 @@ import MapboxDraw from '@mapbox/mapbox-gl-draw';
 import { RulerControl } from '@prashis/maplibre-gl-controls';
 import { MeiosisComponent } from '../../services/meiosis';
 import * as MapUtils from './map-utils';
-import { addSource } from './map-experimental';
+import { addISources } from './map-experimental';
 
 declare type MapLayerEventTypeTwo = MapLayerEventType & {
   'draw.create': (e: { type: string; features: GeoJSONFeature[] }) => void;
@@ -69,7 +69,7 @@ export const Map: MeiosisComponent = () => {
         map.on('draw.update', ({ features }) => MapUtils.handleDrawEvent(map, features, actions));
 
         map.once('styledata', async () => {
-          addSource(actions);
+          addISources(actions);
           MapUtils.updateSourcesAndLayers(appState, actions, map);
           MapUtils.updateSatellite(appState, map);
 
@@ -78,7 +78,7 @@ export const Map: MeiosisComponent = () => {
           });
         });
 
-        MapUtils.addAreaOfMovementLayerMapListeners(map);
+        MapUtils.addAreaOfMovementLayerMapListeners(actions, map);
       });
     },
 
@@ -94,10 +94,6 @@ export const Map: MeiosisComponent = () => {
       // Update the grid if necessary
       if (appState.app.gridOptions.updateGrid) {
         MapUtils.updateGrid(appState, actions, map);
-      }
-
-      if (appState.app.clickedFeature?.properties?.type === 'man') {
-        MapUtils.updateAreaOfMovementSourceAndLayer(map, [appState.app.clickedFeature]);
       }
 
       MapUtils.updateSourcesAndLayers(appState, actions, map);
