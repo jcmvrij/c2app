@@ -7,7 +7,7 @@ export const Home: FactoryComponent<{
 }> = () => {
   return {
     view: (_vnode) => {
-      return m('div', m('.col.s12.l2'), m('.col.s12.l8', m('h4', 'Home')), m('.col.s12.l2'));
+      return m('div', m('.col.s12.l8.offset-l2', m('h4', 'Home'), m('p', 'login here..')));
     },
   };
 };

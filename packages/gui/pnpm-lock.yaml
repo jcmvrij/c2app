@@ -1,4 +1,4 @@
-lockfileVersion: 5.3
+lockfileVersion: 5.4
 
 specifiers:
   '@faker-js/faker': ^6.1.2
@@ -8,9 +8,11 @@ specifiers:
   '@turf/boolean-point-in-polygon': ^6.5.0
   '@turf/square-grid': ^6.5.0
   '@turf/turf': ^6.5.0
+  '@types/geojson': ^7946.0.8
   '@types/mapbox__mapbox-gl-draw': ^1.2.3
   '@types/materialize-css': ^1.0.11
   '@types/mithril': ^2.0.9
+  '@types/node': ^17.0.31
   '@types/polylabel': ^1.0.5
   '@typescript-eslint/eslint-plugin': ^5.15.0
   '@typescript-eslint/parser': ^5.15.0
@@ -30,6 +32,7 @@ specifiers:
   mithril: ^2.0.4
   mithril-materialized: ^0.19.4
   mithril-ui-form: ^1.4.9
+  mithril-ui-form-maplibre-plugin: file:..\..\..\mithril-ui-form-maplibre-plugin-0.0.1.tgz
   polylabel: ^1.1.0
   rimraf: ^3.0.2
   socket.io-client: 4.4.1
@@ -57,33 +60,36 @@ dependencies:
   mithril: 2.0.4
   mithril-materialized: 0.19.4
   mithril-ui-form: 1.4.9
+  mithril-ui-form-maplibre-plugin: file:../../../mithril-ui-form-maplibre-plugin-0.0.1.tgz_mithril@2.0.4
   polylabel: 1.1.0
   socket.io-client: 4.4.1
 
 devDependencies:
   '@faker-js/faker': 6.1.2
+  '@types/geojson': 7946.0.8
   '@types/mapbox__mapbox-gl-draw': 1.2.3
   '@types/materialize-css': 1.0.11
   '@types/mithril': 2.0.9
+  '@types/node': 17.0.31
   '@types/polylabel': 1.0.5
-  '@typescript-eslint/eslint-plugin': 5.15.0_f2c49ce7d0e93ebcfdb4b7d25b131b28
-  '@typescript-eslint/parser': 5.15.0_eslint@8.11.0+typescript@4.6.2
+  '@typescript-eslint/eslint-plugin': 5.15.0_6lcjzz6q5e7lz7nuw7jfwey3fa
+  '@typescript-eslint/parser': 5.15.0_ynv3edxl3ah44xwgrna2g2yine
   copy-webpack-plugin: 10.2.4_webpack@5.70.0
   css-loader: 6.7.1_webpack@5.70.0
   css-minimizer-webpack-plugin: 3.4.1_webpack@5.70.0
   dotenv-webpack: 7.1.0_webpack@5.70.0
   eslint: 8.11.0
   html-webpack-plugin: 5.5.0_webpack@5.70.0
-  html-webpack-tags-plugin: 3.0.2_b6f6061bfe56c4f5f9f5f814f10f8be7
+  html-webpack-tags-plugin: 3.0.2_w33amg76k3cpl6pv7akpcd4l44
   mini-css-extract-plugin: 2.6.0_webpack@5.70.0
   rimraf: 3.0.2
   style-loader: 3.3.1_webpack@5.70.0
-  ts-loader: 9.2.8_typescript@4.6.2+webpack@5.70.0
+  ts-loader: 9.2.8_dowam63vmehxjyamkjde33fuby
   tslib: 2.3.1
   typescript: 4.6.2
   webpack: 5.70.0_webpack-cli@4.9.2
-  webpack-cli: 4.9.2_6d3cb84eb7e855ae6fc0a3ee585c0c26
-  webpack-dev-server: 4.7.4_webpack-cli@4.9.2+webpack@5.70.0
+  webpack-cli: 4.9.2_nu6lqtvx5bk2436aupxfqxamey
+  webpack-dev-server: 4.7.4_spmstbzrmxjdafr7ccogoqrx6e
   workbox-webpack-plugin: 6.5.1_webpack@5.70.0
 
 packages:
@@ -1404,7 +1410,7 @@ packages:
       maplibre-gl: 2.1.7
     dev: false
 
-  /@rollup/plugin-babel/5.3.1_@babel+core@7.17.7+rollup@2.70.1:
+  /@rollup/plugin-babel/5.3.1_23xub6twj6jmu66yo3ilu4slda:
     resolution: {integrity: sha512-WFfdLWU/xVWKeRQnKmIAQULUI7Il0gZnBIH/ZFO069wYIfPu+8zrfp/KMW0atmELoRDq8FbiP3VCss9MhCut7Q==}
     engines: {node: '>= 10.0.0'}
     peerDependencies:
@@ -2522,26 +2528,26 @@ packages:
     resolution: {integrity: sha512-ALYone6pm6QmwZoAgeyNksccT9Q4AWZQ6PvfwR37GT6r6FWUPguq6sUmNGSMV2Wr761oQoBxwGGa6DR5o1DC9g==}
     dependencies:
       '@types/connect': 3.4.35
-      '@types/node': 17.0.21
+      '@types/node': 17.0.31
     dev: true
 
   /@types/bonjour/3.5.10:
     resolution: {integrity: sha512-p7ienRMiS41Nu2/igbJxxLDWrSZ0WxM8UQgCeO9KhoVF7cOVFkrKsiDr1EsJIla8vV3oEEjGcz11jc5yimhzZw==}
     dependencies:
-      '@types/node': 17.0.21
+      '@types/node': 17.0.31
     dev: true
 
   /@types/connect-history-api-fallback/1.3.5:
     resolution: {integrity: sha512-h8QJa8xSb1WD4fpKBDcATDNGXghFj6/3GRWG6dhmRcu0RX1Ubasur2Uvx5aeEwlf0MwblEC2bMzzMQntxnw/Cw==}
     dependencies:
       '@types/express-serve-static-core': 4.17.28
-      '@types/node': 17.0.21
+      '@types/node': 17.0.31
     dev: true
 
   /@types/connect/3.4.35:
     resolution: {integrity: sha512-cdeYyv4KWoEgpBISTxWvqYsVy444DOqehiF3fM3ne10AmJ62RSyNkUnxMJXHQWRQQX2eR94m5y1IZyDwBjV9FQ==}
     dependencies:
-      '@types/node': 17.0.21
+      '@types/node': 17.0.31
     dev: true
 
   /@types/eslint-scope/3.7.3:
@@ -2569,7 +2575,7 @@ packages:
   /@types/express-serve-static-core/4.17.28:
     resolution: {integrity: sha512-P1BJAEAW3E2DJUlkgq4tOL3RyMunoWXqbSCygWo5ZIWTjUgN1YnaXWW4VWl/oc8vs/XoYibEGBKP0uZyF4AHig==}
     dependencies:
-      '@types/node': 17.0.21
+      '@types/node': 17.0.31
       '@types/qs': 6.9.7
       '@types/range-parser': 1.2.4
     dev: true
@@ -2593,7 +2599,7 @@ packages:
   /@types/http-proxy/1.17.8:
     resolution: {integrity: sha512-5kPLG5BKpWYkw/LVOGWpiq3nEVqxiN32rTgI53Sk12/xHFQ2rG3ehI9IO+O3W2QoKeyB92dJkoka8SUm6BX1pA==}
     dependencies:
-      '@types/node': 17.0.21
+      '@types/node': 17.0.31
     dev: true
 
   /@types/jquery/3.5.14:
@@ -2619,6 +2625,18 @@ packages:
       '@types/mapbox-gl': 2.6.3
     dev: true
 
+  /@types/mapbox__point-geometry/0.1.2:
+    resolution: {integrity: sha512-D0lgCq+3VWV85ey1MZVkE8ZveyuvW5VAfuahVTQRpXFQTxw03SuIf1/K4UQ87MMIXVKzpFjXFiFMZzLj2kU+iA==}
+    dev: false
+
+  /@types/mapbox__vector-tile/1.3.0:
+    resolution: {integrity: sha512-kDwVreQO5V4c8yAxzZVQLE5tyWF+IPToAanloQaSnwfXmIcJ7cyOrv8z4Ft4y7PsLYmhWXmON8MBV8RX0Rgr8g==}
+    dependencies:
+      '@types/geojson': 7946.0.8
+      '@types/mapbox__point-geometry': 0.1.2
+      '@types/pbf': 3.0.2
+    dev: false
+
   /@types/materialize-css/1.0.11:
     resolution: {integrity: sha512-V7/jSwuq6QrWAjzA2dkZhlqzrrcxcjB+RDfwhw8CosNYZgb+FaAJmmB6t7CT7SRFNRRSxG839e6iK32Vq6sZrQ==}
     dependencies:
@@ -2634,9 +2652,13 @@ packages:
     resolution: {integrity: sha512-a8TMNdGsowAB0R+VppKKmJNAA9YKGVuBvMZcITWTHIZGSKdu3LtyBDKGyU6QkzKJSzq+pW2egxg+09nRK03qIg==}
     dev: true
 
-  /@types/node/17.0.21:
-    resolution: {integrity: sha512-DBZCJbhII3r90XbQxI8Y9IjjiiOGlZ0Hr32omXIZvwwZ7p4DMMXGrKXVyPfuoBOri9XNtL0UK69jYIBIsRX3QQ==}
+  /@types/node/17.0.31:
+    resolution: {integrity: sha512-AR0x5HbXGqkEx9CadRH3EBYx/VkiUgZIhP4wvPn/+5KIsgpNoyFaRlVe0Zlx9gRtg8fA06a9tskE2MSN7TcG4Q==}
     dev: true
+
+  /@types/pbf/3.0.2:
+    resolution: {integrity: sha512-EDrLIPaPXOZqDjrkzxxbX7UlJSeQVgah3i0aA4pOSzmK9zq3BIh7/MZIQxED7slJByvKM4Gc6Hypyu2lJzh3SQ==}
+    dev: false
 
   /@types/polylabel/1.0.5:
     resolution: {integrity: sha512-gnaNmo1OJiYNBFAZMZdqLZ3hKx2ee4ksAzqhKWBxuQ61PmhINHMcvIqsGmyCD1WFKCkwRt9NFhMSmKE6AgYY+w==}
@@ -2653,7 +2675,7 @@ packages:
   /@types/resolve/1.17.1:
     resolution: {integrity: sha512-yy7HuzQhj0dhGpD8RLXSZWEkLsV9ibvxvi6EiJ3bkqLAO1RGo0WbkWQiwpRlSFymTJRz0d3k5LM3kkx8ArDbLw==}
     dependencies:
-      '@types/node': 17.0.21
+      '@types/node': 17.0.31
     dev: true
 
   /@types/retry/0.12.1:
@@ -2670,7 +2692,7 @@ packages:
     resolution: {integrity: sha512-nCkHGI4w7ZgAdNkrEu0bv+4xNV/XDqW+DydknebMOQwkpDGx8G+HTlj7R7ABI8i8nKxVw0wtKPi1D+lPOkh4YQ==}
     dependencies:
       '@types/mime': 1.3.2
-      '@types/node': 17.0.21
+      '@types/node': 17.0.31
     dev: true
 
   /@types/sizzle/2.3.3:
@@ -2680,7 +2702,7 @@ packages:
   /@types/sockjs/0.3.33:
     resolution: {integrity: sha512-f0KEEe05NvUnat+boPTZ0dgaLZ4SfSouXUgv5noUiefG2ajgKjmETo9ZJyuqsl7dfl2aHlLJUiki6B4ZYldiiw==}
     dependencies:
-      '@types/node': 17.0.21
+      '@types/node': 17.0.31
     dev: true
 
   /@types/trusted-types/2.0.2:
@@ -2690,10 +2712,10 @@ packages:
   /@types/ws/8.5.3:
     resolution: {integrity: sha512-6YOoWjruKj1uLf3INHH7D3qTXwFfEsg1kf3c0uDdSBJwfa/llkwIjrAGV7j7mVgGNbzTQ3HiHKKDXl6bJPD97w==}
     dependencies:
-      '@types/node': 17.0.21
+      '@types/node': 17.0.31
     dev: true
 
-  /@typescript-eslint/eslint-plugin/5.15.0_f2c49ce7d0e93ebcfdb4b7d25b131b28:
+  /@typescript-eslint/eslint-plugin/5.15.0_6lcjzz6q5e7lz7nuw7jfwey3fa:
     resolution: {integrity: sha512-u6Db5JfF0Esn3tiAKELvoU5TpXVSkOpZ78cEGn/wXtT2RVqs2vkt4ge6N8cRCyw7YVKhmmLDbwI2pg92mlv7cA==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
     peerDependencies:
@@ -2704,10 +2726,10 @@ packages:
       typescript:
         optional: true
     dependencies:
-      '@typescript-eslint/parser': 5.15.0_eslint@8.11.0+typescript@4.6.2
+      '@typescript-eslint/parser': 5.15.0_ynv3edxl3ah44xwgrna2g2yine
       '@typescript-eslint/scope-manager': 5.15.0
-      '@typescript-eslint/type-utils': 5.15.0_eslint@8.11.0+typescript@4.6.2
-      '@typescript-eslint/utils': 5.15.0_eslint@8.11.0+typescript@4.6.2
+      '@typescript-eslint/type-utils': 5.15.0_ynv3edxl3ah44xwgrna2g2yine
+      '@typescript-eslint/utils': 5.15.0_ynv3edxl3ah44xwgrna2g2yine
       debug: 4.3.4
       eslint: 8.11.0
       functional-red-black-tree: 1.0.1
@@ -2720,7 +2742,7 @@ packages:
       - supports-color
     dev: true
 
-  /@typescript-eslint/parser/5.15.0_eslint@8.11.0+typescript@4.6.2:
+  /@typescript-eslint/parser/5.15.0_ynv3edxl3ah44xwgrna2g2yine:
     resolution: {integrity: sha512-NGAYP/+RDM2sVfmKiKOCgJYPstAO40vPAgACoWPO/+yoYKSgAXIFaBKsV8P0Cc7fwKgvj27SjRNX4L7f4/jCKQ==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
     peerDependencies:
@@ -2748,7 +2770,7 @@ packages:
       '@typescript-eslint/visitor-keys': 5.15.0
     dev: true
 
-  /@typescript-eslint/type-utils/5.15.0_eslint@8.11.0+typescript@4.6.2:
+  /@typescript-eslint/type-utils/5.15.0_ynv3edxl3ah44xwgrna2g2yine:
     resolution: {integrity: sha512-KGeDoEQ7gHieLydujGEFLyLofipe9PIzfvA/41urz4hv+xVxPEbmMQonKSynZ0Ks2xDhJQ4VYjB3DnRiywvKDA==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
     peerDependencies:
@@ -2758,7 +2780,7 @@ packages:
       typescript:
         optional: true
     dependencies:
-      '@typescript-eslint/utils': 5.15.0_eslint@8.11.0+typescript@4.6.2
+      '@typescript-eslint/utils': 5.15.0_ynv3edxl3ah44xwgrna2g2yine
       debug: 4.3.4
       eslint: 8.11.0
       tsutils: 3.21.0_typescript@4.6.2
@@ -2793,7 +2815,7 @@ packages:
       - supports-color
     dev: true
 
-  /@typescript-eslint/utils/5.15.0_eslint@8.11.0+typescript@4.6.2:
+  /@typescript-eslint/utils/5.15.0_ynv3edxl3ah44xwgrna2g2yine:
     resolution: {integrity: sha512-081rWu2IPKOgTOhHUk/QfxuFog8m4wxW43sXNOMSCdh578tGJ1PAaWPsj42LOa7pguh173tNlMigsbrHvh/mtA==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
     peerDependencies:
@@ -2925,14 +2947,14 @@ packages:
       '@xtuc/long': 4.2.2
     dev: true
 
-  /@webpack-cli/configtest/1.1.1_webpack-cli@4.9.2+webpack@5.70.0:
+  /@webpack-cli/configtest/1.1.1_spmstbzrmxjdafr7ccogoqrx6e:
     resolution: {integrity: sha512-1FBc1f9G4P/AxMqIgfZgeOTuRnwZMten8E7zap5zgpPInnCrP8D4Q81+4CWIch8i/Nf7nXjP0v6CjjbHOrXhKg==}
     peerDependencies:
       webpack: 4.x.x || 5.x.x
       webpack-cli: 4.x.x
     dependencies:
       webpack: 5.70.0_webpack-cli@4.9.2
-      webpack-cli: 4.9.2_6d3cb84eb7e855ae6fc0a3ee585c0c26
+      webpack-cli: 4.9.2_nu6lqtvx5bk2436aupxfqxamey
     dev: true
 
   /@webpack-cli/info/1.4.1_webpack-cli@4.9.2:
@@ -2941,10 +2963,10 @@ packages:
       webpack-cli: 4.x.x
     dependencies:
       envinfo: 7.8.1
-      webpack-cli: 4.9.2_6d3cb84eb7e855ae6fc0a3ee585c0c26
+      webpack-cli: 4.9.2_nu6lqtvx5bk2436aupxfqxamey
     dev: true
 
-  /@webpack-cli/serve/1.6.1_9a0b5ed2553fd0953b975a959afcbb80:
+  /@webpack-cli/serve/1.6.1_tifv5usvh7ijko4xlkkzv7f3qa:
     resolution: {integrity: sha512-gNGTiTrjEVQ0OcVnzsRSqTxaBSr+dmTfm+qJsCDluky8uhdLWep7Gcr62QsAKHTMxjCS/8nEITsmFAhfIx+QSw==}
     peerDependencies:
       webpack-cli: 4.x.x
@@ -2953,8 +2975,8 @@ packages:
       webpack-dev-server:
         optional: true
     dependencies:
-      webpack-cli: 4.9.2_6d3cb84eb7e855ae6fc0a3ee585c0c26
-      webpack-dev-server: 4.7.4_webpack-cli@4.9.2+webpack@5.70.0
+      webpack-cli: 4.9.2_nu6lqtvx5bk2436aupxfqxamey
+      webpack-dev-server: 4.7.4_spmstbzrmxjdafr7ccogoqrx6e
     dev: true
 
   /@xtuc/ieee754/1.2.0:
@@ -4543,7 +4565,7 @@ packages:
       webpack: 5.70.0_webpack-cli@4.9.2
     dev: true
 
-  /html-webpack-tags-plugin/3.0.2_b6f6061bfe56c4f5f9f5f814f10f8be7:
+  /html-webpack-tags-plugin/3.0.2_w33amg76k3cpl6pv7akpcd4l44:
     resolution: {integrity: sha512-jZ4IHjT8AWyNa4RJ+8p0+AGkunLf1H5E/IjzW+9BOQbJ39Dy2jZULnxseXsEAiFxu6DX6z+sOZKV9rhbEDtpqA==}
     engines: {node: '>=10'}
     peerDependencies:
@@ -4915,7 +4937,7 @@ packages:
     resolution: {integrity: sha512-KWYVV1c4i+jbMpaBC+U++4Va0cp8OisU185o73T1vo99hqi7w8tSJfUXYswwqqrjzwxa6KpRK54WhPvwf5w6PQ==}
     engines: {node: '>= 10.13.0'}
     dependencies:
-      '@types/node': 17.0.21
+      '@types/node': 17.0.31
       merge-stream: 2.0.0
       supports-color: 7.2.0
     dev: true
@@ -4924,7 +4946,7 @@ packages:
     resolution: {integrity: sha512-7vuh85V5cdDofPyxn58nrPjBktZo0u9x1g8WtjQol+jZDaE+fhN+cIvTj11GndBnMnyfrUOG1sZQxCdjKh+DKg==}
     engines: {node: '>= 10.13.0'}
     dependencies:
-      '@types/node': 17.0.21
+      '@types/node': 17.0.31
       merge-stream: 2.0.0
       supports-color: 8.1.1
     dev: true
@@ -5090,6 +5112,35 @@ packages:
       '@mapbox/unitbezier': 0.0.1
       '@mapbox/vector-tile': 1.3.1
       '@mapbox/whoots-js': 3.1.0
+      csscolorparser: 1.0.3
+      earcut: 2.2.3
+      geojson-vt: 3.2.1
+      gl-matrix: 3.4.3
+      murmurhash-js: 1.0.0
+      pbf: 3.2.1
+      potpack: 1.0.2
+      quickselect: 2.0.0
+      supercluster: 7.1.4
+      tinyqueue: 2.0.3
+      vt-pbf: 3.1.3
+    dev: false
+
+  /maplibre-gl/2.1.9:
+    resolution: {integrity: sha512-pnWJmILeZpgA5QSI7K7xFK3yrkyYTd9srw3fCi2Ca52Phm78hsznPwUErEQcZLfxXKn/1h9t8IPdj0TH0NBNbg==}
+    requiresBuild: true
+    dependencies:
+      '@mapbox/geojson-rewind': 0.5.1
+      '@mapbox/jsonlint-lines-primitives': 2.0.2
+      '@mapbox/mapbox-gl-supported': 2.0.1
+      '@mapbox/point-geometry': 0.1.0
+      '@mapbox/tiny-sdf': 2.0.5
+      '@mapbox/unitbezier': 0.0.1
+      '@mapbox/vector-tile': 1.3.1
+      '@mapbox/whoots-js': 3.1.0
+      '@types/geojson': 7946.0.8
+      '@types/mapbox__point-geometry': 0.1.2
+      '@types/mapbox__vector-tile': 1.3.0
+      '@types/pbf': 3.0.2
       csscolorparser: 1.0.3
       earcut: 2.2.3
       geojson-vt: 3.2.1
@@ -6710,7 +6761,7 @@ packages:
     resolution: {integrity: sha1-y99WD9e5r2MlAv7UD5GMFX6pcTc=}
     dev: false
 
-  /ts-loader/9.2.8_typescript@4.6.2+webpack@5.70.0:
+  /ts-loader/9.2.8_dowam63vmehxjyamkjde33fuby:
     resolution: {integrity: sha512-gxSak7IHUuRtwKf3FIPSW1VpZcqF9+MBrHOvBp9cjHh+525SjtCIJKVGjRKIAfxBwDGDGCFF00rTfzB1quxdSw==}
     engines: {node: '>=12.0.0'}
     peerDependencies:
@@ -6891,7 +6942,7 @@ packages:
     resolution: {integrity: sha512-YQ+BmxuTgd6UXZW3+ICGfyqRyHXVlD5GtQr5+qjiNW7bF0cqrzX500HVXPBOvgXb5YnzDd+h0zqyv61KUD7+Sg==}
     dev: true
 
-  /webpack-cli/4.9.2_6d3cb84eb7e855ae6fc0a3ee585c0c26:
+  /webpack-cli/4.9.2_nu6lqtvx5bk2436aupxfqxamey:
     resolution: {integrity: sha512-m3/AACnBBzK/kMTcxWHcZFPrw/eQuY4Df1TxvIWfWM2x7mRqBQCqKEd96oCUa9jkapLBaFfRce33eGDb4Pr7YQ==}
     engines: {node: '>=10.13.0'}
     hasBin: true
@@ -6912,9 +6963,9 @@ packages:
         optional: true
     dependencies:
       '@discoveryjs/json-ext': 0.5.7
-      '@webpack-cli/configtest': 1.1.1_webpack-cli@4.9.2+webpack@5.70.0
+      '@webpack-cli/configtest': 1.1.1_spmstbzrmxjdafr7ccogoqrx6e
       '@webpack-cli/info': 1.4.1_webpack-cli@4.9.2
-      '@webpack-cli/serve': 1.6.1_9a0b5ed2553fd0953b975a959afcbb80
+      '@webpack-cli/serve': 1.6.1_tifv5usvh7ijko4xlkkzv7f3qa
       colorette: 2.0.16
       commander: 7.2.0
       execa: 5.1.1
@@ -6923,7 +6974,7 @@ packages:
       interpret: 2.2.0
       rechoir: 0.7.1
       webpack: 5.70.0_webpack-cli@4.9.2
-      webpack-dev-server: 4.7.4_webpack-cli@4.9.2+webpack@5.70.0
+      webpack-dev-server: 4.7.4_spmstbzrmxjdafr7ccogoqrx6e
       webpack-merge: 5.8.0
     dev: true
 
@@ -6941,7 +6992,7 @@ packages:
       webpack: 5.70.0_webpack-cli@4.9.2
     dev: true
 
-  /webpack-dev-server/4.7.4_webpack-cli@4.9.2+webpack@5.70.0:
+  /webpack-dev-server/4.7.4_spmstbzrmxjdafr7ccogoqrx6e:
     resolution: {integrity: sha512-nfdsb02Zi2qzkNmgtZjkrMOcXnYZ6FLKcQwpxT7MvmHKc+oTtDsBju8j+NMyAygZ9GW1jMEUpy3itHtqgEhe1A==}
     engines: {node: '>= 12.13.0'}
     hasBin: true
@@ -6981,7 +7032,7 @@ packages:
       spdy: 4.0.2
       strip-ansi: 7.0.1
       webpack: 5.70.0_webpack-cli@4.9.2
-      webpack-cli: 4.9.2_6d3cb84eb7e855ae6fc0a3ee585c0c26
+      webpack-cli: 4.9.2_nu6lqtvx5bk2436aupxfqxamey
       webpack-dev-middleware: 5.3.1_webpack@5.70.0
       ws: 8.5.0
     transitivePeerDependencies:
@@ -7044,7 +7095,7 @@ packages:
       tapable: 2.2.1
       terser-webpack-plugin: 5.3.1_webpack@5.70.0
       watchpack: 2.3.1
-      webpack-cli: 4.9.2_6d3cb84eb7e855ae6fc0a3ee585c0c26
+      webpack-cli: 4.9.2_nu6lqtvx5bk2436aupxfqxamey
       webpack-sources: 3.2.3
     transitivePeerDependencies:
       - '@swc/core'
@@ -7126,7 +7177,7 @@ packages:
       '@babel/core': 7.17.7
       '@babel/preset-env': 7.16.11_@babel+core@7.17.7
       '@babel/runtime': 7.17.7
-      '@rollup/plugin-babel': 5.3.1_@babel+core@7.17.7+rollup@2.70.1
+      '@rollup/plugin-babel': 5.3.1_23xub6twj6jmu66yo3ilu4slda
       '@rollup/plugin-node-resolve': 11.2.1_rollup@2.70.1
       '@rollup/plugin-replace': 2.4.2_rollup@2.70.1
       '@surma/rollup-plugin-off-main-thread': 2.2.3
@@ -7319,4 +7370,16 @@ packages:
 
   /yeast/0.1.2:
     resolution: {integrity: sha1-AI4G2AlDIMNy28L47XagymyKxBk=}
+    dev: false
+
+  file:../../../mithril-ui-form-maplibre-plugin-0.0.1.tgz_mithril@2.0.4:
+    resolution: {integrity: sha512-/DnV5WxepZ7nWCAEsUxcGQEbV/n3RxH6CU1vhmAZrxjhwRoTz1HBhn8yFVyhUi3raF+uIMfruATdae6XA2UIcQ==, tarball: file:../../../mithril-ui-form-maplibre-plugin-0.0.1.tgz}
+    id: file:../../../mithril-ui-form-maplibre-plugin-0.0.1.tgz
+    name: mithril-ui-form-maplibre-plugin
+    version: 0.0.1
+    peerDependencies:
+      mithril: ^2.0.4
+    dependencies:
+      maplibre-gl: 2.1.9
+      mithril: 2.0.4
     dev: false

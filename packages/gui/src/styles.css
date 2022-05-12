@@ -29,3 +29,9 @@ p {
   bottom: 0;
   overflow-y: auto;
 }
+
+#configurator {
+  padding: 0 1rem;
+  overflow-y: auto !important;
+  max-height: 90vh;
+}

@@ -21,7 +21,7 @@ import { GeoJSONFeature, LayerSpecification, LineLayerSpecification } from 'mapl
 import { routingSvc } from './routing-service';
 import { Pages } from '../models';
 import { IGeoJSONFeatureTwo } from '../components/sidebars/poi-formatting';
-import { initGameState } from '../components/stockroom/stockroom';
+import { Gamestate } from 'c2app-models-utils';
 
 export interface ILayer {
   layerName: string;
@@ -138,7 +138,7 @@ export interface IActions {
   sendChat: (group: IGroup, message: string) => void;
 
   // Gamestate
-  sendStockroomConfiguration: (configuration: initGameState) => void;
+  sendStockroomConfiguration: (configuration: Gamestate) => void;
 
   // Layers/styles
   switchStyle: (style: string) => void;
@@ -453,7 +453,7 @@ export const appStateMgmt = {
       },
 
       // Gamestate
-      sendStockroomConfiguration: (configuration: initGameState) => {
+      sendStockroomConfiguration: (configuration: Gamestate) => {
         states()['app'].socket.sendStockroomConfiguration(configuration);
       },
 

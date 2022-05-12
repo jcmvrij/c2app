@@ -1,0 +1,17 @@
+@startuml action
+
+(*) --> "Visit Home page"
+"Visit Home page" --> "Enter game id"
+"Enter game id" --> "Enter credentials"
+
+if "Credentials correct?" then
+    -->[True] "Visit game page"
+    "Visit game page" --> (*)
+    note left: play game
+else
+    -->[False] "Enter credentials"
+
+"Visit Home page" --> "Visit Stockroom page"
+
+
+@enduml

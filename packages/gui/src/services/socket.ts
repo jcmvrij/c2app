@@ -22,7 +22,7 @@ import {
 } from 'c2app-models-utils';
 import M from 'materialize-css';
 import m from 'mithril';
-import { initGameState } from '../components/stockroom/stockroom';
+import { Gamestate } from 'c2app-models-utils';
 
 export class Socket {
   private socket: ioSocket;
@@ -605,7 +605,7 @@ export class Socket {
     return update;
   }
 
-  sendStockroomConfiguration(configuration: initGameState) {
+  sendStockroomConfiguration(configuration: Gamestate) {
     this.socket.emit('game-configuration', configuration, (response: string) => console.log(response));
   }
 }

@@ -1,26 +1,25 @@
 import m, { FactoryComponent } from 'mithril';
-import { LayoutForm, UIForm } from 'mithril-ui-form';
+import { LayoutForm, registerPlugin, UIForm } from 'mithril-ui-form';
 import { IActions, IAppModel } from '../../services/meiosis';
-import { faker } from '@faker-js/faker';
-import { SubmitButton } from 'mithril-materialized';
+import { Button, SubmitButton } from 'mithril-materialized';
+import { configureMaplibrePlugin, maplibrePlugin } from 'mithril-ui-form-maplibre-plugin';
+// import { createEmptyConfiguration } from './stockroom-utils';
+// import { Gamestate } from 'c2app-models-utils';
+import { loadPresetGame1 } from './stockroom-utils';
+import red from '../../assets/pawns/red.png';
+import blue from '../../assets/pawns/blue.png';
+import white from '../../assets/pawns/white.png';
+import maplibregl from 'maplibre-gl';
+import MapboxDraw from '@mapbox/mapbox-gl-draw';
 
-export interface initGameState {
-  gameId: string;
-  gameArea: string;
-  players: [];
-  redUnits: [];
-  blueUnits: [];
-  whiteUnits: [];
-}
+const appIcons = [
+  [red, 'RED'],
+  [blue, 'BLUE'],
+  [white, 'WHITE'],
+] as Array<[img: any, name: string]>;
 
-const obj: initGameState = {
-  gameId: faker.random.words(2).toLowerCase(),
-  gameArea: '',
-  players: [],
-  redUnits: [],
-  blueUnits: [],
-  whiteUnits: [],
-};
+// let obj = createEmptyConfiguration();
+let obj = loadPresetGame1();
 
 const form = [
   { id: 'gameId', label: 'Game Title', type: 'text', maxLength: 80 },
@@ -30,13 +29,19 @@ const form = [
     type: 'select',
     checkboxClass: 'col s3',
     options: [
-      { id: 'map1', label: 'Eindhoven Airport' },
-      { id: 'map2', label: 'Buitenhof' },
-      { id: 'map3', label: 'Gebied 3' },
+      { id: 'EindhovenAirport', label: 'Eindhoven Airport' },
+      { id: 'Buitenhof', label: 'Buitenhof' },
+      { id: 'Schiphol', label: 'Gebied 3' },
     ],
   },
   {
-    id: 'Players',
+    id: 'libremap',
+    type: 'libremap',
+    drawnPolygonLimit: 1,
+    className: 'col s12',
+  },
+  {
+    id: 'players',
     label: 'Players',
     repeat: 0,
     type: [
@@ -54,88 +59,11 @@ const form = [
         label: 'Team',
         type: 'select',
         options: [
-          { id: 'Blue', label: 'Blue' },
-          { id: 'Red', label: 'Red' },
+          { id: 'blue', label: 'Blue' },
+          { id: 'red', label: 'Red' },
         ],
         required: true,
-        icon: 'groups',
         className: 'col s6',
-      },
-    ],
-  },
-  {
-    id: 'redUnits',
-    label: 'Red Units',
-    repeat: 0,
-    type: [
-      {
-        id: 'id',
-        autogenerate: 'id',
-        type: 'none',
-      },
-      {
-        id: 'unitName',
-        label: 'Unit name',
-        type: 'text',
-        className: 'col s8',
-        iconName: 'title',
-        required: true,
-      },
-      {
-        id: 'unitType',
-        label: 'Unit type',
-        type: 'select',
-        options: [
-          { id: 'light', label: 'Light Unit' },
-          { id: 'heavy', label: 'Heavy Unit' },
-        ],
-        className: 'col s4',
-      },
-      {
-        id: 'region',
-        label: 'Region',
-        type: 'select',
-        options: [
-          {
-            id: 'eu',
-            label: 'Europe',
-          },
-          {
-            id: 'other',
-            label: 'Rest of the world',
-          },
-        ],
-        className: 'col s6',
-      },
-    ],
-  },
-  {
-    id: 'BlueUnits',
-    label: 'Blue Units',
-    repeat: 0,
-    type: [
-      {
-        id: 'id',
-        autogenerate: 'id',
-        type: 'none',
-      },
-      {
-        id: 'unitName',
-        label: 'Unit name',
-        type: 'text',
-        className: 'col s8',
-        iconName: 'title',
-        required: true,
-      },
-      {
-        id: 'unitType',
-        label: 'Unit type',
-        type: 'select',
-        options: [
-          { id: 'light', label: 'Light Unit' },
-          { id: 'heavy', label: 'Heavy Unit' },
-        ],
-        className: 'col s4',
       },
     ],
   },
@@ -145,32 +73,45 @@ export const Stockroom: FactoryComponent<{
   state: IAppModel;
   actions: IActions;
 }> = () => {
+  configureMaplibrePlugin({ maplibregl: maplibregl, mapboxdraw: MapboxDraw }, appIcons);
+  registerPlugin('libremap', maplibrePlugin);
   return {
-    view: (vnode) => {
+    view: (_vnode) => {
       return m(
         'div',
-        m('div', [
-          m('.col.s12.l2'),
+        m(
+          '#configurator.col.l8.offset-l2',
+          m('h4', 'Stockroom'),
           m(
-            '.col.s12.l8',
-            m('h4', 'Stockroom'),
+            '.center-align',
             m(LayoutForm, {
               form,
               obj,
             })
           ),
-          m('.col.s12.l2'),
-        ]),
-        m(SubmitButton, {
-          label: 'End Turn',
-          iconName: 'send',
-          iconClass: 'right',
-          onclick: () => {
-            vnode.attrs.actions.sendStockroomConfiguration(obj);
-            console.log('Client sent game configuration to server: ' + obj);
-          },
-        }),
-        m('.col.s12', JSON.stringify(obj))
+          m(Button, {
+            label: 'Load preset game 1',
+            onclick: () => {
+              obj = loadPresetGame1();
+            },
+          }),
+          m(Button, {
+            label: 'Clear configuration',
+            onclick: () => {
+              // obj = createEmptyConfiguration();
+            },
+          }),
+          m(SubmitButton, {
+            label: 'Create Game',
+            iconName: 'send',
+            iconClass: 'right',
+            onclick: () => {
+              // vnode.attrs.actions.sendStockroomConfiguration(obj);
+              // console.log('Client sent game configuration to server: ' + obj);
+            },
+          }),
+          m('.col.s12', JSON.stringify(obj))
+        )
       );
     },
   };
