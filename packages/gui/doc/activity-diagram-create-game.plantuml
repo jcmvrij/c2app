@@ -1,0 +1,18 @@
+
+@startuml Create game
+start
+:Visit Home page;
+:Visit Stockroom page;
+
+repeat 
+:Configure game (id, location and teams);
+repeat while (Config valid?) is (no)
+-> yes;
+
+:Create units for teams;
+:Place units in starting location;
+:Confirm unit placement;
+stop
+note left: Game created
+
+@enduml
