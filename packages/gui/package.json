@@ -29,7 +29,7 @@
     "mithril": "^2.0.4",
     "mithril-materialized": "^0.19.4",
     "mithril-ui-form": "^1.4.9",
-    "mithril-ui-form-maplibre-plugin": "file:..\\..\\..\\mithril-ui-form-maplibre-plugin-0.0.1.tgz",
+    "mithril-ui-form-maplibre-plugin": "file:..\\..\\..\\mithril-ui-form-maplibre-plugin-0.1.1.tgz",
     "polylabel": "^1.1.0",
     "socket.io-client": "4.4.1"
   },

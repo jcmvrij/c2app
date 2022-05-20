@@ -32,7 +32,7 @@ specifiers:
   mithril: ^2.0.4
   mithril-materialized: ^0.19.4
   mithril-ui-form: ^1.4.9
-  mithril-ui-form-maplibre-plugin: file:..\..\..\mithril-ui-form-maplibre-plugin-0.0.1.tgz
+  mithril-ui-form-maplibre-plugin: file:..\..\..\mithril-ui-form-maplibre-plugin-0.1.1.tgz
   polylabel: ^1.1.0
   rimraf: ^3.0.2
   socket.io-client: 4.4.1
@@ -60,7 +60,7 @@ dependencies:
   mithril: 2.0.4
   mithril-materialized: 0.19.4
   mithril-ui-form: 1.4.9
-  mithril-ui-form-maplibre-plugin: file:../../../mithril-ui-form-maplibre-plugin-0.0.1.tgz_mithril@2.0.4
+  mithril-ui-form-maplibre-plugin: file:../../../mithril-ui-form-maplibre-plugin-0.1.1.tgz_mithril@2.0.4
   polylabel: 1.1.0
   socket.io-client: 4.4.1
 
@@ -1337,7 +1337,7 @@ packages:
     dev: false
 
   /@mapbox/jsonlint-lines-primitives/2.0.2:
-    resolution: {integrity: sha1-zlblOfg1UrWNENZy6k1vya3HsjQ=}
+    resolution: {integrity: sha512-rY0o9A5ECsTQRVhv7tL/OyDpGAoUB4tTvLiW1DSzQGq4bvTPhNw1VpSNjDJc5GFZ2XuyOtSWSVN05qOtcD71qQ==}
     engines: {node: '>= 0.6'}
     dev: false
 
@@ -1358,7 +1358,7 @@ packages:
     dev: false
 
   /@mapbox/point-geometry/0.1.0:
-    resolution: {integrity: sha1-ioP5M1x4YO/6Lu7KJUMyqgru2PI=}
+    resolution: {integrity: sha512-6j56HdLTwWGO0fJPlrZtdU/B13q8Uwmo18Ck2GnGgN9PCFyKTZ3UbXeEdRFh18i9XQ92eH2VdtpJHpBD3aripQ==}
     dev: false
 
   /@mapbox/tiny-sdf/2.0.5:
@@ -7372,14 +7372,16 @@ packages:
     resolution: {integrity: sha1-AI4G2AlDIMNy28L47XagymyKxBk=}
     dev: false
 
-  file:../../../mithril-ui-form-maplibre-plugin-0.0.1.tgz_mithril@2.0.4:
-    resolution: {integrity: sha512-/DnV5WxepZ7nWCAEsUxcGQEbV/n3RxH6CU1vhmAZrxjhwRoTz1HBhn8yFVyhUi3raF+uIMfruATdae6XA2UIcQ==, tarball: file:../../../mithril-ui-form-maplibre-plugin-0.0.1.tgz}
-    id: file:../../../mithril-ui-form-maplibre-plugin-0.0.1.tgz
+  file:../../../mithril-ui-form-maplibre-plugin-0.1.1.tgz_mithril@2.0.4:
+    resolution: {integrity: sha512-cWqYRiOJ/Hk6Nx4z5eHm8/VBYyvPe6cbdcYT1K+kBVRrTFjA2r5jP4eiqYx5tSjn2pXxk7yUTjecoUmfNQ53lg==, tarball: file:../../../mithril-ui-form-maplibre-plugin-0.1.1.tgz}
+    id: file:../../../mithril-ui-form-maplibre-plugin-0.1.1.tgz
     name: mithril-ui-form-maplibre-plugin
-    version: 0.0.1
+    version: 0.1.1
     peerDependencies:
       mithril: ^2.0.4
     dependencies:
+      '@mapbox/mapbox-gl-draw': 1.3.0
+      geojson: 0.5.0
       maplibre-gl: 2.1.9
       mithril: 2.0.4
     dev: false

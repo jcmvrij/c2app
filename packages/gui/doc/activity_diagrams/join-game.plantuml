@@ -2,14 +2,13 @@
 start
 :Visit Home page;
 
-repeat 
-:Enter game id;
+repeat :Enter game id;
 repeat while (Game id known?) is (no)
 -> yes;
 
 :Enter player name;
 :Select team to play as;
+:Game joined, directed to game page;
 stop
-note left: Game joined, directed to game page
 
 @enduml
