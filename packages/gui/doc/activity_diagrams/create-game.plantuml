@@ -4,12 +4,16 @@ start
 :Visit Home page;
 :Visit Stockroom page;
 
-repeat :Configure game (id, teams and location);
+repeat :Configure id, teams and location;
 backward: Inform user of invalid configuration;
 repeat while (Config valid?) is (no)
 -> yes;
 
-:Create units for teams;
+repeat :Create units for teams;
+backward: Inform user of invalid configuration;
+repeat while (Config valid?) is (no)
+-> yes;
+
 :Place units in starting location;
 :Confirm game;
 stop

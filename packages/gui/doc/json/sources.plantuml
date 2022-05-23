@@ -1,0 +1,157 @@
+@startjson sources
+{
+	"sources": [
+		{
+			"id": "TeamBlueUnit1",
+			"source": {
+				"type": "FeatureCollection",
+				"features": [
+					{
+						"type": "Feature",
+						"properties": {
+							"movable": true
+						},
+						"geometry": {
+							"type": "Point",
+							"coordinates": [
+								4.327293,
+								52.11
+							]
+						}
+					}
+				]
+			},
+			"layers": [
+				{
+					"id": "Layer",
+					"type": "symbol",
+					"layout": {
+						"icon-image": "BLUE",
+						"icon-size": [
+							"interpolate",
+							[
+								"exponential",
+								0.5
+							],
+							[
+								"zoom"
+							],
+							15,
+							0.7,
+							20,
+							0.2
+						],
+						"icon-allow-overlap": true
+					},
+					"paint": {
+						"icon-opacity": 0.8
+					},
+					"filter": [
+						"all"
+					]
+				}
+			]
+		},
+		{
+			"id": "TeamRedUnit1",
+			"source": {
+				"type": "FeatureCollection",
+				"features": [
+					{
+						"type": "Feature",
+						"properties": {
+							"movable": true
+						},
+						"geometry": {
+							"type": "Point",
+							"coordinates": [
+								4.327293,
+								52.111
+							]
+						}
+					}
+				]
+			},
+			"layers": [
+				{
+					"id": "Layer",
+					"type": "symbol",
+					"layout": {
+						"icon-image": "RED",
+						"icon-size": [
+							"interpolate",
+							[
+								"exponential",
+								0.5
+							],
+							[
+								"zoom"
+							],
+							15,
+							0.7,
+							20,
+							0.2
+						],
+						"icon-allow-overlap": true
+					},
+					"paint": {
+						"icon-opacity": 0.8
+					},
+					"filter": [
+						"all"
+					]
+				}
+			]
+		},
+		{
+			"id": "TeamWhiteUnit1",
+			"source": {
+				"type": "FeatureCollection",
+				"features": [
+					{
+						"type": "Feature",
+						"properties": {
+							"movable": true
+						},
+						"geometry": {
+							"type": "Point",
+							"coordinates": [
+								4.327293,
+								52.112
+							]
+						}
+					}
+				]
+			},
+			"layers": [
+				{
+					"id": "Layer",
+					"type": "symbol",
+					"layout": {
+						"icon-image": "WHITE",
+						"icon-size": [
+							"interpolate",
+							[
+								"exponential",
+								0.5
+							],
+							[
+								"zoom"
+							],
+							15,
+							0.7,
+							20,
+							0.2
+						],
+						"icon-allow-overlap": true
+					},
+					"paint": {},
+					"filter": [
+						"all"
+					]
+				}
+			]
+		}
+	]
+}
+@endjson
