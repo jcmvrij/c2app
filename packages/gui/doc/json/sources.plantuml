@@ -1,4 +1,6 @@
 @startjson sources
+' Follows ISource interface
+' sources is an array of ISource objects
 {
 	"sources": [
 		{

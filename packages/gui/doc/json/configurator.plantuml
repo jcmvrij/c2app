@@ -19,11 +19,11 @@
         "sources": []
     },
     "teams": [{
-            "color": "blue",
-            "name": "Good guys"
+            "name": "Good guys",
+            "color": "blue"
         }, {
-            "color": "red",
-            "name": "Bad guys"
+            "name": "Bad guys",
+            "color": "red"
         }
     ]
 }

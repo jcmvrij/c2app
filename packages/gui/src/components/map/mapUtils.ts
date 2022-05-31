@@ -5,7 +5,7 @@ import { Point, Feature, Polygon, FeatureCollection, Geometry } from 'geojson';
 import { IActions, IAppModel, ILayer, ISource, SourceType, states } from '../../services/meiosis';
 import SquareGrid from '@turf/square-grid';
 import polylabel from 'polylabel';
-import { appIcons } from './map-icons';
+import { appIcons } from './mapIcons';
 import { circle } from '@turf/turf';
 import { IGeoJSONFeatureTwo } from '../sidebars/poi-formatting';
 

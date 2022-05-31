@@ -10,7 +10,7 @@ import { Settings } from '../components/settings/settings';
 import { Alerts } from '../components/alerts/alerts';
 import { chatSidebar } from '../components/sidebars/chat-sidebar';
 import { Home } from '../components/home/home';
-import { Stockroom } from '../components/stockroom/stockroom';
+import { configurator, configuratorPlacement, configuratorUnits } from '../components/configurator';
 
 class RoutingService {
   private pages!: ReadonlyArray<IPage>;
@@ -85,12 +85,32 @@ export const routingSvc: RoutingService = new RoutingService(Layout, [
     default: true,
   },
   {
-    id: Pages.STOCKROOM,
-    title: 'Stockroom',
+    id: Pages.CONFIGURATOR,
+    title: 'Configurator',
     icon: 'tune',
-    route: '/stockroom',
+    route: '/configurator',
     visible: true,
-    component: Stockroom,
+    component: configurator,
+    sidebar: sideBar,
+    hasSidebar: false,
+  },
+  {
+    id: Pages.CONFIGURATORUNITS,
+    title: 'Unit creation',
+    icon: 'tune',
+    route: '/configurator-units',
+    visible: true,
+    component: configuratorUnits,
+    sidebar: sideBar,
+    hasSidebar: false,
+  },
+  {
+    id: Pages.CONFIGURATORPLACEMENT,
+    title: 'Unit placement',
+    icon: 'tune',
+    route: '/configurator-placement',
+    visible: true,
+    component: configuratorPlacement,
     sidebar: sideBar,
     hasSidebar: false,
   },

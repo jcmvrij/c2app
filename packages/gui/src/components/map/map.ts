@@ -10,10 +10,10 @@ import maplibregl, {
 import MapboxDraw from '@mapbox/mapbox-gl-draw';
 import { RulerControl } from '@prashis/maplibre-gl-controls';
 import { MeiosisComponent } from '../../services/meiosis';
-import * as MapUtils from './map-utils';
-import { addISources } from './map-experimental';
+import * as MapUtils from './mapUtils';
+import { addISources } from './mapExperimental';
 
-declare type MapLayerEventTypeTwo = MapLayerEventType & {
+export declare type MapLayerEventTypeTwo = MapLayerEventType & {
   'draw.create': (e: { type: string; features: GeoJSONFeature[] }) => void;
   'draw.update': (e: { type: string; features: GeoJSONFeature[] }) => void;
 };

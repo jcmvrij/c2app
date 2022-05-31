@@ -3,13 +3,19 @@ import { ComponentTypes } from 'mithril';
 type IconResolver = () => string;
 type IconOrResolver = string | IconResolver;
 
+
+
+
 export enum Pages {
   HOME = 'HOME',
-  STOCKROOM = 'STOCKROOM',
+  CONFIGURATOR = 'CONFIGURATOR',
+  CONFIGURATORTEAMS = 'CONFIGURATORTEAMS',
   MAP = 'MAP',
   CHAT = 'CHAT',
   SETTINGS = 'SETTINGS',
   ALERTS = 'ALERTS',
+  CONFIGURATORUNITS = "CONFIGURATORUNITS",
+  CONFIGURATORPLACEMENT = "CONFIGURATORPLACEMENT"
 }
 
 export interface IPage {

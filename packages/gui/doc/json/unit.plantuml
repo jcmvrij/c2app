@@ -1,0 +1,36 @@
+@startjson unit 
+' Follows ISource interface
+{
+    "id": "TeamRedUnit1",
+    "layers": [{
+            "filter": ["all"],
+            "id": "Layer",
+            "layout": {
+                "icon-allow-overlap": true,
+                "icon-image": "RED",
+                "icon-size": ["interpolate", ["exponential", 0.5], ["zoom"], 15, 0.7, 20, 0.2]
+            },
+            "paint": {
+                "icon-opacity": 0.8
+            },
+            "type": "symbol"
+        }
+    ],
+    "source": {
+        "features": [{
+                "geometry": {
+                    "coordinates": [4.327293, 52.111],
+                    "type": "Point"
+                },
+                "properties": {
+                    "movable": true
+                },
+                "type": "Feature"
+            }
+        ],
+        "type": "FeatureCollection"
+    }
+}
+
+
+@endjson

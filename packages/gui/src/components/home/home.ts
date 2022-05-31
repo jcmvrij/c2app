@@ -10,11 +10,9 @@ export const Home: FactoryComponent<{
   return {
     view: () => {
       return m(
-        'div',
+        'div.container',
         m(
           '.col.s12.l4',
-          // 'div.col.s12.l8.offset-l2',
-
           m('h2', 'C2app game'),
           m(
             'blockquote',
