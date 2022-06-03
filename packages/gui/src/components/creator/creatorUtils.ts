@@ -1,7 +1,8 @@
 import faker from '@faker-js/faker';
-import { Polygon } from 'geojson';
+import { Point, Polygon } from 'geojson';
 import { GeoJSONFeature } from 'maplibre-gl';
-import { MapLibrePluginState } from 'mithril-ui-form-maplibre-plugin';
+import { MapLibrePluginBBox, MapLibrePluginState } from 'mithril-ui-form-maplibre-plugin';
+import { IMapLibreSource } from 'mithril-ui-form-maplibre-plugin/lib/componentUtils';
 
 export const loadPresetGame1 = () => {
   return {
@@ -321,6 +322,7 @@ export interface Team {
   id: string;
   name: string;
   color: string;
+  units?: Unit[];
 }
 
 export interface Unit {
@@ -360,4 +362,64 @@ export const isValidConfigurationOfUnits = (configuration: ConfigurationOfUnits)
     }
   }
   return true;
+};
+
+export const createSources = (teams: Team[], mapBounds: MapLibrePluginBBox) => {
+  const sources: IMapLibreSource[] = [];
+  const numberOfTeams = teams.length;
+  teams.forEach((team) => {
+    sources.push({
+      id: team.id,
+      source: {
+        type: 'FeatureCollection',
+        features: [
+          {
+            type: 'Feature',
+            properties: {
+              movable: true,
+            },
+            geometry: {
+              type: 'Point',
+              coordinates: [0, 0],
+            },
+          },
+        ],
+      },
+      layers: [
+        {
+          id: 'Layer',
+          // @ts-ignore
+          type: 'symbol',
+          layout: {
+            'icon-image': team.color.toUpperCase(),
+            'icon-size': ['interpolate', ['exponential', 0.5], ['zoom'], 15, 0.7, 20, 0.2],
+            'icon-allow-overlap': true,
+          },
+          paint: {
+            'icon-opacity': 0.8,
+          },
+          filter: ['all'],
+        },
+      ],
+    });
+  });
+  const coordinates = createCoordinates(numberOfTeams, mapBounds);
+  sources.forEach((source) => {
+    const coordinate = coordinates.shift();
+    console.log(coordinate);
+    if (coordinate) (source.source.features[0].geometry as Point).coordinates = coordinate;
+  });
+  return sources;
+};
+
+const createCoordinates = (numberOfTeams: number, mapBounds: MapLibrePluginBBox) => {
+  const midLng = (mapBounds.sw.lng + mapBounds.ne.lng) / 2;
+  const midLat = (mapBounds.sw.lat + mapBounds.ne.lat) / 2;
+  const coordinates = [];
+  let gapFromPoint = 0;
+  for (let index = 0; index < numberOfTeams; index++) {
+    coordinates.push([midLng, midLat + gapFromPoint]);
+    gapFromPoint += 0.001;
+  }
+  return coordinates;
 };

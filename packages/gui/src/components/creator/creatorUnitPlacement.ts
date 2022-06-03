@@ -2,148 +2,59 @@ import m, { FactoryComponent } from 'mithril';
 import { LayoutForm, UIForm } from 'mithril-ui-form';
 import { IActions, IAppModel } from '../../services/meiosis';
 import { SubmitButton } from 'mithril-materialized';
-// @ts-ignore
-const placeholderBounds = () => {
-  return {
-    sw: {
-      lng: 4.27936263874642,
-      lat: 52.107610237627654,
-    },
-    ne: {
-      lng: 4.330818014164407,
-      lat: 52.11574774600376,
-    },
-  };
-};
-// @ts-ignore
-const placeholder2 = () => {
-  return {
-    'id119fdd00-units': [
+import { MapLibrePluginBBox } from 'mithril-ui-form-maplibre-plugin';
+import { createSources, Team } from './creatorUtils';
+import { IMapLibreSource } from 'mithril-ui-form-maplibre-plugin/lib/componentUtils';
+
+const placeholderTeams: Team[] = [
+  {
+    id: 'ide4bca90b',
+    name: 'speler1',
+    color: 'blue',
+    units: [
       {
         id: 'id2ed4e0b5',
         name: 'speler1-unit1',
-        unit: 'lightUnit',
+        type: 'lightUnit',
       },
       {
         id: 'id282d0a61',
         name: 'speler1-unit2',
-        unit: 'heavyUnit',
+        type: 'heavyUnit',
       },
     ],
-    'id01cd8dcf-units': [
+  },
+  {
+    id: 'id61127b0e',
+    name: 'speler2',
+    color: 'red',
+    units: [
       {
         id: 'iddcb0efa7',
         name: 'speler2-unit1',
-        unit: 'lightUnit',
+        type: 'lightUnit',
       },
       {
         id: 'id2f1869e1',
         name: 'speler2-unit2',
-        unit: 'lightUnit',
-      },
-    ],
-  };
-};
-
-const placeholderSources = [
-  {
-    id: 'TeamBlueUnit1',
-    source: {
-      type: 'FeatureCollection',
-      features: [
-        {
-          type: 'Feature',
-          properties: {
-            movable: true,
-          },
-          geometry: {
-            type: 'Point',
-            coordinates: [4.327293, 52.11],
-          },
-        },
-      ],
-    },
-    layers: [
-      {
-        id: 'Layer',
-        type: 'symbol',
-        layout: {
-          'icon-image': 'BLUE',
-          'icon-size': ['interpolate', ['exponential', 0.5], ['zoom'], 15, 0.7, 20, 0.2],
-          'icon-allow-overlap': true,
-        },
-        paint: {
-          'icon-opacity': 0.8,
-        },
-        filter: ['all'],
-      },
-    ],
-  },
-  {
-    id: 'TeamRedUnit1',
-    source: {
-      type: 'FeatureCollection',
-      features: [
-        {
-          type: 'Feature',
-          properties: {
-            movable: true,
-          },
-          geometry: {
-            type: 'Point',
-            coordinates: [4.327293, 52.111],
-          },
-        },
-      ],
-    },
-    layers: [
-      {
-        id: 'Layer',
-        type: 'symbol',
-        layout: {
-          'icon-image': 'RED',
-          'icon-size': ['interpolate', ['exponential', 0.5], ['zoom'], 15, 0.7, 20, 0.2],
-          'icon-allow-overlap': true,
-        },
-        paint: {
-          'icon-opacity': 0.8,
-        },
-        filter: ['all'],
-      },
-    ],
-  },
-  {
-    id: 'TeamWhiteUnit1',
-    source: {
-      type: 'FeatureCollection',
-      features: [
-        {
-          type: 'Feature',
-          properties: {
-            movable: true,
-          },
-          geometry: {
-            type: 'Point',
-            coordinates: [4.327293, 52.112],
-          },
-        },
-      ],
-    },
-    layers: [
-      {
-        id: 'Layer',
-        type: 'symbol',
-        layout: {
-          'icon-image': 'WHITE',
-          'icon-size': ['interpolate', ['exponential', 0.5], ['zoom'], 15, 0.7, 20, 0.2],
-          'icon-allow-overlap': true,
-        },
-        paint: {},
-        filter: ['all'],
+        type: 'lightUnit',
       },
     ],
   },
 ];
+
+const placeholderBounds: MapLibrePluginBBox = {
+  sw: {
+    lng: 4.27936263874642,
+    lat: 52.107610237627654,
+  },
+  ne: {
+    lng: 4.330818014164407,
+    lat: 52.11574774600376,
+  },
+};
+
+const placeholderSources: IMapLibreSource[] = createSources(placeholderTeams, placeholderBounds);
 
 const obj = {
   map: {
@@ -162,7 +73,7 @@ const form = [
     type: 'libremap',
     polygonControlBar: false,
     zoom: 0,
-    maxBounds: placeholderBounds(),
+    maxBounds: placeholderBounds,
     className: 'col s12',
   },
 ] as UIForm;
@@ -187,12 +98,6 @@ export const creatorUnitPlacement: FactoryComponent<{
         m(LayoutForm, {
           form,
           obj,
-        }),
-        m(SubmitButton, {
-          label: 'AddUnit',
-          iconName: 'send',
-          iconClass: 'right',
-          onclick: () => {},
         }),
         m('.col.s12', JSON.stringify(obj, null, 2))
       );

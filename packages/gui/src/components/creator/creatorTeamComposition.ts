@@ -6,18 +6,16 @@ import { Pages } from '../../models';
 import faker from '@faker-js/faker';
 import { Team, Unit, isValidConfigurationOfUnits } from './creatorUtils';
 
-const placeholder = {
-  teams: [
-    { id: 'ide4bca90b', name: 'speler1', color: 'blue' },
-    { id: 'id61127b0e', name: 'speler2', color: 'red' },
-  ] as Team[],
-};
+const placeholderTeams: Team[] = [
+  { id: 'ide4bca90b', name: 'speler1', color: 'blue' },
+  { id: 'id61127b0e', name: 'speler2', color: 'red' },
+];
 
 const createObj = (teams: Team[]) => {
   const obj: Record<string, Unit[]> = {};
   teams.forEach(
     (team) =>
-      (obj[team.id + '-units'] = [
+      (obj[team.id] = [
         { id: '', name: faker.name.findName(), type: '' },
         { id: '', name: faker.name.findName(), type: '' },
         { id: '', name: faker.name.findName(), type: '' },
@@ -37,7 +35,7 @@ const createForm = (teams: Team[]) => {
   ];
   for (let team of teams) {
     form.push({
-      id: team.id + '-units',
+      id: team.id,
       label: team.name + ' units',
       // @ts-ignore
       repeat: 0,
@@ -76,8 +74,8 @@ const createForm = (teams: Team[]) => {
   return form;
 };
 
-const obj = createObj(placeholder.teams);
-const form = createForm(placeholder.teams);
+const obj = createObj(placeholderTeams);
+const form = createForm(placeholderTeams);
 
 export const creatorTeamComposition: FactoryComponent<{
   state: IAppModel;

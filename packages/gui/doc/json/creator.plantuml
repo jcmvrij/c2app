@@ -1,0 +1,29 @@
+@startjson creator result
+{
+    "id": "string",
+    "bounds": {
+        "sw": {
+            "lng": "number",
+            "lat": "number"
+        },
+        "ne": {
+            "lng": "number",
+            "lat": "number"
+        }
+    },
+    "teams": [
+        {
+            "id": "string",
+            "name": "string",
+            "color": "string",
+            "units": [
+                {
+                    "id": "string",
+                    "name": "string",
+                    "type": "string"
+                }
+            ]
+        }
+    ]
+}
+@endjson
