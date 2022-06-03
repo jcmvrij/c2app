@@ -10,7 +10,7 @@ import { Settings } from '../components/settings/settings';
 import { Alerts } from '../components/alerts/alerts';
 import { chatSidebar } from '../components/sidebars/chat-sidebar';
 import { Home } from '../components/home/home';
-import { configurator, configuratorPlacement, configuratorUnits } from '../components/configurator';
+import { creatorGame, creatorTeamComposition, creatorUnitPlacement } from '../components/creator';
 
 class RoutingService {
   private pages!: ReadonlyArray<IPage>;
@@ -85,32 +85,32 @@ export const routingSvc: RoutingService = new RoutingService(Layout, [
     default: true,
   },
   {
-    id: Pages.CONFIGURATOR,
-    title: 'Configurator',
+    id: Pages.CREATORGAME,
+    title: 'CreatorGame',
     icon: 'tune',
-    route: '/configurator',
+    route: '/creatorgame',
     visible: true,
-    component: configurator,
+    component: creatorGame,
     sidebar: sideBar,
     hasSidebar: false,
   },
   {
-    id: Pages.CONFIGURATORUNITS,
-    title: 'Unit creation',
+    id: Pages.CREATORTEAMCOMPOSITION,
+    title: 'Team composition',
     icon: 'tune',
-    route: '/configurator-units',
+    route: '/creator-team-composition',
     visible: true,
-    component: configuratorUnits,
+    component: creatorTeamComposition,
     sidebar: sideBar,
     hasSidebar: false,
   },
   {
-    id: Pages.CONFIGURATORPLACEMENT,
+    id: Pages.CREATORUNITPLACEMENT,
     title: 'Unit placement',
     icon: 'tune',
-    route: '/configurator-placement',
+    route: '/creator-unit-placement',
     visible: true,
-    component: configuratorPlacement,
+    component: creatorUnitPlacement,
     sidebar: sideBar,
     hasSidebar: false,
   },

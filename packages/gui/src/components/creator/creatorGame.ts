@@ -4,14 +4,16 @@ import { IActions, IAppModel } from '../../services/meiosis';
 import { SubmitButton } from 'mithril-materialized';
 import { Pages } from '../../models';
 import faker from '@faker-js/faker';
-import { boundingBoxFromPolygon } from './configuratorUtils';
+import { boundingBoxFromPolygon, ConfigurationBasic, Team, isValidConfigurationBasic } from './creatorUtils';
 import { MapLibrePluginState } from 'mithril-ui-form-maplibre-plugin';
-// import { Feature, Polygon } from 'geojson';
 
-const obj = {
+const obj: ConfigurationBasic = {
   id: faker.random.words(2).toLowerCase(),
-  map: {} as MapLibrePluginState,
-  teams: [{}, {}],
+  location: {} as MapLibrePluginState,
+  teams: [
+    { id: '', name: '', color: '' },
+    { id: '', name: '', color: '' },
+  ] as Team[],
 };
 
 const availableTeamColors = () => {
@@ -31,7 +33,7 @@ const form = [
     value: 'Locatie\n\nTeken een figuur om het gewenste speelveld',
   },
   {
-    id: 'map',
+    id: 'location',
     type: 'libremap',
     drawnPolygonLimit: 1,
     className: 'col s12',
@@ -63,7 +65,7 @@ const form = [
   },
 ] as UIForm;
 
-export const configurator: FactoryComponent<{
+export const creatorGame: FactoryComponent<{
   state: IAppModel;
   actions: IActions;
 }> = ({ attrs: { actions } }) => {
@@ -74,15 +76,11 @@ export const configurator: FactoryComponent<{
         'div.container#configurator',
         m('h4', 'Configurator'),
         m(SubmitButton, {
-          label: 'Next page',
+          label: 'Next',
           iconName: 'send',
           iconClass: 'right',
           onclick: () => {
-            if (obj.map.polygons) {
-              console.log(obj.map.polygons);
-              // boundingBoxFromFeature(obj.map.polygons.features[0]);
-            }
-            switchToPage(Pages.CONFIGURATORTEAMS);
+            if (isValidConfigurationBasic(obj)) switchToPage(Pages.CREATORTEAMCOMPOSITION);
           },
         }),
         m(SubmitButton, {
@@ -90,10 +88,9 @@ export const configurator: FactoryComponent<{
           iconName: 'send',
           iconClass: 'right',
           onclick: () => {
-            if (obj.map.polygons) {
-              console.log(obj.map.polygons);
-              const bb = boundingBoxFromPolygon(obj.map.polygons[0]);
-              console.log(bb);
+            if (obj.location.polygons) {
+              console.log(obj.location.polygons);
+              console.log(boundingBoxFromPolygon(obj.location.polygons[0]));
             }
           },
         }),
@@ -101,7 +98,7 @@ export const configurator: FactoryComponent<{
           form,
           obj,
         }),
-        m.trust(JSON.stringify(obj, null, 2))
+        m.trust(JSON.stringify(obj))
       );
     },
   };

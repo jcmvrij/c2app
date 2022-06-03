@@ -118,71 +118,7 @@ export const layersBody: FactoryComponent<{
           ]),
         ]),
         m('.divider'),
-        /// CUSTOM LAYERS
-        m('ul.collapsible', [
-          m('li', [
-            m('.collapsible-header', 'Custom Layers'),
-            m(
-              '.collapsible-body',
-              m(
-                '.row',
-                m(
-                  'button.btn.modal-trigger.col.s10.offset-s1',
-                  { 'data-target': 'customLayerModal' },
-                  'Create Layer'
-                ),
-                m(
-                  '.col.s12',
-                  vnode.attrs.state.app.sources.map((source: ISource, sourceIndex: number) => {
-                    if (source.sourceCategory !== SourceType.custom) return;
-                    return source.layers.map((layer: ILayer, layerIndex: number) => {
-                      return m(
-                        '.collection-item',
-                        m('.valign-wrapper', [
-                          m(
-                            '.switch.col.s2.left-align',
-                            m('label', [
-                              m('input', {
-                                type: 'checkbox',
-                                class: 'filled-in',
-                                checked: layer.showLayer,
-                                onclick: () => {
-                                  vnode.attrs.actions.toggleLayer(sourceIndex, layerIndex);
-                                },
-                              }),
-                              m('span.lever'),
-                            ])
-                          ),
-                          m('p.col.s5.left-align', layer.layerName),
-                          m(
-                            'a.btn.waves-effect.waves-light.col.s2.offset-s1.right-align.modal-trigger',
-                            {
-                              'data-target': 'editLayerModal',
-                              onclick: () => {
-                                vnode.attrs.actions.setLayerEdit(sourceIndex);
-                              },
-                            },
-                            m('i.material-icons', 'edit')
-                          ),
-                          m(
-                            'a.btn.waves-effect.waves-light.red.col.s2.right-align',
-                            {
-                              onclick: () => {
-                                vnode.attrs.actions.deleteLayer(sourceIndex);
-                              },
-                            },
-                            m('i.material-icons', 'delete')
-                          ),
-                        ])
-                      );
-                    });
-                  })
-                )
-              )
-            ),
-          ]),
-        ]),
-        m('.divider'),
+
         /// Alert Layers
         m('ul.collapsible', [
           m('li', [

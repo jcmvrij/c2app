@@ -1,6 +1,6 @@
 import faker from '@faker-js/faker';
 import { Polygon } from 'geojson';
-import { GeoJSONFeature, LngLat, LngLatBounds } from 'maplibre-gl';
+import { GeoJSONFeature } from 'maplibre-gl';
 import { MapLibrePluginState } from 'mithril-ui-form-maplibre-plugin';
 
 export const loadPresetGame1 = () => {
@@ -297,7 +297,67 @@ export const boundingBoxFromPolygon = (feature: GeoJSONFeature) => {
     collectedLats.push(point[1]);
   });
 
-  const sw = new LngLat(Math.min(...collectedLongs), Math.min(...collectedLats));
-  const ne = new LngLat(Math.max(...collectedLongs), Math.max(...collectedLats));
-  return new LngLatBounds(sw, ne);
+  return {
+    sw: {
+      lng: Math.min(...collectedLongs),
+      lat: Math.min(...collectedLats),
+    },
+    ne: {
+      lng: Math.max(...collectedLongs),
+      lat: Math.max(...collectedLats),
+    },
+  };
+};
+
+export interface ConfigurationBasic {
+  id: string;
+  location: MapLibrePluginState;
+  teams: Team[];
+}
+
+export interface ConfigurationOfUnits extends Record<string, Unit[]> {}
+
+export interface Team {
+  id: string;
+  name: string;
+  color: string;
+}
+
+export interface Unit {
+  id: string;
+  name: string;
+  type: string;
+}
+
+export const isValidConfigurationBasic = (configuration: ConfigurationBasic): boolean => {
+  const { id, location, teams } = configuration;
+  if (!id) {
+    alert('Id is invalid');
+    return false;
+  }
+  if (!location.polygons) {
+    alert('Location is invalid');
+    return false;
+  }
+  if (teams.length < 2 || teams.some((team) => !team.id || !team.name || !team.color)) {
+    alert('Teams are misconfigured');
+    return false;
+  }
+  return true;
+};
+
+export const isValidConfigurationOfUnits = (configuration: ConfigurationOfUnits) => {
+  const { unitCreationExplanation, ...restConfig } = configuration;
+  for (const key in restConfig) {
+    if (Object.prototype.hasOwnProperty.call(restConfig, key)) {
+      const element = restConfig[key];
+      for (const unit of element) {
+        if (!unit.id || !unit.name || !unit.type) {
+          alert('Configuration is invalid');
+          return false;
+        }
+      }
+    }
+  }
+  return true;
 };

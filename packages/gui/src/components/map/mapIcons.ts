@@ -1,6 +1,6 @@
-import blue from '../../assets/Units/blue.png';
-import red from '../../assets/Units/red.png';
-import white from '../../assets/Units/white.png';
+import blue from '../../assets/icons/blue.png';
+import red from '../../assets/icons/red.png';
+import white from '../../assets/icons/white.png';
 
 export const appIcons = [
   [red, 'RED'],

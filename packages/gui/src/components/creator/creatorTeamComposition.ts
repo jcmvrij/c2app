@@ -4,33 +4,26 @@ import { IActions, IAppModel } from '../../services/meiosis';
 import { SubmitButton } from 'mithril-materialized';
 import { Pages } from '../../models';
 import faker from '@faker-js/faker';
-
-interface Team {
-  id: string;
-  name: string;
-  color: string;
-}
+import { Team, Unit, isValidConfigurationOfUnits } from './creatorUtils';
 
 const placeholder = {
   teams: [
-    {
-      id: 'id119fdd00',
-      name: 'speler1',
-      color: 'blue',
-    },
-    {
-      id: 'id01cd8dcf',
-      name: 'speler2',
-      color: 'red',
-    },
-  ],
+    { id: 'ide4bca90b', name: 'speler1', color: 'blue' },
+    { id: 'id61127b0e', name: 'speler2', color: 'red' },
+  ] as Team[],
 };
 
 const createObj = (teams: Team[]) => {
-  const obj: Record<string, any> = {};
-  for (let team of teams) {
-    obj[team.id + '-units'] = [{ name: faker.name.findName() }, { name: faker.name.findName() }];
-  }
+  const obj: Record<string, Unit[]> = {};
+  teams.forEach(
+    (team) =>
+      (obj[team.id + '-units'] = [
+        { id: '', name: faker.name.findName(), type: '' },
+        { id: '', name: faker.name.findName(), type: '' },
+        { id: '', name: faker.name.findName(), type: '' },
+        { id: '', name: faker.name.findName(), type: '' },
+      ])
+  );
   return obj;
 };
 
@@ -52,7 +45,6 @@ const createForm = (teams: Team[]) => {
         {
           id: 'id',
           autogenerate: 'id',
-          type: 'none',
         },
         {
           id: 'name',
@@ -63,8 +55,8 @@ const createForm = (teams: Team[]) => {
           required: true,
         },
         {
-          id: 'unit',
-          label: 'Unit',
+          id: 'type',
+          label: 'Type',
           type: 'select',
           options: [
             {
@@ -87,7 +79,7 @@ const createForm = (teams: Team[]) => {
 const obj = createObj(placeholder.teams);
 const form = createForm(placeholder.teams);
 
-export const configuratorUnits: FactoryComponent<{
+export const creatorTeamComposition: FactoryComponent<{
   state: IAppModel;
   actions: IActions;
 }> = ({ attrs: { actions } }) => {
@@ -102,7 +94,15 @@ export const configuratorUnits: FactoryComponent<{
           iconName: 'send',
           iconClass: 'right',
           onclick: () => {
-            switchToPage(Pages.CONFIGURATORPLACEMENT);
+            if (isValidConfigurationOfUnits(obj)) switchToPage(Pages.CREATORUNITPLACEMENT);
+          },
+        }),
+        m(SubmitButton, {
+          label: 'Validate',
+          iconName: 'send',
+          iconClass: 'right',
+          onclick: () => {
+            isValidConfigurationOfUnits(obj);
           },
         }),
         m(LayoutForm, {
