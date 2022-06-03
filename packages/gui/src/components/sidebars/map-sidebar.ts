@@ -1,7 +1,7 @@
 import m from 'mithril';
 import { MeiosisComponent } from '../../services/meiosis';
 import M from 'materialize-css';
-import { gridModal, createPOIModal, editLayerModal, editGroupModal } from './modals';
+import { gridModal, editLayerModal, editGroupModal } from './modals';
 import { groupsBody, layersBody } from './bodies';
 import { SubmitButton } from 'mithril-materialized';
 
@@ -10,7 +10,6 @@ export const mapSideBar: MeiosisComponent = () => {
     view: ({ attrs: { state, actions } }) => {
       return [
         m(gridModal, { state, actions }),
-        m(createPOIModal, { state, actions }),
         m(editLayerModal, { state, actions }),
         m(editGroupModal, { state, actions }),
         m('.col.l3.m4#slide-out.sidenav.sidenav-fixed', [

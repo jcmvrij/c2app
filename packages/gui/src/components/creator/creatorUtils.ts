@@ -366,47 +366,53 @@ export const isValidConfigurationOfUnits = (configuration: ConfigurationOfUnits)
 
 export const createSources = (teams: Team[], mapBounds: MapLibrePluginBBox) => {
   const sources: IMapLibreSource[] = [];
-  const numberOfTeams = teams.length;
+
   teams.forEach((team) => {
-    sources.push({
-      id: team.id,
-      source: {
-        type: 'FeatureCollection',
-        features: [
-          {
-            type: 'Feature',
-            properties: {
-              movable: true,
+    const { units } = team;
+    if (units)
+      units.forEach((unit) => {
+        sources.push({
+          id: unit.id,
+          source: {
+            type: 'FeatureCollection',
+            features: [
+              {
+                type: 'Feature',
+                properties: {
+                  movable: true,
+                },
+                geometry: {
+                  type: 'Point',
+                  coordinates: [0, 0],
+                },
+              },
+            ],
+          },
+          layers: [
+            {
+              id: 'Layer',
+              // @ts-ignore
+              type: 'symbol',
+              layout: {
+                'icon-image': team.color.toUpperCase(),
+                'icon-size': ['interpolate', ['exponential', 0.5], ['zoom'], 15, 0.7, 20, 0.2],
+                'icon-allow-overlap': true,
+              },
+              paint: {
+                'icon-opacity': 0.8,
+              },
+              filter: ['all'],
             },
-            geometry: {
-              type: 'Point',
-              coordinates: [0, 0],
-            },
-          },
-        ],
-      },
-      layers: [
-        {
-          id: 'Layer',
-          // @ts-ignore
-          type: 'symbol',
-          layout: {
-            'icon-image': team.color.toUpperCase(),
-            'icon-size': ['interpolate', ['exponential', 0.5], ['zoom'], 15, 0.7, 20, 0.2],
-            'icon-allow-overlap': true,
-          },
-          paint: {
-            'icon-opacity': 0.8,
-          },
-          filter: ['all'],
-        },
-      ],
-    });
+          ],
+        });
+      });
   });
-  const coordinates = createCoordinates(numberOfTeams, mapBounds);
+
+  let numberOfUnits = 0;
+  teams.forEach((team) => (numberOfUnits += team.units!.length));
+  const coordinates = createCoordinates(numberOfUnits, mapBounds);
   sources.forEach((source) => {
     const coordinate = coordinates.shift();
-    console.log(coordinate);
     if (coordinate) (source.source.features[0].geometry as Point).coordinates = coordinate;
   });
   return sources;
@@ -418,7 +424,7 @@ const createCoordinates = (numberOfTeams: number, mapBounds: MapLibrePluginBBox)
   const coordinates = [];
   let gapFromPoint = 0;
   for (let index = 0; index < numberOfTeams; index++) {
-    coordinates.push([midLng, midLat + gapFromPoint]);
+    coordinates.push([midLng + gapFromPoint, midLat]);
     gapFromPoint += 0.001;
   }
   return coordinates;

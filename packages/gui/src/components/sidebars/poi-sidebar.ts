@@ -8,7 +8,6 @@ import {
   resourceFormatComponent,
   sensorFormatComponent,
   formatUnknown,
-  incidentLocationFormatComponent,
   contextFormatComponent,
   manFormatComponent,
 } from './poi-formatting';
@@ -44,8 +43,6 @@ export const poiSidebar: MeiosisComponent = () => {
                 ? m(contextFormatComponent, { state, actions })
                 : clickedFeature?.properties?.type === 'plume'
                 ? m(alertFormatComponent, { state, actions })
-                : clickedFeature?.properties?.type === 'incidentLocation'
-                ? m(incidentLocationFormatComponent, { state, actions })
                 : clickedFeature?.properties?.type === 'man'
                 ? m(manFormatComponent, { state, actions })
                 : clickedFeature?.properties?.type === 'CAR'

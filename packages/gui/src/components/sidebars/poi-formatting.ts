@@ -1,14 +1,7 @@
 import m, { FactoryComponent } from 'mithril';
 import { IActions, ISource, IAppModel } from '../../services/meiosis';
 import M from 'materialize-css';
-import { LayoutForm } from 'mithril-ui-form';
-import { formGenerator } from '../../template/form';
-import {
-  IChemicalIncident,
-  IChemicalIncidentControlParameters,
-  IChemicalIncidentScenario,
-  ICbrnProperties,
-} from 'c2app-models-utils';
+import { ICbrnProperties } from 'c2app-models-utils';
 import { LayerSpecification } from 'maplibre-gl';
 import { Collapsible } from 'mithril-materialized';
 
@@ -166,56 +159,6 @@ export const sensorFormatComponent: FactoryComponent<{
           ];
         })
       );
-    },
-  };
-};
-
-export const incidentLocationFormatComponent: FactoryComponent<{
-  state: IAppModel;
-  actions: IActions;
-}> = () => {
-  let source = {
-    scenario: {} as IChemicalIncidentScenario,
-    control_parameters: {} as IChemicalIncidentControlParameters,
-  };
-  return {
-    view: (vnode) => {
-      const ft = vnode.attrs.state.app.clickedFeature as IGeoJSONFeatureTwo;
-      const scenario = JSON.parse(ft.properties?.scenario) as IChemicalIncidentScenario;
-      const form = formGenerator({});
-
-      return [
-        m('p', 'ID: ' + ft.properties?.id),
-        m('p', 'Chemical: ' + scenario.chemical),
-        m('p', 'Start of release: ' + scenario.start_of_release),
-        m(
-          'button.btn',
-          {
-            onclick: () => {
-              source.scenario.source_location = scenario.source_location;
-              const chemicalIncident = {
-                context: ft.properties?.context,
-                _id: ft.properties?.id,
-                scenario: source.scenario,
-                control_parameters: source.control_parameters,
-                timestamp: new Date().valueOf(),
-              } as IChemicalIncident;
-
-              vnode.attrs.actions.updateCHT(chemicalIncident);
-            },
-          },
-          'Recalculate'
-        ),
-        m(LayoutForm, {
-          form,
-          obj: source,
-          section: 'source',
-        }),
-        m('p', 'test text'),
-      ];
-    },
-    oncreate: () => {
-      M.AutoInit();
     },
   };
 };

@@ -88,21 +88,14 @@ export const creatorTeamComposition: FactoryComponent<{
         'div.container#configurator',
         m('h4', 'Configurator Units'),
         m(SubmitButton, {
-          label: 'Next page',
+          label: 'Next',
           iconName: 'send',
           iconClass: 'right',
           onclick: () => {
             if (isValidConfigurationOfUnits(obj)) switchToPage(Pages.CREATORUNITPLACEMENT);
           },
         }),
-        m(SubmitButton, {
-          label: 'Validate',
-          iconName: 'send',
-          iconClass: 'right',
-          onclick: () => {
-            isValidConfigurationOfUnits(obj);
-          },
-        }),
+
         m(LayoutForm, {
           form,
           obj,

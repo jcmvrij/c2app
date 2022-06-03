@@ -42,7 +42,6 @@ const placeholderTeams: Team[] = [
     ],
   },
 ];
-
 const placeholderBounds: MapLibrePluginBBox = {
   sw: {
     lng: 4.27936263874642,
@@ -53,7 +52,6 @@ const placeholderBounds: MapLibrePluginBBox = {
     lat: 52.11574774600376,
   },
 };
-
 const placeholderSources: IMapLibreSource[] = createSources(placeholderTeams, placeholderBounds);
 
 const obj = {

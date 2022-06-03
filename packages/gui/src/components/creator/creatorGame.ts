@@ -16,14 +16,12 @@ const obj: ConfigurationBasic = {
   ] as Team[],
 };
 
-const availableTeamColors = () => {
-  return [
-    { id: 'blue', label: 'Blue' },
-    { id: 'red', label: 'Red' },
-    { id: 'green', label: 'Green' },
-    { id: 'yellow', label: 'Yellow' },
-  ];
-};
+const availableTeamColors = [
+  { id: 'blue', label: 'Blue' },
+  { id: 'red', label: 'Red' },
+  { id: 'green', label: 'Green' },
+  { id: 'yellow', label: 'Yellow' },
+];
 
 const form = [
   { id: 'id', label: 'Game Id', type: 'text', maxLength: 80 },
@@ -57,7 +55,7 @@ const form = [
         id: 'color',
         label: 'Team Color',
         type: 'select',
-        options: availableTeamColors(),
+        options: availableTeamColors,
         required: true,
         className: 'col s6',
       },
@@ -80,18 +78,10 @@ export const creatorGame: FactoryComponent<{
           iconName: 'send',
           iconClass: 'right',
           onclick: () => {
-            if (isValidConfigurationBasic(obj)) switchToPage(Pages.CREATORTEAMCOMPOSITION);
-          },
-        }),
-        m(SubmitButton, {
-          label: 'see',
-          iconName: 'send',
-          iconClass: 'right',
-          onclick: () => {
             if (obj.location.polygons) {
-              console.log(obj.location.polygons);
               console.log(boundingBoxFromPolygon(obj.location.polygons[0]));
             }
+            if (isValidConfigurationBasic(obj)) switchToPage(Pages.CREATORTEAMCOMPOSITION);
           },
         }),
         m(LayoutForm, {
