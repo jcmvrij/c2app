@@ -10,7 +10,11 @@ import { Settings } from '../components/settings/settings';
 import { Alerts } from '../components/alerts/alerts';
 import { chatSidebar } from '../components/sidebars/chat-sidebar';
 import { Home } from '../components/home/home';
-import { creatorGame, creatorTeamComposition, creatorUnitPlacement } from '../components/creator';
+import {
+  gameCreationGeneral,
+  gameCreationTeamComposition,
+  gameCreationUnitPlacement,
+} from '../components/gameCreation';
 
 class RoutingService {
   private pages!: ReadonlyArray<IPage>;
@@ -85,32 +89,32 @@ export const routingSvc: RoutingService = new RoutingService(Layout, [
     default: true,
   },
   {
-    id: Pages.CREATORGAME,
-    title: 'CreatorGame',
+    id: Pages.GAMECREATIONGENERAL,
+    title: 'Game creation',
     icon: 'tune',
-    route: '/creatorgame',
+    route: '/gamecreation/general',
     visible: true,
-    component: creatorGame,
+    component: gameCreationGeneral,
     sidebar: sideBar,
     hasSidebar: false,
   },
   {
-    id: Pages.CREATORTEAMCOMPOSITION,
+    id: Pages.GAMECREATIONTEAMCOMPOSITION,
     title: 'Team composition',
     icon: 'tune',
-    route: '/creator-team-composition',
+    route: '/gamecreation/teams',
     visible: true,
-    component: creatorTeamComposition,
+    component: gameCreationTeamComposition,
     sidebar: sideBar,
     hasSidebar: false,
   },
   {
-    id: Pages.CREATORUNITPLACEMENT,
+    id: Pages.GAMECREATIONUNITPLACEMENT,
     title: 'Unit placement',
     icon: 'tune',
-    route: '/creator-unit-placement',
+    route: '/gamecreation/units',
     visible: true,
-    component: creatorUnitPlacement,
+    component: gameCreationUnitPlacement,
     sidebar: sideBar,
     hasSidebar: false,
   },

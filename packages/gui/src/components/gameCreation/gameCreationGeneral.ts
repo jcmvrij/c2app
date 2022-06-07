@@ -1,13 +1,13 @@
 import m, { FactoryComponent } from 'mithril';
 import { LayoutForm, UIForm } from 'mithril-ui-form';
 import { IActions, IAppModel } from '../../services/meiosis';
-import { SubmitButton } from 'mithril-materialized';
+import { Collapsible, SubmitButton } from 'mithril-materialized';
 import { Pages } from '../../models';
 import faker from '@faker-js/faker';
-import { boundingBoxFromPolygon, ConfigurationBasic, Team, isValidConfigurationBasic } from './creatorUtils';
+import { Team, isValidConfigurationBasic, createConfiguration } from './gameCreationUtils';
 import { MapLibrePluginState } from 'mithril-ui-form-maplibre-plugin';
 
-const obj: ConfigurationBasic = {
+const obj = {
   id: faker.random.words(2).toLowerCase(),
   location: {} as MapLibrePluginState,
   teams: [
@@ -15,6 +15,13 @@ const obj: ConfigurationBasic = {
     { id: '', name: '', color: '' },
   ] as Team[],
 };
+
+// enum TeamColors {
+//   blue = 'BLUE',
+//   red = 'RED',
+//   green = 'GREEN',
+//   yellow = 'YELLOW',
+// }
 
 const availableTeamColors = [
   { id: 'blue', label: 'Blue' },
@@ -63,11 +70,10 @@ const form = [
   },
 ] as UIForm;
 
-export const creatorGame: FactoryComponent<{
+export const gameCreationGeneral: FactoryComponent<{
   state: IAppModel;
   actions: IActions;
 }> = ({ attrs: { actions } }) => {
-  const { switchToPage } = actions;
   return {
     view: () => {
       return m(
@@ -79,16 +85,21 @@ export const creatorGame: FactoryComponent<{
           iconClass: 'right',
           onclick: () => {
             if (obj.location.polygons) {
-              console.log(boundingBoxFromPolygon(obj.location.polygons[0]));
+              const configuration = createConfiguration(obj);
+              if (isValidConfigurationBasic(configuration)) {
+                actions.updateConfiguration(configuration);
+                actions.switchToPage(Pages.GAMECREATIONTEAMCOMPOSITION);
+              }
             }
-            if (isValidConfigurationBasic(obj)) switchToPage(Pages.CREATORTEAMCOMPOSITION);
           },
         }),
         m(LayoutForm, {
           form,
           obj,
         }),
-        m.trust(JSON.stringify(obj))
+        m(Collapsible, {
+          items: [{ header: 'JSON', body: JSON.stringify(obj), iconName: 'data_object' }],
+        })
       );
     },
   };

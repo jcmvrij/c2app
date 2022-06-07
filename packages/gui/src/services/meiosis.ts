@@ -15,13 +15,13 @@ import {
   ISensor,
   uuid4,
 } from 'c2app-models-utils';
-// @ts-ignore
-import ch from '../ch.json';
 import { GeoJSONFeature, LayerSpecification, LineLayerSpecification } from 'maplibre-gl';
 import { routingSvc } from './routing-service';
 import { Pages } from '../models';
 import { IGeoJSONFeatureTwo } from '../components/sidebars/poi-formatting';
 import { Gamestate } from 'c2app-models-utils';
+import { MapLibrePluginBBox } from 'mithril-ui-form-maplibre-plugin';
+import { ConfigurationBasic, Team } from '../components/gameCreation/gameCreationUtils';
 
 export interface ILayer {
   layerName: string;
@@ -83,6 +83,9 @@ export interface IAppModel {
     chat?: IGroup;
     newMessages: { [key: string]: number };
 
+    // Creator
+    configuration: ConfigurationBasic;
+
     // Layers/styles
     sources: Array<ISource>;
     mapStyle: string;
@@ -136,6 +139,9 @@ export interface IActions {
   // Chat
   openChat: (group: IGroup) => void;
   sendChat: (group: IGroup, message: string) => void;
+
+  // Creator
+  updateConfiguration: (configuration: ConfigurationBasic) => void;
 
   // Gamestate
   sendStockroomConfiguration: (configuration: Gamestate) => void;
@@ -203,8 +209,14 @@ export const appStateMgmt = {
       messages: new Map<string, Array<IMessage>>(),
       newMessages: {} as { [key: string]: number },
 
-      // Layers/styles
+      // Creator
+      configuration: {
+        id: '',
+        location: {} as MapLibrePluginBBox,
+        teams: [] as Team[],
+      },
 
+      // Layers/styles
       sources: [] as Array<ISource>,
       mapStyle: 'https://geodata.nationaalgeoregister.nl/beta/topotiles-viewer/styles/achtergrond.json',
       gridOptions: {
@@ -448,6 +460,15 @@ export const appStateMgmt = {
         us({
           app: {
             editGroup: index,
+          },
+        });
+      },
+
+      // Creator
+      updateConfiguration: (configuration: ConfigurationBasic) => {
+        us({
+          app: {
+            configuration: configuration,
           },
         });
       },
